@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Carlo Augustine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <section class="bg-white text-slate-900 pt-12 pb-16">
+        <div class="max-w-3xl mx-auto px-6">
+          
+        <!-- top row: name + tiny circle img -->
+        <div class="flex items-center gap-4 mb-8">
+            <img
+                src="Carlo.jpg"
+                alt="Carlo surfing"
+                class="w-24 h-24 rounded-full object-cover border border-slate-200 shadow-sm"
+            />
+        </div>
+      
+          <!-- headline / bio -->
+          <h1 class="text-3xl font-semibold tracking-tight text-slate-900 mb-4">
+            Hi, I'm Carlo.
+          </h1>
+      
+          <p class="text-xl font-normal text-slate-700 leading-relaxed mb-6">
+            I'm a third year <span class="font-medium text-slate-900">[computer science, physics]</span>
+            student at UCSB working on flight software and control systems for spacecraft hardware.
+            I love surfing and breakfast burritos. Welcome to my world. 
+          </p>
+      
+          <div class="flex flex-wrap gap-4 text-sm">
+            <a href="#contact" class="underline decoration-slate-400 hover:text-slate-900 hover:decoration-slate-900">
+              Contact
+            </a>
+            <a href="Carlo_Makeever.pdf" class="underline decoration-slate-400 hover:text-slate-900 hover:decoration-slate-900">
+              Resume
+            </a>
+            <a href="https://github.com/carloxaugustine" class="underline decoration-slate-400 hover:text-slate-900 hover:decoration-slate-900">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" class="underline decoration-slate-400 hover:text-slate-900 hover:decoration-slate-900">
+              LinkedIn
+            </a>
+        <div class="w-12 h-12"></div>
+          
+      
+      
+      
+
+    <!-- SECTION: PROJECTS / "APPS" -->
+    <section class="pb-12" id="apps">
+      <h3 class="text-lg font-semibold text-slate-900 mb-6">Tools / Systems</h3>
+
+      <!-- Card 1 -->
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          HOTtake / SOLmate
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Python + Elasticsearch pipeline for NASA's Mars rover thermal team.
+          Flags weird heater preheat events, surfaces them on dashboards, and
+          cuts manual review time ~60%. Used by flight thermal engineers.
+        </p>
+        <div class="flex flex-wrap gap-2 text-[11px] text-slate-500 mt-2">
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Python</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Elasticsearch</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">pandas</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          Closed-Loop Thermal Control Sim
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Modeled rover-like thermal zones and built a PID-style controller in
+          MATLAB/Simulink to hold components inside safe temperature limits.
+          Produced tuning curves and stability checks for engineers.
+        </p>
+        <div class="flex flex-wrap gap-2 text-[11px] text-slate-500 mt-2">
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">MATLAB</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Simulink</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Controls</span>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          Telemetry Parser (C++)
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          C++ tool that walks mission-style thermal telemetry records, extracts
+          key fields, and raises out-of-family flags with minimal heap churn.
+          Built like flight software: predictable, testable.
+        </p>
+        <div class="flex flex-wrap gap-2 text-[11px] text-slate-500 mt-2">
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">C++</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Data structures</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Systems</span>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          3-DOF Arm Kinematics Sandbox
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Forward / inverse kinematics + simple numerical IK solver to land an
+          end effector within ~2 mm of target while respecting joint limits.
+          Used to practice robotics math for guidance / controls work.
+        </p>
+        <div class="flex flex-wrap gap-2 text-[11px] text-slate-500 mt-2">
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Robotics</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Linear Algebra</span>
+          <span class="px-2 py-[2px] rounded bg-slate-100 border border-slate-200">Numerical Methods</span>
+        </div>
+      </article>
+    </section>
+
+
+    <!-- SECTION: CONTENT / TALKS -->
+    <section class="pb-12" id="content">
+      <h3 class="text-lg font-semibold text-slate-900 mb-6">Talks / Docs</h3>
+
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          Automating Thermal Review for Flight Hardware
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Internal walkthrough I gave on converting heater telemetry into
+          actionable “this is off-nominal” flags for rover subsystems. Focus on:
+          data hygiene, false positives, and how to not waste an engineer’s time.
+        </p>
+        <!-- links if you have them later -->
+        <!-- <div class="flex flex-wrap gap-4 text-sm mt-2">
+          <a class="underline text-slate-700 hover:text-slate-900" href="#">Slides</a>
+          <a class="underline text-slate-700 hover:text-slate-900" href="#">Demo video</a>
+        </div> -->
+      </article>
+
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          PID vs State-Space for Thermal Control
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Notes comparing classic PID tuning to basic state-space/controller
+          design for temperature regulation. Goal: show why controls is
+          absolutely aerospace, not just class homework.
+        </p>
+      </article>
+    </section>
+
+    <!-- SECTION: OPEN SOURCE / PUBLIC REPOS -->
+    <section class="pb-12" id="open-source">
+      <h3 class="text-lg font-semibold text-slate-900 mb-6">Open Source / Public</h3>
+
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          rover-thermal-tools
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Redacted / simulated version of my heater event analysis pipeline.
+          Cleans CSV telemetry, clusters abnormal events, spits out plots and a
+          short text report. Safe to share, shows how I think.
+        </p>
+        <div class="flex flex-wrap gap-4 text-sm mt-2">
+          <a class="underline text-slate-700 hover:text-slate-900" href="https://github.com/YOUR_GITHUB/rover-thermal-tools">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="mb-8">
+        <h4 class="text-base font-semibold text-slate-900">
+          arm-ik-notes
+        </h4>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          A tiny notebook walking through FK/IK math for a 3-DOF arm and a
+          simple numerical solver. This is how I practice guidance / pointing
+          problems.
+        </p>
+        <div class="flex flex-wrap gap-4 text-sm mt-2">
+          <a class="underline text-slate-700 hover:text-slate-900" href="https://github.com/YOUR_GITHUB/arm-ik-notes">View on GitHub</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="pb-24" id="contact">
+      <h3 class="text-lg font-semibold text-slate-900 mb-2">Contact</h3>
+      <p class="text-sm text-slate-600 leading-relaxed mb-4">
+        Want a 2026 Digital Engineering / Controls / Systems intern in SoCal?
+        Send me real problems.
+      </p>
+      <div class="text-sm flex flex-col gap-1 text-slate-700">
+        <a class="underline decoration-slate-400 hover:text-slate-900 hover:decoration-slate-900"
+           href="mailto:carlomakeever@engineering.ucsb.edu">
+          carlomakeever@engineering.ucsb.edu
+        </a>
+        <a class="underline decoration-slate-400 hover:text-slate-900 hover:decoration-slate-900"
+           href="https://www.linkedin.com/in/carlo-makeever-880b232a6/">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <footer class="text-[11px] text-slate-400 pb-16">
+      © 2025 Carlo Makeever. All rights reserved.
+    </footer>
+
+  </main>
+</body>
+</html>
