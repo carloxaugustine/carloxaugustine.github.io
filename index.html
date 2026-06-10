@@ -3,266 +3,281 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Carlo Makeever</title>
-<meta name="description" content="Carlo Makeever — mechanical engineering student in San Diego. Aerospace, controls, CFD. And surfing." />
+<title>Carlo Augustine</title>
+<meta name="description" content="Carlo Augustine — SDSU mechanical engineering student. Aerospace, controls, CFD." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{
---sand:#F6F6F4;
---sand-2:#F4ECDD;
---card:#FFFDF8;
---ink:#332F29;
---ink-soft:#736B5F;
---ink-faint:#A89E8E;
---line:rgba(51,47,41,.12);
---accent:#3B7DD8; /* blue */
---accent-deep:#255FA8;
---clay:#C58A68; /* warm sand pop */
---serif:'Fraunces',Georgia,serif;
---sans:'DM Sans',system-ui,sans-serif;
+  --bg:#F6F6F4;
+  --card:#FFFFFF;
+  --ink:#1A1A1A;
+  --ink-2:#555;
+  --ink-3:#888;
+  --line:rgba(0,0,0,.09);
+  --accent:#1A4FAF;
+  --accent-deep:#0F3480;
+  --f:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-background:var(--sand);color:var(--ink);
-font-family:var(--sans);font-weight:400;line-height:1.65;
--webkit-font-smoothing:antialiased;
-}
-body::before{
-content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-background:
-radial-gradient(60% 40% at 50% -5%,rgba(197,138,104,.10),transparent 70%),
-radial-gradient(50% 35% at 90% 5%,rgba(59,125,216,.10),transparent 70%);
-}
-.wrap{max-width:900px;margin:0 auto;padding:0 26px;position:relative;z-index:1}
-a{color:inherit}
-nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(8px);background:rgba(246,246,244,.8);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:15px;padding-bottom:15px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:18px;text-decoration:none}
-.logo svg{width:22px;height:22px}
-.navlinks{display:flex;gap:26px;font-size:14px;color:var(--ink-soft)}
-.navlinks a{text-decoration:none;transition:color .2s}
-.navlinks a:hover{color:var(--accent-deep)}
-@media(max-width:640px){.navlinks{display:none}}
-header{padding:74px 0 56px}
-.photo{width:104px;height:104px;border-radius:50%;object-fit:cover;border:3px solid var(--card);box-shadow:0 10px 30px rgba(51,47,41,.12);margin-bottom:30px;background:linear-gradient(135deg,var(--accent),var(--clay))}
-h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,7vw,64px);line-height:1.04;letter-spacing:-.015em;margin-bottom:22px}
-h1 em{font-style:italic;color:var(--accent-deep)}
-.lede{font-size:clamp(17px,2.3vw,21px);color:var(--ink-soft);max-width:620px}
-.lede b{color:var(--ink);font-weight:500}
-.hlinks{display:flex;flex-wrap:wrap;gap:11px;margin-top:34px}
-.hlinks a{text-decoration:none;font-size:14px;font-weight:500;padding:11px 19px;border-radius:999px;transition:.22s;border:1px solid var(--line);background:var(--card);color:var(--ink)}
-.hlinks a:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(51,47,41,.1)}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:40;background:rgba(246,246,244,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.logo{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.navlinks{display:flex;gap:24px;font-size:14px;color:var(--ink-2)}
+.navlinks a:hover{color:var(--accent)}
+@media(max-width:600px){.navlinks{display:none}}
+
+/* HEADER */
+header{padding:64px 0 52px}
+.hero{display:flex;align-items:flex-start;gap:44px}
+.hero-left{flex-shrink:0;display:flex;flex-direction:column;gap:16px;width:160px}
+.hero-photo{width:160px;height:160px;border-radius:50%;object-fit:cover;border:2px solid var(--line);background:#ddd;display:block}
+.hero-sub{font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.hero-sub b{color:var(--ink);font-weight:500}
+.hero-right{flex:1;padding-top:6px}
+.hero-right h1{font-size:clamp(26px,4.5vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
+.hero-right h1 span{color:var(--accent)}
+@media(max-width:600px){.hero{flex-direction:column;gap:20px}.hero-left{width:100%;flex-direction:row;align-items:center}.hero-photo{width:80px;height:80px}}
+.hlinks{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.hlinks a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+.hlinks a:hover{border-color:rgba(0,0,0,.2);box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .hlinks a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
 .hlinks a.solid:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
-section{padding:56px 0;position:relative}
-.eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);font-weight:500;margin-bottom:10px}
-.sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(26px,4vw,36px);letter-spacing:-.01em;margin-bottom:34px}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+
+/* SECTIONS */
+section{padding:48px 0;border-top:1px solid var(--line)}
+.label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.sec-title{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:28px}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
-.about p{font-size:18px;color:var(--ink-soft);max-width:680px;margin-bottom:16px}
-.about p b{color:var(--ink);font-weight:500}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-@media(max-width:640px){.grid{grid-template-columns:1fr}}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
-.proj:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(51,47,41,.12)}
-.proj .thumb{aspect-ratio:16/10;position:relative;background:linear-gradient(135deg,#F1E8D8,#E9DECB);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
-.proj .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.proj .thumb .ph{font-size:12px;letter-spacing:.05em;color:var(--ink-faint);text-align:center;padding:0 14px}
-.proj .thumb .ph b{display:block;color:var(--accent-deep);font-weight:600;font-family:var(--serif);font-size:15px;margin-bottom:4px;letter-spacing:0}
-.proj .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
-.proj h3{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.2;margin-bottom:10px}
-.proj p{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px;flex:1}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
-.chips span{font-size:12px;color:var(--ink-soft);background:var(--sand-2);border-radius:999px;padding:4px 11px}
-.xp .row{display:flex;gap:22px;padding:20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.xp .row:last-child{border-bottom:none}
-.xp .when{font-size:13px;color:var(--accent-deep);font-weight:500;min-width:96px;padding-top:4px}
-.xp h3{font-family:var(--serif);font-weight:500;font-size:19px}
-.xp .org{font-size:14px;color:var(--ink);margin:2px 0 6px}
-.xp p{font-size:14.5px;color:var(--ink-soft);max-width:580px}
-.skills{display:flex;flex-wrap:wrap;gap:9px}
-.skills span{font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 15px}
-.edu .row{display:flex;justify-content:space-between;gap:18px;padding:17px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.edu .row:last-child{border-bottom:none}
-.edu h3{font-family:var(--serif);font-weight:500;font-size:18px}
-.edu .deg{font-size:14px;color:var(--ink-soft);margin-top:2px}
-.edu .yr{font-size:13px;color:var(--accent-deep);font-weight:500;white-space:nowrap}
-.contact{padding-bottom:40px}
-.contact .big{font-family:var(--serif);font-weight:500;font-size:clamp(24px,5vw,44px);line-height:1.1;letter-spacing:-.01em;margin-bottom:14px;word-break:break-word}
-.contact .big a{text-decoration:none;color:var(--accent-deep)}
-.contact .note{color:var(--ink-soft);font-size:16px;max-width:560px;margin-bottom:26px}
-.contact .clear{font-size:13px;color:var(--ink-faint);margin-top:26px;letter-spacing:.02em}
-footer{padding:30px 0 60px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-faint)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* PROJECTS */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;transition:box-shadow .2s}
+.proj:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.proj h3{font-size:15px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
+.proj p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:11.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
+.proj-featured{grid-column:1/-1;padding:0;overflow:hidden}
+.proj-featured .proj-body{padding:20px}
+.proj-featured .proj-body h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
+.proj-featured .proj-body p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
+.proj-imgs{display:grid;gap:2px;border-bottom:1px solid var(--line)}
+.proj-imgs .img-main img{width:100%;max-height:340px;object-fit:cover;object-position:center;display:block}
+.proj-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.proj-imgs-strip img{width:100%;height:180px;object-fit:cover;object-position:center;display:block}
+@media(max-width:600px){.proj-imgs-strip img{height:120px}}
+
+/* EXPERIENCE */
+.xp-row{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.xp-row:last-child{border-bottom:none}
+.xp-when{font-size:12px;color:var(--accent);font-weight:600;min-width:80px;padding-top:3px;flex-shrink:0}
+.xp-row h3{font-size:15px;font-weight:600;margin-bottom:2px}
+.xp-row .org{font-size:13px;color:var(--ink-2);margin-bottom:5px}
+.xp-row p{font-size:13.5px;color:var(--ink-2);max-width:560px}
+
+/* SKILLS */
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.skills span{font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:6px 12px}
+
+/* EDUCATION */
+.edu-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.edu-row:last-child{border-bottom:none}
+.edu-row h3{font-size:15px;font-weight:600}
+.edu-row .deg{font-size:13px;color:var(--ink-2);margin-top:2px}
+.edu-row .yr{font-size:12px;color:var(--accent);font-weight:600;white-space:nowrap}
+
+/* CONTACT */
+.contact-block{padding-bottom:32px}
+.contact-block .big{font-size:clamp(20px,4vw,34px);font-weight:600;letter-spacing:-.02em;margin-bottom:10px}
+.contact-block .big a{color:var(--accent)}
+.contact-block .big a:hover{color:var(--accent-deep)}
+.contact-block .note{font-size:15px;color:var(--ink-2);max-width:520px;margin-bottom:22px}
+.contact-block .flag{font-size:12px;color:var(--ink-3);margin-top:20px}
+
+/* FOOTER */
+footer{padding:24px 0 48px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);flex-wrap:wrap;gap:6px}
 </style>
 </head>
 <body>
+
 <nav>
-<div class="wrap">
-<a class="logo" href="#top">
-<svg viewBox="0 0 24 24" fill="none"><path d="M3 16c4-1 6-4 9-4s5 3 9 4c-4 1-6 4-9 4s-5-3-9-4Z" fill="#3B7DD8"/><circle cx="18.5" cy="6" r="2.4" fill="#C58A68"/></svg>
-Carlo
-</a>
-<div class="navlinks">
-<a href="#work">Work</a>
-<a href="#experience">Experience</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+  <div class="wrap">
+    <span class="logo">Carlo Augustine</span>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
-<a id="top"></a>
+
 <header class="wrap">
-<img class="photo" src="Carlo.jpg" alt="Carlo" />
-<h1>Hi, I'm Carlo —<br>SDSU <em>mechanical engineering</em> student.</h1>
-<p class="lede">
-A mechanical engineering student in San Diego, transferring to <b>SDSU</b>, building toward <b>aerospace &amp; defense</b>. I've done research across space, sky, and sea — <b>NASA JPL</b>, <b>NOAA</b>, and <b>Scripps</b> — design UAVs, run CFD, and lead controls testing for my rocket club. When I'm not in the lab, I'm in the water.
-</p>
-<div class="hlinks">
-<a class="solid" href="#work">See my work</a>
-<a href="mailto:carlomakeever@engineering.ucsb.edu">Email</a>
-<a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
-<a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
-<a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
-</div>
+  <div class="hero">
+    <div class="hero-left">
+      <img class="hero-photo" src="Carlo.jpg" alt="Carlo Augustine" />
+      <p class="hero-sub">Building toward <b>aerospace &amp; defense</b>. Research at <b>NASA JPL</b>, <b>NOAA</b>, and <b>Scripps</b>. Controls lead at the Gaucho Rocket Club.</p>
+    </div>
+    <div class="hero-right">
+      <h1>SDSU <span>mechanical engineering</span> student.</h1>
+      <div class="hlinks">
+        <a class="solid" href="#work">See my work</a>
+        <a href="mailto:carlomakeever@engineering.ucsb.edu">Email</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
 </header>
+
 <section id="work" class="wrap reveal">
-<div class="eyebrow">Selected Work</div>
-<h2 class="sec-title">Things I've designed &amp; analyzed</h2>
-<div class="grid">
-<article class="proj">
-<div class="thumb">
-<!-- swap for: <img src="assets/vwing.jpg" alt="V-Wing render"> -->
-<div class="ph"><b>V-Wing UAV</b>add vwing_render.png</div>
-</div>
-<div class="body">
-<h3>Deployable Tactical V-Wing UAV</h3>
-<p>A conceptual design &amp; CFD study of a field-deployable, composite-sectioned UAV — measuring the drag cost of its seams and the dihedral–stability tradeoff, start to finish in simulation.</p>
-<div class="chips"><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span></div>
-</div>
-</article>
-<article class="proj">
-<div class="thumb"><div class="ph"><b>ALBATROSS-1</b>add albatross.png</div></div>
-<div class="body">
-<h3>ALBATROSS-1 Fixed-Wing UAV</h3>
-<p>A fixed-wing UAV designed and analyzed end to end — airframe layout, structures, and aerodynamics — as a platform study for long-endurance sensing.</p>
-<div class="chips"><span>Conceptual Design</span><span>Aero</span><span>Structures</span></div>
-</div>
-</article>
-<article class="proj">
-<div class="thumb"><div class="ph"><b>Nose-Cone CFD</b>add nosecone.png</div></div>
-<div class="body">
-<h3>Nose-Cone Geometry CFD Study</h3>
-<p>A comparative computational-aerodynamics study of nose-cone profiles — meshing, viscous CFD, and post-processing to evaluate drag across geometries.</p>
-<div class="chips"><span>OpenFOAM</span><span>ParaView</span><span>Meshing</span></div>
-</div>
-</article>
-<article class="proj">
-<div class="thumb"><div class="ph"><b>TVC Model</b>add tvc.png</div></div>
-<div class="body">
-<h3>Thrust-Vector Control Modeling</h3>
-<p>Simulink-based TVC modeling for the Gaucho Rocket Club — control-loop design and simulation supporting the team's flight-control development and test.</p>
-<div class="chips"><span>Simulink</span><span>MATLAB</span><span>Controls</span></div>
-</div>
-</article>
-<article class="proj">
-<div class="thumb"><div class="ph"><b>Pi Camera</b>add picamera.png</div></div>
-<div class="body">
-<h3>Raspberry Pi Instant Camera</h3>
-<p>A self-built instant camera on Raspberry Pi — embedded hardware, integration, and packaging. The hands-on counterweight to all the simulation work.</p>
-<div class="chips"><span>Raspberry Pi</span><span>Python</span><span>Embedded</span></div>
-</div>
-</article>
-</div>
+  <div class="label">Selected Work</div>
+  <h2 class="sec-title">Projects</h2>
+  <div class="grid">
+    <article class="proj proj-featured">
+      <div class="proj-imgs">
+        <div class="img-main"><img src="vwing_render.jpg" alt="V-Wing UAV Blender render" /></div>
+        <div class="proj-imgs-strip">
+          <img src="vwing_cfd.jpg" alt="V-Wing CFD velocity magnitude" />
+          <img src="vwing_mesh.jpg" alt="V-Wing OpenVSP mesh" />
+        </div>
+      </div>
+      <div class="proj-body">
+        <h3>Deployable Tactical V-Wing UAV</h3>
+        <p>Conceptual design and CFD study of a field-deployable composite UAV — drag cost of assembly seams, dihedral–stability tradeoff, start to finish in simulation.</p>
+        <div class="chips"><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span></div>
+      </div>
+    </article>
+    <article class="proj">
+      <h3>ALBATROSS-1 Fixed-Wing UAV</h3>
+      <p>End-to-end design and analysis of a fixed-wing UAV — airframe layout, structures, and aerodynamics as a long-endurance sensing platform study.</p>
+      <div class="chips"><span>Conceptual Design</span><span>Aerodynamics</span><span>Structures</span></div>
+    </article>
+    <article class="proj">
+      <h3>Nose-Cone Geometry CFD Study</h3>
+      <p>Comparative computational aerodynamics study of nose-cone profiles — meshing, viscous CFD, and post-processing to evaluate drag across geometries.</p>
+      <div class="chips"><span>OpenFOAM</span><span>ParaView</span><span>Meshing</span></div>
+    </article>
+    <article class="proj">
+      <h3>Thrust-Vector Control Modeling</h3>
+      <p>Simulink-based TVC modeling for the Gaucho Rocket Club — control-loop design and simulation supporting flight-control development and test.</p>
+      <div class="chips"><span>Simulink</span><span>MATLAB</span><span>Controls</span></div>
+    </article>
+    <article class="proj">
+      <h3>Raspberry Pi Instant Camera</h3>
+      <p>Self-built instant camera on Raspberry Pi — embedded hardware integration and packaging. The hands-on counterweight to all the simulation work.</p>
+      <div class="chips"><span>Raspberry Pi</span><span>Python</span><span>Embedded</span></div>
+    </article>
+  </div>
 </section>
+
 <section id="experience" class="wrap reveal">
-<div class="eyebrow">Experience &amp; Research</div>
-<h2 class="sec-title">Space, sky &amp; sea</h2>
-<div class="xp">
-<div class="row">
-<div class="when">Now</div>
-<div>
-<h3>Lead Control Systems Test Engineer</h3>
-<div class="org">Gaucho Rocket Club</div>
-<p>Leading control-systems test engineering — Simulink modeling, test design, and validation for the team's flight-control and thrust-vector work.</p>
-</div>
-</div>
-<div class="row">
-<div class="when">Research</div>
-<div>
-<h3>Thermal Systems Research</h3>
-<div class="org">NASA Jet Propulsion Laboratory</div>
-<p>Thermal systems work supporting the Curiosity Mars rover program.</p>
-</div>
-</div>
-<div class="row">
-<div class="when">Fellowship</div>
-<div>
-<h3>Lapenta Fellow</h3>
-<div class="org">NOAA</div>
-<p>High-performance computing and atmospheric-science research as a NOAA Lapenta Summer Fellow.</p>
-</div>
-</div>
-<div class="row">
-<div class="when">Research</div>
-<div>
-<h3>Electronics Validation</h3>
-<div class="org">Scripps Institution of Oceanography</div>
-<p>Electronics validation and instrumentation work in the ocean-science domain.</p>
-</div>
-</div>
-</div>
+  <div class="label">Experience &amp; Research</div>
+  <h2 class="sec-title">Background</h2>
+  <div>
+    <div class="xp-row">
+      <div class="xp-when">Now</div>
+      <div>
+        <h3>Lead Control Systems Test Engineer</h3>
+        <div class="org">Gaucho Rocket Club</div>
+        <p>Simulink modeling, test design, and validation for flight-control and thrust-vector systems.</p>
+      </div>
+    </div>
+    <div class="xp-row">
+      <div class="xp-when">Research</div>
+      <div>
+        <h3>Thermal Systems Research</h3>
+        <div class="org">NASA Jet Propulsion Laboratory</div>
+        <p>Thermal systems work supporting the Curiosity Mars rover program.</p>
+      </div>
+    </div>
+    <div class="xp-row">
+      <div class="xp-when">Fellowship</div>
+      <div>
+        <h3>Lapenta Fellow</h3>
+        <div class="org">NOAA</div>
+        <p>High-performance computing and atmospheric-science research.</p>
+      </div>
+    </div>
+    <div class="xp-row">
+      <div class="xp-when">Research</div>
+      <div>
+        <h3>Electronics Validation</h3>
+        <div class="org">Scripps Institution of Oceanography</div>
+        <p>Electronics validation and instrumentation work in ocean-science systems.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="about" class="wrap reveal about">
-<div class="eyebrow">A little more</div>
-<h2 class="sec-title">About</h2>
-<p>I like problems that live where <b>structures, aerodynamics, and controls meet</b> — especially deployable, point-of-need hardware. My path's been a little non-linear, which means I've gotten my hands on real systems across three very different domains, and I bring that range to aerospace work.</p>
-<p>Currently focused on materials and mechanics heading into SDSU, and always building something on the side.</p>
-<div style="margin-top:26px" class="skills">
-<span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Simulink</span><span>MATLAB</span><span>CAD</span><span>Composite Structures</span><span>Blender</span><span>Python</span><span>C / C++</span><span>HPC</span>
-</div>
+
+<section id="about" class="wrap reveal">
+  <div class="label">About</div>
+  <h2 class="sec-title">Background</h2>
+  <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">I like problems that live where structures, aerodynamics, and controls overlap — especially deployable, point-of-need hardware. My path's been non-linear, which means I've gotten real experience across three different technical domains. Currently focused on materials and mechanics heading into SDSU.</p>
+  <div class="skills">
+    <span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Simulink</span><span>MATLAB</span><span>CAD</span><span>Composite Structures</span><span>Blender</span><span>Python</span><span>C / C++</span><span>HPC</span>
+  </div>
 </section>
-<section class="wrap reveal edu">
-<div class="eyebrow">Education</div>
-<h2 class="sec-title">Schools</h2>
-<div class="row">
-<div><h3>San Diego State University</h3><div class="deg">B.S. Mechanical Engineering — Materials &amp; Mechanics</div></div>
-<div class="yr">Incoming · 2027</div>
-</div>
-<div class="row">
-<div><h3>San Diego Mesa College</h3><div class="deg">Engineering transfer coursework · 3.88 GPA</div></div>
-<div class="yr">Transfer</div>
-</div>
-<div class="row">
-<div><h3>UC Santa Barbara</h3><div class="deg">Physics &amp; Computer Science coursework</div></div>
-<div class="yr">Foundation</div>
-</div>
+
+<section class="wrap reveal">
+  <div class="label">Education</div>
+  <h2 class="sec-title">Schools</h2>
+  <div>
+    <div class="edu-row">
+      <div><h3>San Diego State University</h3><div class="deg">B.S. Mechanical Engineering — Materials &amp; Mechanics</div></div>
+      <div class="yr">Incoming · 2027</div>
+    </div>
+    <div class="edu-row">
+      <div><h3>San Diego Mesa College</h3><div class="deg">Engineering transfer coursework · 3.88 GPA</div></div>
+      <div class="yr">Transfer</div>
+    </div>
+    <div class="edu-row">
+      <div><h3>UC Santa Barbara</h3><div class="deg">Physics &amp; Computer Science coursework</div></div>
+      <div class="yr">Foundation</div>
+    </div>
+  </div>
 </section>
-<section id="contact" class="wrap reveal contact">
-<div class="eyebrow">Say hi</div>
-<div class="big"><a href="mailto:carlomakeever@engineering.ucsb.edu">carlomakeever@engineering.ucsb.edu</a></div>
-<p class="note">Looking for aerospace, controls, or systems work — internships or research. Send me a real problem and I'll dig in.</p>
-<div class="hlinks">
-<a class="solid" href="mailto:carlomakeever@engineering.ucsb.edu">Email me</a>
-<a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
-<a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
-<a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
-</div>
-<div class="clear">U.S. Citizen · DoD Secret clearance eligible</div>
+
+<section id="contact" class="wrap reveal contact-block">
+  <div class="label">Contact</div>
+  <div class="big"><a href="mailto:carlomakeever@engineering.ucsb.edu">carlomakeever@<wbr>engineering.ucsb.edu</a></div>
+  <p class="note">Looking for aerospace, controls, or systems work — internships or research. Send me a real problem.</p>
+  <div class="hlinks">
+    <a class="solid" href="mailto:carlomakeever@engineering.ucsb.edu">Email me</a>
+    <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
+    <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+  </div>
+  <div class="flag">U.S. Citizen · DoD Secret clearance eligible</div>
 </section>
+
 <footer>
-<div class="wrap">
-<span>© <span id="yr"></span> Carlo Makeever</span>
-<span>San Diego, CA</span>
-</div>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Carlo Augustine</span>
+    <span>San Diego, CA</span>
+  </div>
 </footer>
+
 <script>
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(function(s){io.observe(s)});
-document.getElementById('yr').textContent=new Date().getFullYear();
+document.getElementById('yr').textContent = new Date().getFullYear();
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
 </script>
 </body>
 </html>
