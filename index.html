@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Carlo Augustine</title>
-<meta name="description" content="Carlo Augustine — SDSU mechanical engineering student. Aerospace, controls, CFD." />
+<meta name="description" content="Carlo Augustine. SDSU mechanical engineering student. Aerospace, controls, CFD." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -25,50 +25,42 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px}
-
-/* NAV */
 nav{position:sticky;top:0;z-index:40;background:rgba(246,246,244,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
 .logo{font-size:15px;font-weight:600;letter-spacing:-.01em}
 .navlinks{display:flex;gap:24px;font-size:14px;color:var(--ink-2)}
 .navlinks a:hover{color:var(--accent)}
 @media(max-width:600px){.navlinks{display:none}}
-
-/* HEADER */
 header{padding:64px 0 52px}
-.hero{display:flex;align-items:flex-start;gap:44px}
-.hero-left{flex-shrink:0;display:flex;flex-direction:column;gap:16px;width:160px}
+.hero{display:flex;align-items:center;gap:44px}
+.hero-left{flex-shrink:0;display:flex;flex-direction:column;gap:14px;width:180px}
 .hero-photo{width:160px;height:160px;border-radius:50%;object-fit:cover;border:2px solid var(--line);background:#ddd;display:block}
 .hero-sub{font-size:13.5px;color:var(--ink-2);line-height:1.6}
 .hero-sub b{color:var(--ink);font-weight:500}
-.hero-right{flex:1;padding-top:6px}
-.hero-right h1{font-size:clamp(26px,4.5vw,40px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
+.hero-right{flex:1}
+.hero-right h1{font-size:clamp(24px,3.6vw,36px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
 .hero-right h1 span{color:var(--accent)}
 @media(max-width:600px){.hero{flex-direction:column;gap:20px}.hero-left{width:100%;flex-direction:row;align-items:center}.hero-photo{width:80px;height:80px}}
-.hlinks{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.hlinks{display:flex;flex-wrap:wrap;gap:9px}
 .hlinks a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s,box-shadow .15s}
 .hlinks a:hover{border-color:rgba(0,0,0,.2);box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .hlinks a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
 .hlinks a.solid:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
-
-/* SECTIONS */
 section{padding:48px 0;border-top:1px solid var(--line)}
 .label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
 .sec-title{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:28px}
-
-/* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
-
-/* PROJECTS */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;transition:box-shadow .2s}
-.proj:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;cursor:pointer;transition:box-shadow .2s,transform .2s}
+.proj:hover{box-shadow:0 4px 20px rgba(0,0,0,.1);transform:translateY(-2px)}
 .proj h3{font-size:15px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
 .proj p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips span{font-size:11.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
+.proj-footer{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.proj-more{font-size:12px;color:var(--accent);font-weight:500}
 .proj-featured{grid-column:1/-1;padding:0;overflow:hidden}
 .proj-featured .proj-body{padding:20px}
 .proj-featured .proj-body h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
@@ -78,37 +70,53 @@ section{padding:48px 0;border-top:1px solid var(--line)}
 .proj-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .proj-imgs-strip img{width:100%;height:180px;object-fit:cover;object-position:center;display:block}
 @media(max-width:600px){.proj-imgs-strip img{height:120px}}
-
-/* EXPERIENCE */
 .xp-row{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
 .xp-row:last-child{border-bottom:none}
 .xp-when{font-size:12px;color:var(--accent);font-weight:600;min-width:80px;padding-top:3px;flex-shrink:0}
 .xp-row h3{font-size:15px;font-weight:600;margin-bottom:2px}
 .xp-row .org{font-size:13px;color:var(--ink-2);margin-bottom:5px}
 .xp-row p{font-size:13.5px;color:var(--ink-2);max-width:560px}
-
-/* SKILLS */
 .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .skills span{font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:6px 12px}
-
-/* EDUCATION */
 .edu-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .edu-row:last-child{border-bottom:none}
 .edu-row h3{font-size:15px;font-weight:600}
 .edu-row .deg{font-size:13px;color:var(--ink-2);margin-top:2px}
 .edu-row .yr{font-size:12px;color:var(--accent);font-weight:600;white-space:nowrap}
-
-/* CONTACT */
 .contact-block{padding-bottom:32px}
 .contact-block .big{font-size:clamp(20px,4vw,34px);font-weight:600;letter-spacing:-.02em;margin-bottom:10px}
 .contact-block .big a{color:var(--accent)}
 .contact-block .big a:hover{color:var(--accent-deep)}
 .contact-block .note{font-size:15px;color:var(--ink-2);max-width:520px;margin-bottom:22px}
 .contact-block .flag{font-size:12px;color:var(--ink-3);margin-top:20px}
-
-/* FOOTER */
 footer{padding:24px 0 48px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);flex-wrap:wrap;gap:6px}
+.modal-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.45);overflow-y:auto;padding:40px 16px}
+.modal-overlay.open{display:block}
+.modal{background:var(--card);border-radius:12px;max-width:740px;margin:0 auto;overflow:hidden;position:relative}
+.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink-2);line-height:1;z-index:2;transition:background .15s}
+.modal-close:hover{background:#eee}
+.modal-imgs{border-bottom:1px solid var(--line)}
+.modal-imgs img{width:100%;display:block;max-height:380px;object-fit:cover}
+.modal-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.modal-imgs-strip img{width:100%;height:200px;object-fit:cover;display:block}
+.modal-body{padding:32px 36px 36px}
+@media(max-width:600px){.modal-body{padding:24px 20px 28px}}
+.modal-body .m-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
+.modal-body h2{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
+.modal-body .m-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px}
+.modal-body .m-chips span{font-size:12px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:4px 10px}
+.modal-body .m-section{margin-bottom:26px}
+.modal-body .m-section h3{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.modal-body .m-section p{font-size:14px;color:var(--ink-2);line-height:1.7;margin-bottom:10px}
+.modal-body .m-section p:last-child{margin-bottom:0}
+.modal-body .m-section ul{padding-left:18px;font-size:14px;color:var(--ink-2);line-height:1.75}
+.modal-body .m-section ul li{margin-bottom:4px}
+.modal-actions{display:flex;gap:10px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.modal-actions a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s}
+.modal-actions a:hover{border-color:rgba(0,0,0,.2)}
+.modal-actions a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
+.modal-actions a.solid:hover{background:var(--accent-deep)}
 </style>
 </head>
 <body>
@@ -148,7 +156,8 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
   <div class="label">Selected Work</div>
   <h2 class="sec-title">Projects</h2>
   <div class="grid">
-    <article class="proj proj-featured">
+
+    <article class="proj proj-featured" onclick="openModal('vwing')">
       <div class="proj-imgs">
         <div class="img-main"><img src="vwing_render.jpg" alt="V-Wing UAV Blender render" /></div>
         <div class="proj-imgs-strip">
@@ -158,30 +167,50 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       </div>
       <div class="proj-body">
         <h3>Deployable Tactical V-Wing UAV</h3>
-        <p>Conceptual design and CFD study of a field-deployable composite UAV — drag cost of assembly seams, dihedral–stability tradeoff, start to finish in simulation.</p>
-        <div class="chips"><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span></div>
+        <p>Conceptual design and CFD study of a field-deployable composite UAV. Investigated seam drag cost and dihedral stability tradeoffs from geometry through simulation.</p>
+        <div class="proj-footer">
+          <div class="chips"><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span></div>
+          <span class="proj-more">Read more →</span>
+        </div>
       </div>
     </article>
-    <article class="proj">
+
+    <article class="proj" onclick="openModal('albatross')">
       <h3>ALBATROSS-1 Fixed-Wing UAV</h3>
-      <p>End-to-end design and analysis of a fixed-wing UAV — airframe layout, structures, and aerodynamics as a long-endurance sensing platform study.</p>
-      <div class="chips"><span>Conceptual Design</span><span>Aerodynamics</span><span>Structures</span></div>
+      <p>Full conceptual design cycle for a long-endurance fixed-wing UAV. Airframe sizing, aerodynamic analysis, and structural layout.</p>
+      <div class="proj-footer">
+        <div class="chips"><span>Conceptual Design</span><span>Aerodynamics</span><span>Structures</span></div>
+        <span class="proj-more">Read more →</span>
+      </div>
     </article>
-    <article class="proj">
-      <h3>Nose-Cone Geometry CFD Study</h3>
-      <p>Comparative computational aerodynamics study of nose-cone profiles — meshing, viscous CFD, and post-processing to evaluate drag across geometries.</p>
-      <div class="chips"><span>OpenFOAM</span><span>ParaView</span><span>Meshing</span></div>
+
+    <article class="proj" onclick="openModal('nosecone')">
+      <h3>Nose Cone Geometry CFD Study</h3>
+      <p>Drag comparison across nose cone profiles using OpenFOAM. Meshing, viscous CFD, and ParaView post-processing on multiple geometries.</p>
+      <div class="proj-footer">
+        <div class="chips"><span>OpenFOAM</span><span>ParaView</span><span>Meshing</span></div>
+        <span class="proj-more">Read more →</span>
+      </div>
     </article>
-    <article class="proj">
-      <h3>Thrust-Vector Control Modeling</h3>
-      <p>Simulink-based TVC modeling for the Gaucho Rocket Club — control-loop design and simulation supporting flight-control development and test.</p>
-      <div class="chips"><span>Simulink</span><span>MATLAB</span><span>Controls</span></div>
+
+    <article class="proj" onclick="openModal('tvc')">
+      <h3>Thrust Vector Control Modeling</h3>
+      <p>Simulink TVC model for the Gaucho Rocket Club. Control loop design and simulation to support flight control development and hardware testing.</p>
+      <div class="proj-footer">
+        <div class="chips"><span>Simulink</span><span>MATLAB</span><span>Controls</span></div>
+        <span class="proj-more">Read more →</span>
+      </div>
     </article>
-    <article class="proj">
+
+    <article class="proj" onclick="openModal('picamera')">
       <h3>Raspberry Pi Instant Camera</h3>
-      <p>Self-built instant camera on Raspberry Pi — embedded hardware integration and packaging. The hands-on counterweight to all the simulation work.</p>
-      <div class="chips"><span>Raspberry Pi</span><span>Python</span><span>Embedded</span></div>
+      <p>Self-built instant camera on Raspberry Pi. Embedded hardware, software integration, and physical packaging from scratch.</p>
+      <div class="proj-footer">
+        <div class="chips"><span>Raspberry Pi</span><span>Python</span><span>Embedded</span></div>
+        <span class="proj-more">Read more →</span>
+      </div>
     </article>
+
   </div>
 </section>
 
@@ -194,7 +223,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       <div>
         <h3>Lead Control Systems Test Engineer</h3>
         <div class="org">Gaucho Rocket Club</div>
-        <p>Simulink modeling, test design, and validation for flight-control and thrust-vector systems.</p>
+        <p>Simulink modeling, test design, and validation for flight control and thrust vector systems.</p>
       </div>
     </div>
     <div class="xp-row">
@@ -210,7 +239,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       <div>
         <h3>Lapenta Fellow</h3>
         <div class="org">NOAA</div>
-        <p>High-performance computing and atmospheric-science research.</p>
+        <p>High-performance computing and atmospheric science research.</p>
       </div>
     </div>
     <div class="xp-row">
@@ -218,7 +247,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       <div>
         <h3>Electronics Validation</h3>
         <div class="org">Scripps Institution of Oceanography</div>
-        <p>Electronics validation and instrumentation work in ocean-science systems.</p>
+        <p>Electronics validation and instrumentation work in ocean science systems.</p>
       </div>
     </div>
   </div>
@@ -227,7 +256,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <section id="about" class="wrap reveal">
   <div class="label">About</div>
   <h2 class="sec-title">Background</h2>
-  <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">I like problems that live where structures, aerodynamics, and controls overlap — especially deployable, point-of-need hardware. My path's been non-linear, which means I've gotten real experience across three different technical domains. Currently focused on materials and mechanics heading into SDSU.</p>
+  <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">I like problems that sit at the intersection of structures, aerodynamics, and controls. Especially anything deployable or field-relevant. My path has been nonlinear but that means I've gotten hands-on experience across three pretty different technical domains. Heading into SDSU focused on materials and mechanics.</p>
   <div class="skills">
     <span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Simulink</span><span>MATLAB</span><span>CAD</span><span>Composite Structures</span><span>Blender</span><span>Python</span><span>C / C++</span><span>HPC</span>
   </div>
@@ -238,7 +267,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
   <h2 class="sec-title">Schools</h2>
   <div>
     <div class="edu-row">
-      <div><h3>San Diego State University</h3><div class="deg">B.S. Mechanical Engineering — Materials &amp; Mechanics</div></div>
+      <div><h3>San Diego State University</h3><div class="deg">B.S. Mechanical Engineering, Materials and Mechanics</div></div>
       <div class="yr">Incoming · 2027</div>
     </div>
     <div class="edu-row">
@@ -246,7 +275,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       <div class="yr">Transfer</div>
     </div>
     <div class="edu-row">
-      <div><h3>UC Santa Barbara</h3><div class="deg">Physics &amp; Computer Science coursework</div></div>
+      <div><h3>UC Santa Barbara</h3><div class="deg">Physics and Computer Science coursework</div></div>
       <div class="yr">Foundation</div>
     </div>
   </div>
@@ -255,7 +284,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <section id="contact" class="wrap reveal contact-block">
   <div class="label">Contact</div>
   <div class="big"><a href="mailto:carlomakeever@engineering.ucsb.edu">carlomakeever@<wbr>engineering.ucsb.edu</a></div>
-  <p class="note">Looking for aerospace, controls, or systems work — internships or research. Send me a real problem.</p>
+  <p class="note">Looking for aerospace, controls, or systems work. Internships or research. Send me something real.</p>
   <div class="hlinks">
     <a class="solid" href="mailto:carlomakeever@engineering.ucsb.edu">Email me</a>
     <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
@@ -272,12 +301,218 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
   </div>
 </footer>
 
+<!-- V-WING MODAL -->
+<div class="modal-overlay" id="modal-vwing">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('vwing')">✕</button>
+    <div class="modal-imgs">
+      <div class="img-main"><img src="vwing_render.jpg" alt="V-Wing UAV render" /></div>
+      <div class="modal-imgs-strip">
+        <img src="vwing_cfd.jpg" alt="CFD velocity magnitude" />
+        <img src="vwing_mesh.jpg" alt="OpenVSP mesh" />
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="m-label">Aerodynamics · Structures · CFD</div>
+      <h2>Deployable Tactical V-Wing UAV</h2>
+      <div class="m-chips">
+        <span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span>
+      </div>
+
+      <div class="m-section">
+        <h3>The Problem</h3>
+        <p>Most fixed-wing ISR platforms are way too big or structurally complicated to actually carry and deploy in the field. I wanted to see if a V-wing configuration could be split into sections you could pack out and bolt together on-site without paying a huge aerodynamic penalty for the seams.</p>
+        <p>The reason I went with a flying wing specifically is that you get good span efficiency and no tail drag, which gives you some margin to absorb whatever penalty the seams add. The catch is that flying wings are inherently pitch unstable, so dihedral and sweep are doing a lot of work on the stability side.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Geometry and Configuration</h3>
+        <p>I built everything in OpenVSP, starting with a central fuselage pod that the wing panels attach to. The pod is both the payload housing and the structural spine. I ran a bunch of VSPAERO iterations sweeping dihedral and sweep angle before landing on what you see in the render.</p>
+        <p>Getting the mesh to behave at the wing-pod junction took longer than I expected. OpenVSP's surface mesher produces irregular triangles at blended junctions and my early VSPAERO runs were throwing off-axis moments that didn't match my hand calcs. I had to go back and clean up those intersections before I trusted the panel results.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>CFD and Seam Drag</h3>
+        <p>The CFD ran in OpenFOAM using simpleFoam, steady-state incompressible RANS, k-omega SST turbulence model. The flow domain you can see in the mesh screenshot has the inlet about 3 chord lengths upstream and the outlet 8 chord lengths downstream.</p>
+        <p>I modeled the seams as a surface gap and step discontinuity at the panel joints. My first mesh was bad. The y+ values near the seam were way too high, over 100 in some spots, so the wall treatment wasn't actually resolving the boundary layer where I needed it. I refined the mesh locally around the seam features and reran. The velocity contour shown is from the corrected run.</p>
+        <p>Main finding: seam drag depends a lot on gap width and surface flush. A tight flush joint is manageable. A proud or recessed edge is way worse than the geometry would suggest because of the separation at the step.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Dihedral and Stability</h3>
+        <p>I swept dihedral angle through VSPAERO and looked at static margin and Dutch roll characteristics at each point. More dihedral improves roll stability but pushes the neutral point forward and eats into pitch stability margin. The configuration in the render is the best tradeoff from that sweep.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>What I'd Do Differently</h3>
+        <p>Everything here is simulation only and the CFD hasn't been validated against any physical data. VSPAERO is also inviscid so it misses the separated flow regions I actually care most about. The real next step is building a scaled section and running it in a wind tunnel to get a validation point for the seam drag numbers.</p>
+        <p>I'd also redo the mesh with structured hexahedrals instead of snappyHexMesh. The unstructured approach is faster to set up but the near-wall resolution suffers for the same cell count, which matters a lot for this kind of boundary layer study.</p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="vwing_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ALBATROSS MODAL -->
+<div class="modal-overlay" id="modal-albatross">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('albatross')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">Conceptual Design · Aerodynamics · Structures</div>
+      <h2>ALBATROSS-1 Fixed-Wing UAV</h2>
+      <div class="m-chips">
+        <span>Conceptual Design</span><span>Aerodynamics</span><span>Structures</span><span>OpenVSP</span>
+      </div>
+
+      <div class="m-section">
+        <h3>The Project</h3>
+        <p>ALBATROSS-1 was a full conceptual design study for a long-endurance low-altitude fixed-wing UAV. I wanted to actually work through a complete design cycle from mission requirements to a sized airframe rather than just sketch something and call it a concept.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Design Process</h3>
+        <p>I started from a weight budget and mission profile and worked backward to size the wing using a simplified Breguet range equation. Wing geometry was iterated in OpenVSP to hit the required cruise lift coefficient while keeping the aspect ratio within structural limits for a composite spar.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Aerodynamic Analysis</h3>
+        <p><em>Writeup in progress.</em></p>
+      </div>
+
+      <div class="m-section">
+        <h3>Structural Sizing</h3>
+        <p><em>Writeup in progress.</em></p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="albatross_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NOSE CONE MODAL -->
+<div class="modal-overlay" id="modal-nosecone">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('nosecone')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">CFD · Aerodynamics · Comparative Study</div>
+      <h2>Nose Cone Geometry CFD Study</h2>
+      <div class="m-chips">
+        <span>OpenFOAM</span><span>ParaView</span><span>snappyHexMesh</span>
+      </div>
+
+      <div class="m-section">
+        <h3>The Project</h3>
+        <p>There is a lot of conventional wisdom in rocketry about nose cone geometry but I wanted to actually run the numbers on a controlled set of profiles instead of just trusting Barrowman equations. Direct drag comparison across common nose cone families at the same flow conditions.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>CFD Setup and Results</h3>
+        <p><em>Writeup in progress.</em></p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="nosecone_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TVC MODAL -->
+<div class="modal-overlay" id="modal-tvc">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('tvc')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">Controls · Simulation · Gaucho Rocket Club</div>
+      <h2>Thrust Vector Control Modeling</h2>
+      <div class="m-chips">
+        <span>Simulink</span><span>MATLAB</span><span>Controls</span><span>State-Space</span>
+      </div>
+
+      <div class="m-section">
+        <h3>Context</h3>
+        <p>As lead control systems test engineer for the Gaucho Rocket Club I was responsible for modeling and validating the TVC system for the team's vehicle. TVC is the primary flight control authority during boost. If it doesn't work the vehicle is unstable from liftoff.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>System Model and Control Design</h3>
+        <p><em>Writeup in progress.</em></p>
+      </div>
+
+      <div class="m-section">
+        <h3>Simulation and Testing</h3>
+        <p><em>Writeup in progress.</em></p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="tvc_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PI CAMERA MODAL -->
+<div class="modal-overlay" id="modal-picamera">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('picamera')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">Embedded Systems · Hardware · Python</div>
+      <h2>Raspberry Pi Instant Camera</h2>
+      <div class="m-chips">
+        <span>Raspberry Pi</span><span>Python</span><span>Embedded</span><span>Hardware</span>
+      </div>
+
+      <div class="m-section">
+        <h3>Why I Built This</h3>
+        <p>Most of my work is in simulation. I built this to force myself to deal with real hardware problems. An instant camera is scoped small enough to actually finish but there are enough real integration challenges that you can't just skip the hard parts.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Build and Software</h3>
+        <p><em>Writeup in progress.</em></p>
+      </div>
+
+      <div class="modal-actions">
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 var io = new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+function openModal(id){
+  document.getElementById('modal-'+id).classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(id){
+  document.getElementById('modal-'+id).classList.remove('open');
+  document.body.style.overflow='';
+}
+document.querySelectorAll('.modal-overlay').forEach(function(overlay){
+  overlay.addEventListener('click', function(e){
+    if(e.target===overlay){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+  });
+});
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){
+    document.querySelectorAll('.modal-overlay.open').forEach(function(m){
+      m.classList.remove('open'); document.body.style.overflow='';
+    });
+  }
+});
 </script>
 </body>
 </html>
