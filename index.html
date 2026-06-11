@@ -61,6 +61,10 @@ section{padding:48px 0;border-top:1px solid var(--line)}
 .chips span{font-size:11.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
 .proj-footer{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
 .proj-more{font-size:12px;color:var(--accent);font-weight:500}
+.proj .org-line{font-size:12.5px;color:var(--ink-3);margin:-2px 0 9px;font-weight:500}
+.xp-tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.org-modal{font-size:13px;color:var(--ink-3);margin:-10px 0 20px;font-weight:500;line-height:1.5}
+.m-note{font-size:12.5px;color:var(--ink-3);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:22px;line-height:1.6}
 .proj-featured{grid-column:1/-1;padding:0;overflow:hidden}
 .proj-featured .proj-body{padding:20px}
 .proj-featured .proj-body h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
@@ -144,7 +148,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       <div class="hlinks">
         <a class="solid" href="#work">See my work</a>
         <a href="mailto:carlomakeever@engineering.ucsb.edu">Email</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé</a>
         <a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
@@ -216,49 +220,88 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 
 <section id="experience" class="wrap reveal">
   <div class="label">Experience &amp; Research</div>
-  <h2 class="sec-title">Background</h2>
-  <div>
-    <div class="xp-row">
-      <div class="xp-when">Now</div>
-      <div>
-        <h3>Lead Control Systems Test Engineer</h3>
-        <div class="org">Gaucho Rocket Club</div>
-        <p>Simulink modeling, test design, and validation for flight control and thrust vector systems.</p>
+  <h2 class="sec-title">Where I've worked</h2>
+  <div class="grid">
+
+    <article class="proj proj-featured" onclick="openModal('jpl')">
+      <div class="proj-body">
+        <div class="xp-tag">NASA Jet Propulsion Laboratory · 2025</div>
+        <h3>Curiosity Rover Thermal Diagnostics</h3>
+        <p>Built automated Python tooling for the Curiosity Mars rover's thermal-control subsystem inside a flight-operations environment — replacing manual diagnostics with one pipeline that pulls heating events, computes performance margins, and generates the tactical reports the thermal team posts daily.</p>
+        <div class="proj-footer">
+          <div class="chips"><span>Python</span><span>Systems Integration</span><span>Operational Pipelines</span><span>Automated Reporting</span></div>
+          <span class="proj-more">Read more →</span>
+        </div>
       </div>
-    </div>
-    <div class="xp-row">
-      <div class="xp-when">Research</div>
-      <div>
-        <h3>Thermal Systems Research</h3>
-        <div class="org">NASA Jet Propulsion Laboratory</div>
-        <p>Thermal systems work supporting the Curiosity Mars rover program.</p>
+    </article>
+
+    <article class="proj proj-featured" onclick="openModal('noaa')">
+      <div class="proj-imgs">
+        <div class="img-main"><img src="noaa_regrid.jpg" alt="SFBOFS original netCDF grid resampled onto an interpolated grid" /></div>
+        <div class="proj-imgs-strip">
+          <img src="noaa_stripes.jpg" alt="Relative sea level stripes for Pacific tide stations" />
+          <img src="noaa_interp3d.jpg" alt="3D interpolation surface visualization" />
+        </div>
       </div>
-    </div>
-    <div class="xp-row">
-      <div class="xp-when">Fellowship</div>
-      <div>
-        <h3>Lapenta Fellow</h3>
-        <div class="org">NOAA</div>
-        <p>High-performance computing and atmospheric science research.</p>
+      <div class="proj-body">
+        <div class="xp-tag">NOAA · Lapenta Fellowship · 2024</div>
+        <h3>Operational Forecast Cloud Port</h3>
+        <p>Ported NOAA's San Francisco Bay forecast model from an on-prem supercomputer to the cloud, and built the netCDF→GRIB2 conversion and interpolation tooling to make the data formats line up.</p>
+        <div class="proj-footer">
+          <div class="chips"><span>HPC</span><span>Python / R</span><span>netCDF / GRIB2</span><span>Interpolation</span></div>
+          <span class="proj-more">Read more →</span>
+        </div>
       </div>
-    </div>
-    <div class="xp-row">
-      <div class="xp-when">Research</div>
-      <div>
-        <h3>Electronics Validation</h3>
-        <div class="org">Scripps Institution of Oceanography</div>
-        <p>Electronics validation and instrumentation work in ocean science systems.</p>
+    </article>
+
+    <article class="proj" onclick="openModal('gaucho')">
+      <h3>Lead Control Systems Test Engineer</h3>
+      <div class="org-line">Gaucho Rocket Club · Now</div>
+      <p>Simulink modeling, test design, and validation for flight-control and thrust-vector systems.</p>
+      <div class="proj-footer">
+        <div class="chips"><span>Simulink</span><span>Controls</span><span>Test</span></div>
+        <span class="proj-more">Read more →</span>
       </div>
-    </div>
+    </article>
+
+    <article class="proj" onclick="openModal('scrippshw')">
+      <h3>Ocean Sensor Hardware &amp; Electronics</h3>
+      <div class="org-line">Scripps Institution of Oceanography · 2023</div>
+      <p>CAD housings, electrical schematics, and hands-on calibration for self-calibrating ocean sensors built to survive real deployment.</p>
+      <div class="proj-footer">
+        <div class="chips"><span>CAD</span><span>Electronics</span><span>Field Hardware</span></div>
+        <span class="proj-more">Read more →</span>
+      </div>
+    </article>
+
+    <article class="proj proj-featured" onclick="openModal('cce')">
+      <div class="proj-imgs">
+        <div class="img-main"><img src="cce_temp.jpg" alt="Modeled upper-ocean temperature across the California Current" /></div>
+        <div class="proj-imgs-strip">
+          <img src="cce_diatoms.jpg" alt="Modeled diatom concentration, California Current" />
+          <img src="cce_zoo.jpg" alt="Modeled zooplankton concentration, California Current" />
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="xp-tag">Scripps · CCE-LTER REU · 2023</div>
+        <h3>California Current Ecosystem Modeling</h3>
+        <p>Learned MATLAB to read large ocean-model output and build seasonal-cycle visualizations linking physical drivers — upwelling, El Niño — to ecological response across temperature and plankton types.</p>
+        <div class="proj-footer">
+          <div class="chips"><span>MATLAB</span><span>Scientific Computing</span><span>Data Viz</span></div>
+          <span class="proj-more">Read more →</span>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
 <section id="about" class="wrap reveal">
   <div class="label">About</div>
   <h2 class="sec-title">Background</h2>
-  <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">I like problems that sit at the intersection of structures, aerodynamics, and controls. Especially anything deployable or field-relevant. My path has been nonlinear but that means I've gotten hands-on experience across three pretty different technical domains. Heading into SDSU focused on materials and mechanics.</p>
+  <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">My background is a little unusual for someone heading into a mechanical engineering program: most of my hands-on work so far has been in flight software, high-performance computing, and sensor hardware — at JPL, NOAA, and Scripps — rather than in a machine shop. What ties it together is systems thinking. I like getting separate pieces to work as one reliable thing, whether that's a thermal-diagnostics pipeline on a Mars rover or a deployable UAV. I'm at SDSU now to push deeper into mechanics and materials and aim all of it at aerospace.</p>
   <div class="skills">
-    <span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Simulink</span><span>MATLAB</span><span>CAD</span><span>Composite Structures</span><span>Blender</span><span>Python</span><span>C / C++</span><span>HPC</span>
+    <span>Python</span><span>MATLAB</span><span>R</span><span>C / C++</span><span>Simulink</span><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Blender</span><span>CAD</span><span>Composite Structures</span><span>Elasticsearch</span><span>HPC</span><span>Linux</span><span>Git</span><span>Numerical Modeling</span>
   </div>
 </section>
 
@@ -289,7 +332,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
     <a class="solid" href="mailto:carlomakeever@engineering.ucsb.edu">Email me</a>
     <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
-    <a href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    <a href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé</a>
   </div>
   <div class="flag">U.S. Citizen · DoD Secret clearance eligible</div>
 </section>
@@ -480,6 +523,180 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
         <p><em>Writeup in progress.</em></p>
       </div>
 
+      <div class="modal-actions">
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JPL MODAL -->
+<div class="modal-overlay" id="modal-jpl">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('jpl')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">Flight Operations · Systems · Python</div>
+      <h2>Curiosity Rover Thermal Diagnostics</h2>
+      <div class="org-modal">NASA Jet Propulsion Laboratory — Mars Science Laboratory · Summer 2025</div>
+      <div class="m-chips">
+        <span>Python</span><span>Systems Integration</span><span>Operational Data Pipelines</span><span>Elasticsearch</span><span>Automated Reporting</span>
+      </div>
+
+      <div class="m-section">
+        <h3>The Problem</h3>
+        <p>On an active Mars mission, the thermal team has to keep rover components inside tight temperature limits, which means constant "preheat" diagnostics. That data was scattered across systems and validated by hand, and there was no standard way to see long-term trends — slow, and easy to get wrong.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>What I Built</h3>
+        <p>Three modular Python tools that together form one pipeline: pull the relevant heating events from the operations database, compute performance margins automatically, and generate the formatted tactical reports the thermal team posts. I replaced an older manual workflow with a native Python implementation and put the whole thing on an automated schedule so it runs without anyone touching it.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Working in Flight Ops</h3>
+        <p>The harder half was integration. Everything had to slot into existing flight-operations infrastructure and match the team's conventions and config structures. I spent real time fighting environment and dependency issues across different machines before it ran cleanly end to end, working alongside thermal, operations, and systems engineers to get it right.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Impact</h3>
+        <p>Every heating event now gets automatic margin and efficiency metrics and shows up in the daily operational reports with no manual data entry. The work is continuing toward a single consolidated thermal data index and a dashboard.</p>
+      </div>
+
+      <div class="m-note">This project involves export-controlled mission data, so the description here is intentionally high-level. Technical specifics, schematics, and internal tooling are omitted.</div>
+
+      <div class="modal-actions">
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NOAA MODAL -->
+<div class="modal-overlay" id="modal-noaa">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('noaa')">✕</button>
+    <div class="modal-imgs">
+      <div class="img-main"><img src="noaa_regrid.jpg" alt="SFBOFS original netCDF grid vs interpolated GRIB-style grid" /></div>
+      <div class="modal-imgs-strip">
+        <img src="noaa_stripes.jpg" alt="Relative sea level stripes for La Jolla, San Diego, Honolulu, Kodiak Island" />
+        <img src="noaa_interp3d.jpg" alt="3D interpolation surface and nearest-neighbor grid" />
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="m-label">HPC · Operational Forecasting · Scientific Computing</div>
+      <h2>Operational Forecast Cloud Port</h2>
+      <div class="org-modal">NOAA — Center for Operational Oceanographic Products &amp; Services · William M. Lapenta Fellowship · 2024</div>
+      <div class="m-chips">
+        <span>Python</span><span>R</span><span>HPC</span><span>netCDF / GRIB2</span><span>Interpolation</span>
+      </div>
+
+      <div class="m-section">
+        <h3>The Problem</h3>
+        <p>NOAA's San Francisco Bay Operational Forecast System (SFBOFS) ran on an on-premise supercomputer. The goal was to get it running on the National Ocean Service cloud sandbox, which meant moving the model and reconciling some awkward data-format differences along the way.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>HPC → Cloud Port</h3>
+        <p>I ported the system from the on-prem NOAA HPC to the cloud sandbox, reusing the existing finite-element mesh and grid. From there I ran SFBOFS under different forcing conditions and looked at how water level, currents, temperature, and salinity responded — including a comparison of global-model versus regional-model forcing to see which performed better.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Data-Format Tooling: netCDF → GRIB2</h3>
+        <p>A big chunk of the work was format conversion. I helped build one of the first netCDF-to-GRIB2 converters for the group, in Python and R. The hard part is regridding: the source data lives on an unstructured, CDF-style grid and GRIB2 wants a regular grid, so I implemented the interpolation — nearest-neighbor and bilinear — to move values across without distorting them. The plot above shows the original grid resampled onto the target grid.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Side Build: Sea Level Stripes</h3>
+        <p>I also built a small tool that pulls hourly water-level data from the NOAA API, resamples it to monthly means, and renders long-term trends as "climate stripes" per tide station. The four-panel image shows relative sea level at La Jolla, San Diego, Honolulu, and Kodiak Island from the early 1900s to today.</p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="https://tidesandcurrents.noaa.gov/" target="_blank" rel="noopener">NOAA CO-OPS</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GAUCHO MODAL -->
+<div class="modal-overlay" id="modal-gaucho">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('gaucho')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">Controls · Test · Flight Systems</div>
+      <h2>Lead Control Systems Test Engineer</h2>
+      <div class="org-modal">Gaucho Rocket Club · Current</div>
+      <div class="m-chips">
+        <span>Simulink</span><span>MATLAB</span><span>Controls</span><span>Test &amp; Validation</span>
+      </div>
+      <div class="m-section">
+        <h3>Role</h3>
+        <p>I lead control-systems testing for the club's flight-control and thrust-vector work: building the Simulink models, designing the tests that exercise them, and validating results against expected behavior before anything goes near hardware.</p>
+      </div>
+      <div class="m-section">
+        <h3>Related Project</h3>
+        <p>The thrust-vector control modeling in my Selected Work came out of this role — closed-loop TVC simulation to support flight-control development and hardware testing.</p>
+      </div>
+      <div class="modal-actions">
+        <a href="#work">See TVC project</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPPS HARDWARE MODAL -->
+<div class="modal-overlay" id="modal-scrippshw">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('scrippshw')">✕</button>
+    <div class="modal-body">
+      <div class="m-label">Hardware · Electronics · CAD</div>
+      <h2>Ocean Sensor Hardware &amp; Electronics</h2>
+      <div class="org-modal">Scripps Institution of Oceanography · 2023</div>
+      <div class="m-chips">
+        <span>CAD</span><span>Electrical Schematics</span><span>Sensor Calibration</span><span>Field Hardware</span>
+      </div>
+      <div class="m-section">
+        <h3>What I Did</h3>
+        <p>I designed CAD models for sensor housings and structural components used in marine instrumentation, and helped develop the wiring diagrams and electrical schematics for self-calibrating ocean sensors.</p>
+      </div>
+      <div class="m-section">
+        <h3>Hands-On</h3>
+        <p>I calibrated sensors against lab test systems to keep measurements honest, troubleshot pressure-housing seal failures and sensor-communication faults, and verified field-readiness against the things that actually break ocean hardware: saltwater corrosion, biofouling, and pressure. It's where I learned how much of real engineering is integration constraints rather than the ideal design.</p>
+      </div>
+      <div class="modal-actions">
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CCE MODAL -->
+<div class="modal-overlay" id="modal-cce">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('cce')">✕</button>
+    <div class="modal-imgs">
+      <div class="img-main"><img src="cce_temp.jpg" alt="Modeled upper-ocean temperature across the California Current" /></div>
+      <div class="modal-imgs-strip">
+        <img src="cce_diatoms.jpg" alt="Modeled diatom concentration, California Current" />
+        <img src="cce_zoo.jpg" alt="Modeled zooplankton concentration, California Current" />
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="m-label">Scientific Computing · Modeling · MATLAB</div>
+      <h2>California Current Ecosystem Modeling</h2>
+      <div class="org-modal">Scripps Institution of Oceanography — CCE-LTER REU, Dr. Art Miller's lab · 2023</div>
+      <div class="m-chips">
+        <span>MATLAB</span><span>Numerical Models</span><span>Data Visualization</span><span>Statistics</span>
+      </div>
+      <div class="m-section">
+        <h3>The Work</h3>
+        <p>I worked with output from a regional ocean model of the California Current — POP for the physics, COBALT biogeochemistry, MARBL ecology. I picked up MATLAB to read the large model-output files, then built seasonal-cycle "snapshots" and animations across temperature and the different plankton types: diatoms, small phytoplankton, coccolithophores, diazotrophs, and zooplankton.</p>
+      </div>
+      <div class="m-section">
+        <h3>What It Showed</h3>
+        <p>By averaging by month and computing anomalies, I could line up physical drivers with ecological response: coldest coastal water during spring upwelling, diatom blooms tracking those upwelling nutrients, and clearly different offshore-versus-coastal phytoplankton regimes. The maps shown are from my own model output — temperature, diatoms, and zooplankton.</p>
+      </div>
       <div class="modal-actions">
         <a href="#contact">Get in touch</a>
       </div>
