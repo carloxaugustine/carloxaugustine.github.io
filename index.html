@@ -24,7 +24,7 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
 nav{position:sticky;top:0;z-index:40;background:rgba(246,246,244,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
 .logo{font-size:15px;font-weight:600;letter-spacing:-.01em}
@@ -46,31 +46,31 @@ header{padding:64px 0 52px}
 .hlinks a:hover{border-color:rgba(0,0,0,.2);box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .hlinks a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
 .hlinks a.solid:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
-section{padding:48px 0;border-top:1px solid var(--line)}
+section{padding:64px 0;border-top:1px solid var(--line)}
 .label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
 .sec-title{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:28px}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;cursor:pointer;transition:box-shadow .2s,transform .2s}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;cursor:pointer;transition:box-shadow .2s,transform .2s}
 .proj:hover{box-shadow:0 4px 20px rgba(0,0,0,.1);transform:translateY(-2px)}
 .proj h3{font-size:15px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
 .proj p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips span{font-size:11.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
-.proj-footer{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.proj-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:18px;flex-wrap:wrap}
 .proj-more{font-size:12px;color:var(--accent);font-weight:500}
 .proj .org-line{font-size:12.5px;color:var(--ink-3);margin:-2px 0 9px;font-weight:500}
 .xp-tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
 .org-modal{font-size:13px;color:var(--ink-3);margin:-10px 0 20px;font-weight:500;line-height:1.5}
 .m-note{font-size:12.5px;color:var(--ink-3);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:22px;line-height:1.6}
 .proj-featured{grid-column:1/-1;padding:0;overflow:hidden}
-.proj-featured .proj-body{padding:20px}
+.proj-featured .proj-body{padding:26px 28px 28px}
 .proj-featured .proj-body h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
 .proj-featured .proj-body p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
 .proj-imgs{display:grid;gap:2px;border-bottom:1px solid var(--line)}
-.proj-imgs .img-main img{width:100%;max-height:340px;object-fit:cover;object-position:center;display:block}
+.proj-imgs .img-main img{width:100%;max-height:520px;object-fit:contain;object-position:center;display:block;background:#f8fafc}
 .proj-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .proj-imgs-strip img{width:100%;height:180px;object-fit:cover;object-position:center;display:block}
 @media(max-width:600px){.proj-imgs-strip img{height:120px}}
@@ -97,30 +97,42 @@ footer{padding:24px 0 48px;border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);flex-wrap:wrap;gap:6px}
 .modal-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.45);overflow-y:auto;padding:40px 16px}
 .modal-overlay.open{display:block}
-.modal{background:var(--card);border-radius:12px;max-width:740px;margin:0 auto;overflow:hidden;position:relative}
+.modal{background:var(--card);border-radius:14px;max-width:900px;margin:0 auto;overflow:hidden;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.22)}
 .modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink-2);line-height:1;z-index:2;transition:background .15s}
 .modal-close:hover{background:#eee}
 .modal-imgs{border-bottom:1px solid var(--line)}
-.modal-imgs img{width:100%;display:block;max-height:380px;object-fit:cover}
+.modal-imgs img{width:100%;display:block;max-height:620px;object-fit:contain;background:#f8fafc}
 .modal-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
 .modal-imgs-strip img{width:100%;height:200px;object-fit:cover;display:block}
-.modal-body{padding:32px 36px 36px}
+.modal-body{padding:40px 46px 46px}
 @media(max-width:600px){.modal-body{padding:24px 20px 28px}}
 .modal-body .m-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
 .modal-body h2{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
 .modal-body .m-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px}
 .modal-body .m-chips span{font-size:12px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:4px 10px}
-.modal-body .m-section{margin-bottom:26px}
+.modal-body .m-section{margin-bottom:32px}
 .modal-body .m-section h3{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.modal-body .m-section p{font-size:14px;color:var(--ink-2);line-height:1.7;margin-bottom:10px}
+.modal-body .m-section p{font-size:14.5px;color:var(--ink-2);line-height:1.78;margin-bottom:13px}
 .modal-body .m-section p:last-child{margin-bottom:0}
-.modal-body .m-section ul{padding-left:18px;font-size:14px;color:var(--ink-2);line-height:1.75}
+.modal-body .m-section ul{padding-left:20px;font-size:14.5px;color:var(--ink-2);line-height:1.78}
 .modal-body .m-section ul li{margin-bottom:4px}
 .modal-actions{display:flex;gap:10px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 .modal-actions a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s}
 .modal-actions a:hover{border-color:rgba(0,0,0,.2)}
 .modal-actions a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
 .modal-actions a.solid:hover{background:var(--accent-deep)}
+
+.project-status{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;padding:5px 9px;border-radius:999px;margin-bottom:12px}
+.project-status.current{background:#fff4dc;color:#8a5400;border:1px solid #efd39c}
+.project-status.validated{background:#eaf6ee;color:#17663a;border:1px solid #bfdfca}
+.status-list{display:grid;gap:10px;margin-top:12px}
+.status-item{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.status-item:last-child{border-bottom:none}
+.status-item b{font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.status-item span{font-size:14px;color:var(--ink-2);line-height:1.65}
+.eq{font-family:Georgia,'Times New Roman',serif;font-size:18px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;color:var(--ink);overflow-x:auto}
+@media(max-width:600px){.status-item{grid-template-columns:1fr;gap:4px}.wrap{padding-left:18px;padding-right:18px}section{padding:48px 0}}
+
 </style>
 </head>
 <body>
@@ -160,6 +172,38 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
   <div class="label">Selected Work</div>
   <h2 class="sec-title">Projects</h2>
   <div class="grid">
+
+    <article class="proj proj-featured" onclick="openModal('mwir')">
+      <div class="proj-imgs">
+        <div class="img-main"><img src="mwir_coating_current_status.png" alt="Current MWIR coating optimization research workflow and status" /></div>
+      </div>
+      <div class="proj-body">
+        <div class="project-status current">Thermal coupling in progress</div>
+        <h3>Trajectory-Integrated MWIR Coating Optimization</h3>
+        <div class="org-line">SDSU Aerospace Materials Research · Current</div>
+        <p>Building a Python transfer-matrix and differential-evolution workflow for lightweight all-dielectric coatings, then coupling it to transient ANSYS temperature histories to compare trajectory-aware designs against fixed-temperature baselines.</p>
+        <div class="proj-footer">
+          <div class="chips"><span>Python</span><span>TMM</span><span>Differential Evolution</span><span>ANSYS</span><span>Thermal Modeling</span></div>
+          <span class="proj-more">Current status →</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj proj-featured" onclick="openModal('mote2')">
+      <div class="proj-imgs">
+        <div class="img-main"><img src="mote2_radiation_current_status.png" alt="Current MoTe2 DFT validation workflow and research status" /></div>
+      </div>
+      <div class="proj-body">
+        <div class="project-status current">DFT validation in progress</div>
+        <h3>MoTe₂ Phase Switching Under Radiation</h3>
+        <div class="org-line">SDSU Computational Materials Research Lab · Current</div>
+        <p>Establishing a defensible DFT baseline for the 2H and 1T′ phases of MoTe₂ before validating a machine-learned interatomic potential and eventually studying radiation-driven defects and switching reliability.</p>
+        <div class="proj-footer">
+          <div class="chips"><span>DFT</span><span>Python / ASE</span><span>MLIP</span><span>HPC</span><span>Materials Modeling</span></div>
+          <span class="proj-more">Current status →</span>
+        </div>
+      </div>
+    </article>
 
     <article class="proj proj-featured" onclick="openModal('vwing')">
       <div class="proj-imgs">
@@ -301,7 +345,7 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
   <h2 class="sec-title">Background</h2>
   <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">I admit my background looks unusual, it really is a set of separate systems. Most of my hands-on work has been in high-performance computing, sensor hardware, and flight software. At its core, I think that makes me a systems engineer: ever since I was a kid, connecting the pieces, experimenting, learning about how things work and why; this is what I find interesting, and that's still my foundation. I'm at SDSU now to push deeper into mechanics and materials and point all of it at something that I can build and be proud of, which is why aerospace interests me so much and I believe is my calling.</p>
   <div class="skills">
-    <span>Python</span><span>MATLAB</span><span>R</span><span>C / C++</span><span>Simulink</span><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Blender</span><span>CAD</span><span>Composite Structures</span><span>Elasticsearch</span><span>HPC</span><span>Linux</span><span>Git</span><span>Numerical Modeling</span>
+    <span>Python</span><span>MATLAB</span><span>R</span><span>C / C++</span><span>Simulink</span><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Blender</span><span>CAD</span><span>Composite Structures</span><span>Elasticsearch</span><span>HPC</span><span>Linux</span><span>Git</span><span>Numerical Modeling</span><span>ANSYS Mechanical</span><span>Transfer Matrix Method</span><span>Computational Materials</span>
   </div>
 </section>
 
@@ -343,6 +387,122 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
     <span>San Diego, CA</span>
   </div>
 </footer>
+
+
+<!-- MWIR COATING MODAL -->
+<div class="modal-overlay" id="modal-mwir">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('mwir')">✕</button>
+    <div class="modal-imgs">
+      <img src="mwir_coating_current_status.png" alt="MWIR coating optimization current research status" />
+    </div>
+    <div class="modal-body">
+      <div class="m-label">Optical Modeling · Optimization · Transient Thermal Analysis</div>
+      <h2>Trajectory-Integrated MWIR Coating Optimization</h2>
+      <div class="org-modal">SDSU Aerospace Materials Research · Current</div>
+      <div class="m-chips">
+        <span>Python</span><span>Transfer Matrix Method</span><span>Differential Evolution</span><span>ANSYS Mechanical</span><span>Thermal Radiation</span>
+      </div>
+
+      <div class="m-section">
+        <h3>Research Question</h3>
+        <p>Most multilayer infrared-coating studies optimize at one temperature or collapse a changing thermal history into a simplified representative condition. My project asks whether optimizing directly against the full surface-temperature trajectory produces a meaningfully better MWIR signature-reduction coating.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Completed Optical Work</h3>
+        <ul>
+          <li>Built a custom Python transfer-matrix solver for multilayer optical stacks.</li>
+          <li>Integrated differential evolution to search layer materials and thicknesses.</li>
+          <li>Benchmarked the solver against published transfer-matrix results from Xi et al. (2023).</li>
+          <li>Validated temperature-dependent optical behavior using a VO₂ phase-change absorber across its insulator-to-metal transition.</li>
+        </ul>
+      </div>
+
+      <div class="m-section">
+        <h3>Objective Formulation</h3>
+        <p>The current optical baseline trades MWIR emissivity against coating mass:</p>
+        <div class="eq">J = w<sub>ε</sub> ε̄<sub>MWIR</sub> + w<sub>m</sub>(m/A)</div>
+        <p>The transient branch will replace the single-temperature optical term with time-integrated spectral radiance along the simulated surface-temperature history. That coupling is the research contribution currently being implemented; I am not claiming a trajectory-level performance result yet.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Transient ANSYS Branch — Current Status</h3>
+        <div class="status-list">
+          <div class="status-item"><b>Defined</b><span>Element configuration, thermal-mass properties, boundary-condition strategy, adaptive time stepping, and temperature-output requirements.</span></div>
+          <div class="status-item"><b>In progress</b><span>Building the transient thermal model using a layered shell or through-thickness solid representation and resolving the surface/laminate temperature history.</span></div>
+          <div class="status-item"><b>Next</b><span>Export T(x,t) to the Python TMM kernel and evaluate spectral emissivity and radiance at each time step.</span></div>
+          <div class="status-item"><b>Comparison</b><span>Benchmark trajectory-aware optimization against fixed-temperature and uniformly weighted temperature baselines.</span></div>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h3>My Exact Contribution</h3>
+        <p>I developed the optical solver and optimization workflow, performed the literature benchmark and VO₂ validation, and architected the transient ANSYS-to-Python coupling. The transient thermal simulations and trajectory comparison are current work, not completed results.</p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="mwir_coating_current_status.png" target="_blank" rel="noopener">Open project graphic</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOTE2 MODAL -->
+<div class="modal-overlay" id="modal-mote2">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('mote2')">✕</button>
+    <div class="modal-imgs">
+      <img src="mote2_radiation_current_status.png" alt="MoTe2 radiation project current research status" />
+    </div>
+    <div class="modal-body">
+      <div class="m-label">Computational Materials · DFT · Radiation Damage</div>
+      <h2>MoTe₂ Phase Switching Under Radiation</h2>
+      <div class="org-modal">SDSU Computational Materials Research Lab · Current</div>
+      <div class="m-chips">
+        <span>DFT</span><span>Python</span><span>ASE</span><span>MLIP Validation</span><span>HPC</span>
+      </div>
+
+      <div class="m-section">
+        <h3>Physical Problem</h3>
+        <p>MoTe₂ can reversibly switch between the semiconducting 2H phase and metallic 1T′ phase, making it a candidate for non-volatile phase-change memory. In a spacecraft environment, displacement damage and vacancy accumulation may shift phase stability, alter switching barriers, and eventually make the device unreliable.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Current Work — DFT Baseline</h3>
+        <p>I now have relaxed structures for both phases. Initial checks give a 1T′–2H energy difference of 43 meV per formula unit, with 2H lower, and a 1T′ Mo–Mo dimer distance of 2.89 Å. Those numbers are close to the expected published behavior, but they are preliminary rather than final validation.</p>
+        <p>The first calculations used a 300 eV cutoff and fixed cells, so I am preparing matched reruns at 500 eV with 18 Å vacuum and ISIF = 3. This removes inherited cell strain and makes the phase-energy comparison defensible.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Planned Workflow</h3>
+        <div class="status-list">
+          <div class="status-item"><b>Completed</b><span>Relaxed 2H and 1T′ structures and performed initial phase-ordering, lattice, and dimerization checks.</span></div>
+          <div class="status-item"><b>Current</b><span>Run converged, matched DFT calculations and verify energy normalization per formula unit.</span></div>
+          <div class="status-item"><b>Next</b><span>Validate the Shuang machine-learned interatomic potential against DFT energies, forces, structures, and phase ordering.</span></div>
+          <div class="status-item"><b>Later</b><span>Test short-range behavior, add screened repulsion if required, then run radiation-damage molecular dynamics and map switching degradation.</span></div>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h3>My Exact Contribution</h3>
+        <p>I am interpreting and validating the relaxed structures, normalizing phase energies, checking the defining 1T′ dimerization, defining the higher-fidelity rerun protocol, and building the Python/ASE validation workflow that will gate all later MLIP and cascade work.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Intended Application</h3>
+        <p>The long-term goal is a physics-based design map for low-power, non-volatile MoTe₂ memory that retains reliable switching as radiation defects accumulate. No MLIP training, radiation cascade simulation, or final device-performance claim is presented as completed work yet.</p>
+      </div>
+
+      <div class="modal-actions">
+        <a class="solid" href="mote2_radiation_current_status.png" target="_blank" rel="noopener">Open project graphic</a>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- V-WING MODAL -->
 <div class="modal-overlay" id="modal-vwing">

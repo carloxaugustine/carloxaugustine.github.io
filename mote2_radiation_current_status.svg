@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1150" viewBox="0 0 1600 1150">
+<rect width="1600" height="1150" fill="#F7F8FA"/>
+<rect x="34" y="28" width="1532" height="116" rx="24" fill="#17663A"/>
+<text x="70" y="84" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700" fill="#FFFFFF" text-anchor="start">MoTe₂ Phase Switching Under Radiation</text>
+<text x="70" y="122" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="400" fill="#DBF2E5" text-anchor="start">DFT baseline development for radiation-hardened, non-volatile spacecraft memory</text>
+<rect x="1194" y="62" width="326" height="42" rx="21" fill="#E4F5EA"/><text x="1357.0" y="91" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#17663A" text-anchor="middle">Current stage: DFT validation</text>
+<rect x="34" y="168" width="474" height="414" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="66" y="212" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#17663A" text-anchor="start">1. Physical problem</text>
+<text x="66" y="252" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="400" fill="#5B6473">
+<tspan x="66" dy="0">MoTe₂ can switch between</tspan>
+<tspan x="66" dy="31">semiconducting 2H and metallic 1T′</tspan>
+<tspan x="66" dy="31">phases. Radiation-created defects</tspan>
+<tspan x="66" dy="31">may alter phase stability, switching</tspan>
+<tspan x="66" dy="31">barriers, and retention.</tspan>
+</text>
+<rect x="70" y="392" width="170" height="92" rx="18" fill="#EEF4FF" stroke="#B8CDEF" stroke-width="2"/>
+<text x="155" y="430" font-family="Inter,Arial,sans-serif" font-size="29" font-weight="700" fill="#1A4FAF" text-anchor="middle">2H</text>
+<text x="155" y="463" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="500" fill="#5B6473" text-anchor="middle">Semiconducting</text>
+<line x1="262" y1="438" x2="336" y2="438" stroke="#17663A" stroke-width="5" stroke-linecap="round"/><polygon points="336,438 320,428 320,448" fill="#17663A"/>
+<rect x="358" y="392" width="118" height="92" rx="18" fill="#EDF8F1" stroke="#AFD5BE" stroke-width="2"/>
+<text x="417" y="430" font-family="Inter,Arial,sans-serif" font-size="29" font-weight="700" fill="#17663A" text-anchor="middle">1T′</text>
+<text x="417" y="463" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="500" fill="#5B6473" text-anchor="middle">Metallic</text>
+<text x="66" y="526" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#17663A" text-anchor="start">Research target</text>
+<text x="66" y="554" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033">
+<tspan x="66" dy="0">Determine when accumulated radiation</tspan>
+<tspan x="66" dy="27">damage prevents reliable switching.</tspan>
+</text>
+<rect x="528" y="168" width="500" height="414" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="560" y="212" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#17663A" text-anchor="start">2. Current evidence</text>
+<rect x="560" y="238" width="350" height="42" rx="21" fill="#FFF3D5"/><text x="735.0" y="267" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#A86400" text-anchor="middle">INITIAL CHECKS — NOT FINAL</text>
+<circle cx="566" cy="317" r="5" fill="#17663A"/>
+<text x="582" y="324" font-family="Inter,Arial,sans-serif" font-size="20" fill="#5B6473">
+<tspan x="582" dy="0">Relaxed structures obtained for both 2H</tspan>
+<tspan x="582" dy="28">and 1T′ phases.</tspan>
+</text>
+<circle cx="566" cy="385" r="5" fill="#17663A"/>
+<text x="582" y="392" font-family="Inter,Arial,sans-serif" font-size="20" fill="#5B6473">
+<tspan x="582" dy="0">Initial ΔE = 43 meV per formula unit,</tspan>
+<tspan x="582" dy="28">with 2H lower.</tspan>
+</text>
+<circle cx="566" cy="453" r="5" fill="#17663A"/>
+<text x="582" y="460" font-family="Inter,Arial,sans-serif" font-size="20" fill="#5B6473">
+<tspan x="582" dy="0">1T′ Mo–Mo dimerization = 2.89 Å,</tspan>
+<tspan x="582" dy="28">consistent with the distorted phase.</tspan>
+</text>
+<circle cx="566" cy="521" r="5" fill="#17663A"/>
+<text x="582" y="528" font-family="Inter,Arial,sans-serif" font-size="20" fill="#5B6473">
+<tspan x="582" dy="0">Initial runs used a 300 eV cutoff and</tspan>
+<tspan x="582" dy="28">fixed cells; converged reruns are required.</tspan>
+</text>
+<rect x="1048" y="168" width="518" height="414" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="1080" y="212" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#17663A" text-anchor="start">3. Converged rerun specification</text>
+<rect x="1080" y="244" width="454" height="52" rx="12" fill="#EDF8F1" stroke="#C5E0D0"/>
+<text x="1100" y="277" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#17663A" text-anchor="start">ENCUT</text>
+<text x="1510" y="277" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033" text-anchor="end">500 eV</text>
+<rect x="1080" y="304" width="454" height="52" rx="12" fill="#EDF8F1" stroke="#C5E0D0"/>
+<text x="1100" y="337" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#17663A" text-anchor="start">Vacuum</text>
+<text x="1510" y="337" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033" text-anchor="end">18 Å</text>
+<rect x="1080" y="364" width="454" height="52" rx="12" fill="#EDF8F1" stroke="#C5E0D0"/>
+<text x="1100" y="397" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#17663A" text-anchor="start">Cell relaxation</text>
+<text x="1510" y="397" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033" text-anchor="end">ISIF = 3</text>
+<rect x="1080" y="424" width="454" height="52" rx="12" fill="#EDF8F1" stroke="#C5E0D0"/>
+<text x="1100" y="457" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#17663A" text-anchor="start">Comparison</text>
+<text x="1510" y="457" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033" text-anchor="end">Energy / formula unit</text>
+<rect x="1080" y="484" width="454" height="52" rx="12" fill="#EDF8F1" stroke="#C5E0D0"/>
+<text x="1100" y="517" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#17663A" text-anchor="start">Checks</text>
+<text x="1510" y="517" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033" text-anchor="end">Lattice, dimerization, ΔE</text>
+<text x="1080" y="548" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#5B6473">
+<tspan x="1080" dy="0">Purpose: remove inherited strain and numerical</tspan>
+<tspan x="1080" dy="25">uncertainty before any MLIP or cascade work.</tspan>
+</text>
+<rect x="34" y="606" width="1532" height="264" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="66" y="650" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#17663A" text-anchor="start">4. Research workflow and actual status</text>
+<rect x="70" y="690" width="230" height="132" rx="18" fill="#E8F6EE" stroke="#D9E0EA" stroke-width="2"/>
+<text x="185.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Relax structures</text>
+<rect x="90" y="754" width="98" height="42" rx="21" fill="#FFFFFF"/><text x="139.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#17663A" text-anchor="middle">DONE</text>
+<line x1="312" y1="756" x2="336" y2="756" stroke="#17663A" stroke-width="5" stroke-linecap="round"/><polygon points="336,756 320,746 320,766" fill="#17663A"/>
+<rect x="350" y="690" width="254" height="132" rx="18" fill="#FFF4DC" stroke="#D9E0EA" stroke-width="2"/>
+<text x="477.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Converged DFT reruns</text>
+<rect x="370" y="754" width="98" height="42" rx="21" fill="#FFFFFF"/><text x="419.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#A86400" text-anchor="middle">CURRENT</text>
+<line x1="616" y1="756" x2="640" y2="756" stroke="#8A99AF" stroke-width="5" stroke-linecap="round"/><polygon points="640,756 624,746 624,766" fill="#8A99AF"/>
+<rect x="654" y="690" width="250" height="132" rx="18" fill="#EEF4FF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="779.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Validate Shuang MTP</text>
+<rect x="674" y="754" width="98" height="42" rx="21" fill="#FFFFFF"/><text x="723.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#1A4FAF" text-anchor="middle">NEXT</text>
+<line x1="916" y1="756" x2="950" y2="756" stroke="#8A99AF" stroke-width="5" stroke-linecap="round"/><polygon points="950,756 934,746 934,766" fill="#8A99AF"/>
+<rect x="964" y="690" width="250" height="132" rx="18" fill="#F2F3F5" stroke="#D9E0EA" stroke-width="2"/>
+<text x="1089.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Short-range / ZBL check</text>
+<rect x="984" y="754" width="98" height="42" rx="21" fill="#FFFFFF"/><text x="1033.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#5B6473" text-anchor="middle">LATER</text>
+<line x1="1226" y1="756" x2="1236" y2="756" stroke="#8A99AF" stroke-width="5" stroke-linecap="round"/><polygon points="1236,756 1220,746 1220,766" fill="#8A99AF"/>
+<rect x="1250" y="690" width="246" height="132" rx="18" fill="#F2F3F5" stroke="#D9E0EA" stroke-width="2"/>
+<text x="1373.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Radiation-damage MD</text>
+<rect x="1270" y="754" width="98" height="42" rx="21" fill="#FFFFFF"/><text x="1319.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#5B6473" text-anchor="middle">LATER</text>
+<rect x="34" y="894" width="742" height="220" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="66" y="938" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#17663A" text-anchor="start">My exact contribution</text>
+<text x="66" y="977" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="400" fill="#5B6473">
+<tspan x="66" dy="0">Interpreting the relaxed structures, normalizing phase energies,</tspan>
+<tspan x="66" dy="29">checking 1T′ dimerization, defining the converged rerun protocol,</tspan>
+<tspan x="66" dy="29">and building the Python/ASE validation plan.</tspan>
+</text>
+<text x="66" y="1082" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#A86400" text-anchor="start">MLIP training and radiation-damage MD are not presented as completed.</text>
+<rect x="796" y="894" width="770" height="220" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="828" y="938" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#17663A" text-anchor="start">Intended application</text>
+<text x="828" y="977" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="400" fill="#5B6473">
+<tspan x="828" dy="0">A physics-based design map for low-power, non-volatile MoTe₂ memory</tspan>
+<tspan x="828" dy="29">that remains reliable as spacecraft radiation defects accumulate.</tspan>
+</text>
+<text x="828" y="1082" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#17663A" text-anchor="start">Current work is the DFT foundation required before that study.</text>
+</svg>

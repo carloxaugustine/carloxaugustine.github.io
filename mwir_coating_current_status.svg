@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1150" viewBox="0 0 1600 1150">
+<rect width="1600" height="1150" fill="#F7F8FA"/>
+<rect x="34" y="28" width="1532" height="116" rx="24" fill="#0F2E5D"/>
+<text x="70" y="84" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="700" fill="#FFFFFF" text-anchor="start">MWIR Coating Optimization</text>
+<text x="70" y="122" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="400" fill="#DCE8FF" text-anchor="start">Trajectory-aware multilayer design for heated aerospace surfaces</text>
+<rect x="1194" y="62" width="326" height="42" rx="21" fill="#DDEAFF"/><text x="1357.0" y="91" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#0F2E5D" text-anchor="middle">Current stage: thermal coupling</text>
+<rect x="34" y="168" width="474" height="414" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="66" y="212" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#0F2E5D" text-anchor="start">1. Physical problem</text>
+<text x="66" y="252" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="400" fill="#5B6473">
+<tspan x="66" dy="0">Design lightweight all-dielectric</tspan>
+<tspan x="66" dy="31">coatings that reduce mid-wave</tspan>
+<tspan x="66" dy="31">infrared radiance while a vehicle</tspan>
+<tspan x="66" dy="31">surface heats and cools.</tspan>
+</text>
+<rect x="94" y="360" width="240" height="28" fill="#B9CFF1" stroke="#718096" stroke-width="1.4"/>
+<rect x="94" y="388" width="240" height="28" fill="#DCE8E0" stroke="#718096" stroke-width="1.4"/>
+<rect x="94" y="416" width="240" height="28" fill="#F0EFCB" stroke="#718096" stroke-width="1.4"/>
+<rect x="94" y="444" width="240" height="28" fill="#C6D3EE" stroke="#718096" stroke-width="1.4"/>
+<rect x="94" y="472" width="240" height="28" fill="#F1B9C4" stroke="#718096" stroke-width="1.4"/>
+<text x="358" y="380" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="500" fill="#172033" text-anchor="start">Layer 1  (n₁, t₁)</text>
+<text x="358" y="409" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="500" fill="#172033" text-anchor="start">Layer 2  (n₂, t₂)</text>
+<text x="358" y="455" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="500" fill="#5B6473" text-anchor="start">⋮</text>
+<text x="358" y="494" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="500" fill="#172033" text-anchor="start">Substrate  T(t)</text>
+<text x="66" y="532" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#1A4FAF" text-anchor="start">Current question</text>
+<text x="66" y="560" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="500" fill="#172033">
+<tspan x="66" dy="0">Will full-trajectory optimization beat</tspan>
+<tspan x="66" dy="27">fixed-temperature baselines?</tspan>
+</text>
+<rect x="528" y="168" width="500" height="414" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="560" y="212" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#0F2E5D" text-anchor="start">2. Objective formulation</text>
+<rect x="560" y="244" width="436" height="120" rx="16" fill="#EEF4FF" stroke="#B6CBED" stroke-width="2"/>
+<text x="778" y="284" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="600" fill="#1A4FAF" text-anchor="middle">Current optical baseline</text>
+<text x="778" y="330" font-family="Inter,Arial,sans-serif" font-size="29" font-weight="500" fill="#172033" text-anchor="middle">J = wε · ε̄MWIR + wm · (m/A)</text>
+<rect x="560" y="386" width="436" height="132" rx="16" fill="#FFF6E7" stroke="#F0C879" stroke-width="2"/>
+<text x="778" y="428" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#A86400" text-anchor="middle">Transient objective being implemented</text>
+<text x="778" y="470" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="500" fill="#172033" text-anchor="middle">∫∫ ε(λ,T(t)) Eb,λ(T(t)) dλ dt</text>
+<text x="778" y="501" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="500" fill="#172033" text-anchor="middle">+ coating-mass penalty</text>
+<text x="560" y="550" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#5B6473" text-anchor="start">No trajectory-level result is claimed yet.</text>
+<rect x="1048" y="168" width="518" height="414" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="1080" y="212" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#0F2E5D" text-anchor="start">3. Verified work to date</text>
+<circle cx="1086" cy="253" r="5" fill="#2AA876"/>
+<text x="1102" y="260" font-family="Inter,Arial,sans-serif" font-size="21" fill="#5B6473">
+<tspan x="1102" dy="0">Built a custom Python transfer-matrix</tspan>
+<tspan x="1102" dy="29">solver for multilayer optical stacks.</tspan>
+</text>
+<circle cx="1086" cy="325" r="5" fill="#2AA876"/>
+<text x="1102" y="332" font-family="Inter,Arial,sans-serif" font-size="21" fill="#5B6473">
+<tspan x="1102" dy="0">Integrated differential evolution to</tspan>
+<tspan x="1102" dy="29">search material and thickness</tspan>
+<tspan x="1102" dy="29">combinations.</tspan>
+</text>
+<circle cx="1086" cy="426" r="5" fill="#2AA876"/>
+<text x="1102" y="433" font-family="Inter,Arial,sans-serif" font-size="21" fill="#5B6473">
+<tspan x="1102" dy="0">Benchmarked the solver against published</tspan>
+<tspan x="1102" dy="29">TMM results (Xi et al., 2023).</tspan>
+</text>
+<circle cx="1086" cy="498" r="5" fill="#2AA876"/>
+<text x="1102" y="505" font-family="Inter,Arial,sans-serif" font-size="21" fill="#5B6473">
+<tspan x="1102" dy="0">Validated temperature-dependent optical</tspan>
+<tspan x="1102" dy="29">behavior using a VO₂ phase-change</tspan>
+<tspan x="1102" dy="29">absorber.</tspan>
+</text>
+<rect x="34" y="606" width="1532" height="264" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="66" y="650" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="700" fill="#0F2E5D" text-anchor="start">4. Current workflow</text>
+<rect x="70" y="690" width="230" height="132" rx="18" fill="#E8F6EE" stroke="#D9E0EA" stroke-width="2"/>
+<text x="185.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Python TMM</text>
+<rect x="90" y="754" width="88" height="42" rx="21" fill="#FFFFFF"/><text x="134.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#17663A" text-anchor="middle">DONE</text>
+<line x1="312" y1="756" x2="336" y2="756" stroke="#1A4FAF" stroke-width="5" stroke-linecap="round"/><polygon points="336,756 320,746 320,766" fill="#1A4FAF"/>
+<rect x="350" y="690" width="254" height="132" rx="18" fill="#E8F6EE" stroke="#D9E0EA" stroke-width="2"/>
+<text x="477.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Differential evolution</text>
+<rect x="370" y="754" width="88" height="42" rx="21" fill="#FFFFFF"/><text x="414.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#17663A" text-anchor="middle">DONE</text>
+<line x1="616" y1="756" x2="640" y2="756" stroke="#1A4FAF" stroke-width="5" stroke-linecap="round"/><polygon points="640,756 624,746 624,766" fill="#1A4FAF"/>
+<rect x="654" y="690" width="250" height="132" rx="18" fill="#FFF4DC" stroke="#D9E0EA" stroke-width="2"/>
+<text x="779.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">ANSYS transient model</text>
+<rect x="674" y="754" width="130" height="42" rx="21" fill="#FFFFFF"/><text x="739.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#A86400" text-anchor="middle">IN PROGRESS</text>
+<line x1="916" y1="756" x2="950" y2="756" stroke="#8A99AF" stroke-width="5" stroke-linecap="round"/><polygon points="950,756 934,746 934,766" fill="#8A99AF"/>
+<rect x="964" y="690" width="220" height="132" rx="18" fill="#EEF4FF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="1074.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">T(x,t) export</text>
+<rect x="984" y="754" width="88" height="42" rx="21" fill="#FFFFFF"/><text x="1028.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#1A4FAF" text-anchor="middle">NEXT</text>
+<line x1="1196" y1="756" x2="1236" y2="756" stroke="#8A99AF" stroke-width="5" stroke-linecap="round"/><polygon points="1236,756 1220,746 1220,766" fill="#8A99AF"/>
+<rect x="1250" y="690" width="246" height="132" rx="18" fill="#EEF4FF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="1373.0" y="730" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#172033" text-anchor="middle">Trajectory comparison</text>
+<rect x="1270" y="754" width="88" height="42" rx="21" fill="#FFFFFF"/><text x="1314.0" y="783" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="600" fill="#1A4FAF" text-anchor="middle">NEXT</text>
+<rect x="34" y="894" width="742" height="220" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="66" y="938" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#0F2E5D" text-anchor="start">My exact contribution</text>
+<text x="66" y="977" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="400" fill="#5B6473">
+<tspan x="66" dy="0">Optical solver and optimizer development; literature benchmarking;</tspan>
+<tspan x="66" dy="29">VO₂ validation; and architecture of the transient ANSYS-to-Python</tspan>
+<tspan x="66" dy="29">coupling strategy.</tspan>
+</text>
+<text x="66" y="1082" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#1A4FAF" text-anchor="start">Completed work and in-progress work are separated explicitly.</text>
+<rect x="796" y="894" width="770" height="220" rx="22" fill="#FFFFFF" stroke="#D9E0EA" stroke-width="2"/>
+<text x="828" y="938" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#0F2E5D" text-anchor="start">Immediate next milestone</text>
+<text x="828" y="977" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="400" fill="#5B6473">
+<tspan x="828" dy="0">Run the first transient thermal case, export the temperature history,</tspan>
+<tspan x="828" dy="29">and compare a trajectory-optimized coating against fixed-temperature</tspan>
+<tspan x="828" dy="29">baselines.</tspan>
+</text>
+<text x="828" y="1082" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="600" fill="#A86400" text-anchor="start">No numerical performance claim until this comparison is complete.</text>
+</svg>
