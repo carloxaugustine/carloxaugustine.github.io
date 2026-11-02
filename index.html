@@ -4,413 +4,821 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Carlo Augustine Makeever</title>
-<meta name="description" content="Carlo Augustine Makeever. Mechanical Engineering Student @ SDSU. Aerospace, Thermal, CFD." />
+<meta name="description" content="Carlo Augustine Makeever. Mechanical engineering at SDSU. Rocket structures, thermal, CFD, computational materials." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:#F6F6F4;
-  --card:#FFFFFF;
-  --ink:#1A1A1A;
-  --ink-2:#555;
-  --ink-3:#888;
-  --line:rgba(0,0,0,.09);
-  --accent:#1A4FAF;
-  --accent-deep:#0F3480;
-  --f:'Inter',system-ui,sans-serif;
+  --bg:#FFFFFF;
+  --tint:#F4F7FD;
+  --tint-2:#E9F0FC;
+  --ink:#0E1726;
+  --ink-2:#465264;
+  --ink-3:#7F8A9C;
+  --rule:#E3E8F0;
+  --rule-2:#CBD5E3;
+  --blue:#1F4FD1;
+  --blue-2:#163A9C;
+  --blue-soft:#DCE6FB;
+  --amber:#B45309;
+  --green:#15803D;
+  --head:'Space Grotesk',system-ui,sans-serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  color-scheme:light;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
-nav{position:sticky;top:0;z-index:40;background:rgba(246,246,244,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
-.logo{font-size:15px;font-weight:600;letter-spacing:-.01em}
-.navlinks{display:flex;gap:24px;font-size:14px;color:var(--ink-2)}
-.navlinks a:hover{color:var(--accent)}
-@media(max-width:600px){.navlinks{display:none}}
-header{padding:64px 0 52px}
-.hero{display:flex;align-items:center;gap:44px}
-.hero-left{flex-shrink:0;display:flex;flex-direction:column;gap:14px;width:180px}
-.hero-photo{width:160px;height:160px;border-radius:50%;object-fit:cover;border:2px solid var(--line);background:#ddd;display:block}
-.hero-sub{font-size:13.5px;color:var(--ink-2);line-height:1.6}
-.hero-sub b{color:var(--ink);font-weight:500}
-.hero-right{flex:1}
-.hero-right h1{font-size:clamp(24px,3.6vw,36px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-bottom:20px}
-.hero-right h1 span{color:var(--accent)}
-@media(max-width:600px){.hero{flex-direction:column;gap:20px}.hero-left{width:100%;flex-direction:row;align-items:center}.hero-photo{width:80px;height:80px}}
-.hlinks{display:flex;flex-wrap:wrap;gap:9px}
-.hlinks a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s,box-shadow .15s}
-.hlinks a:hover{border-color:rgba(0,0,0,.2);box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.hlinks a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
-.hlinks a.solid:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
-section{padding:64px 0;border-top:1px solid var(--line)}
-.label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
-.sec-title{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:28px}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
-.proj{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;cursor:pointer;transition:box-shadow .2s,transform .2s}
-.proj:hover{box-shadow:0 4px 20px rgba(0,0,0,.1);transform:translateY(-2px)}
-.proj h3{font-size:15px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
-.proj p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips span{font-size:11.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:3px 8px}
-.proj-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:18px;flex-wrap:wrap}
-.proj-more{font-size:12px;color:var(--accent);font-weight:500}
-.proj .org-line{font-size:12.5px;color:var(--ink-3);margin:-2px 0 9px;font-weight:500}
-.xp-tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
-.org-modal{font-size:13px;color:var(--ink-3);margin:-10px 0 20px;font-weight:500;line-height:1.5}
-.m-note{font-size:12.5px;color:var(--ink-3);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:22px;line-height:1.6}
-.proj-featured{grid-column:1/-1;padding:0;overflow:hidden}
-.proj-featured .proj-body{padding:26px 28px 28px}
-.proj-featured .proj-body h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
-.proj-featured .proj-body p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin-bottom:14px}
-.proj-imgs{display:grid;gap:2px;border-bottom:1px solid var(--line)}
-.proj-imgs .img-main img{width:100%;max-height:520px;object-fit:contain;object-position:center;display:block;background:#f8fafc}
-.proj-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.proj-imgs-strip img{width:100%;height:180px;object-fit:cover;object-position:center;display:block}
-@media(max-width:600px){.proj-imgs-strip img{height:120px}}
-.xp-row{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
-.xp-row:last-child{border-bottom:none}
-.xp-when{font-size:12px;color:var(--accent);font-weight:600;min-width:80px;padding-top:3px;flex-shrink:0}
-.xp-row h3{font-size:15px;font-weight:600;margin-bottom:2px}
-.xp-row .org{font-size:13px;color:var(--ink-2);margin-bottom:5px}
-.xp-row p{font-size:13.5px;color:var(--ink-2);max-width:560px}
-.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
-.skills span{font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:6px 12px}
-.edu-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
-.edu-row:last-child{border-bottom:none}
-.edu-row h3{font-size:15px;font-weight:600}
-.edu-row .deg{font-size:13px;color:var(--ink-2);margin-top:2px}
-.edu-row .yr{font-size:12px;color:var(--accent);font-weight:600;white-space:nowrap}
-.contact-block{padding-bottom:32px}
-.contact-block .big{font-size:clamp(20px,4vw,34px);font-weight:600;letter-spacing:-.02em;margin-bottom:10px}
-.contact-block .big a{color:var(--accent)}
-.contact-block .big a:hover{color:var(--accent-deep)}
-.contact-block .note{font-size:15px;color:var(--ink-2);max-width:520px;margin-bottom:22px}
-.contact-block .flag{font-size:12px;color:var(--ink-3);margin-top:20px}
-footer{padding:24px 0 48px;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);flex-wrap:wrap;gap:6px}
-.modal-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.45);overflow-y:auto;padding:40px 16px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--blue-soft)}
+a:hover{color:var(--blue-2);border-bottom-color:var(--blue)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--head);color:var(--ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:13px;padding-bottom:13px;flex-wrap:wrap}
+.brand{font-family:var(--head);font-weight:600;font-size:15px;color:var(--ink);border:0}
+.brand span{color:var(--blue)}
+.top nav{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+.top nav a{color:var(--ink-2);border:0}
+.top nav a:hover{color:var(--blue)}
+@media(max-width:720px){.top nav{display:none}}
+
+/* hero with blueprint grid */
+header{background:
+  linear-gradient(var(--tint-2) 1px,transparent 1px) 0 0/28px 28px,
+  linear-gradient(90deg,var(--tint-2) 1px,transparent 1px) 0 0/28px 28px,
+  var(--tint);border-bottom:1px solid var(--rule)}
+header .wrap{padding-top:72px;padding-bottom:64px}
+.hero{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:center}
+.kicker{font-family:var(--mono);font-size:12.5px;color:var(--blue);margin-bottom:16px;letter-spacing:.02em}
+.hero h1{font-size:clamp(34px,5vw,54px);font-weight:600;letter-spacing:-.03em;line-height:1.04;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.lede{font-size:18.5px;color:var(--ink-2);max-width:620px;margin-bottom:26px}
+.now{background:#fff;border:1px solid var(--rule);border-left:3px solid var(--blue);border-radius:8px;padding:14px 18px;margin-bottom:28px;max-width:620px}
+.now .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.now ul{list-style:none;font-size:14.5px;color:var(--ink-2);line-height:1.75}
+.now li{padding-left:16px;position:relative}
+.now li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.links{display:flex;flex-wrap:wrap;gap:10px;font-size:14.5px;font-weight:500}
+.btn{display:inline-block;padding:9px 16px;border-radius:7px;border:1px solid var(--rule-2);background:#fff;color:var(--ink)}
+.btn:hover{border-color:var(--blue);color:var(--blue)}
+.btn.solid{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.solid:hover{background:var(--blue-2);border-color:var(--blue-2);color:#fff}
+.photo{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:8px 8px 12px;box-shadow:0 10px 30px rgba(20,40,90,.08)}
+.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:6px}
+.photo figcaption{font-size:13px;font-style:italic;color:var(--ink-2);line-height:1.5;padding:10px 4px 0}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:28px}.photo{max-width:220px;order:-1}header .wrap{padding-top:40px;padding-bottom:40px}}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--rule)}
+section.alt{background:var(--tint)}
+section.wrap{padding-top:72px;padding-bottom:72px}
+.hero h1 em{display:block;font-size:.58em;line-height:1.15;letter-spacing:-.02em;margin-top:10px}
+@media(max-width:600px){section.wrap{padding-top:48px;padding-bottom:48px}}
+.sec-head{margin-bottom:34px}
+.sec-head .num{font-family:var(--mono);font-size:12.5px;color:var(--blue);display:block;margin-bottom:6px}
+.sec-head h2{font-size:32px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.sec-head p{font-size:15px;color:var(--ink-3);margin-top:8px;max-width:620px}
+
+/* updates log */
+.log{border-top:1px solid var(--rule)}
+.log-row{display:grid;grid-template-columns:118px 140px 1fr;gap:20px;padding:17px 0;border-bottom:1px solid var(--rule)}
+.log-row .d{font-family:var(--mono);font-size:13px;color:var(--ink-2);padding-top:2px}
+.log-row .t{padding-top:1px}
+.log-row .t span{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue);background:var(--tint-2);border-radius:4px;padding:2px 7px}
+.log-row .b{font-size:16px;color:var(--ink)}
+.log-row .b span{color:var(--ink-2)}
+.log-more{display:none}
+.log.expanded .log-more{display:grid}
+.log-toggle{margin-top:18px;font-family:var(--sans);font-size:14px;font-weight:500;background:#fff;border:1px solid var(--rule-2);border-radius:7px;color:var(--ink);padding:8px 14px;cursor:pointer}
+.log-toggle:hover{border-color:var(--blue);color:var(--blue)}
+@media(max-width:700px){.log-row{grid-template-columns:1fr;gap:4px}}
+
+/* project entries */
+.entry{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:44px;padding:40px 0;border-bottom:1px solid var(--rule)}
+.entry:first-of-type{padding-top:0}
+.entry:last-child{border-bottom:none}
+.entry.flip .figs{order:2}
+@media(max-width:820px){.entry,.entry.flip{grid-template-columns:1fr;gap:22px}.entry.flip .figs{order:0}}
+.figs{display:grid;gap:14px;align-content:start}
+.figs.two{grid-template-columns:1fr 1fr}
+.fig{margin:0}
+.fig img{width:100%;border:1px solid var(--rule);border-radius:8px;background:#fff;cursor:zoom-in;transition:box-shadow .2s,border-color .2s}
+.fig img:hover{border-color:var(--rule-2);box-shadow:0 8px 24px rgba(20,40,90,.10)}
+.fig.tall img{aspect-ratio:3/4;object-fit:cover}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.45;margin-top:7px}
+.fig figcaption b{font-family:var(--mono);font-weight:500;color:var(--blue)}
+.meta{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:10px;letter-spacing:.01em}
+.entry h3{font-size:25px;font-weight:600;line-height:1.18;letter-spacing:-.02em;margin-bottom:12px}
+.entry p{color:var(--ink-2);margin-bottom:14px}
+.status{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11.5px;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.status.wip{color:var(--amber);background:#FEF6E7}
+.status.done{color:var(--green);background:#EAF7EE}
+.tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.tools span{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);background:var(--tint);border:1px solid var(--rule);border-radius:5px;padding:2px 8px}
+.open{font-family:var(--sans);font-size:14.5px;font-weight:500;background:none;border:none;color:var(--blue);padding:0;cursor:pointer}
+.open:hover{color:var(--blue-2);text-decoration:underline;text-underline-offset:3px}
+.actions{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline;font-size:14.5px;font-weight:500}
+.xfs-logo{width:56px;height:56px;border-radius:10px;float:right;margin:0 0 8px 12px;border:1px solid var(--rule)}
+
+/* drawing board gallery */
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.board .fig{background:#fff;border:1px solid var(--rule);border-radius:10px;padding:10px 10px 12px}
+.board .fig img{border:0;border-radius:6px;aspect-ratio:4/3;object-fit:contain}
+.board .fig img:hover{box-shadow:none}
+.board .fig:hover{border-color:var(--rule-2);box-shadow:0 8px 24px rgba(20,40,90,.08)}
+.board figcaption{padding:0 2px}
+.board figcaption strong{display:block;font-family:var(--head);font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:2px}
+@media(max-width:900px){.board{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.board{grid-template-columns:1fr}}
+
+/* earlier work list */
+.list{border-top:1px solid var(--rule)}
+.list-row{display:grid;grid-template-columns:1fr 2fr auto;gap:24px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.list-row h3{font-size:17.5px;font-weight:600;line-height:1.3}
+.list-row .meta{margin:4px 0 0}
+.list-row p{font-size:15.5px;color:var(--ink-2)}
+@media(max-width:760px){.list-row{grid-template-columns:1fr;gap:6px}}
+
+/* experience */
+.xp{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--rule)}
+.xp:last-child{border-bottom:none}
+.xp .when{font-family:var(--mono);font-size:13px;color:var(--blue);padding-top:5px}
+.xp h3{font-size:20px;font-weight:600;line-height:1.25;letter-spacing:-.01em}
+.xp .org{font-size:14px;color:var(--ink-3);margin:3px 0 10px}
+.xp p{color:var(--ink-2);max-width:640px;margin-bottom:10px}
+.xp-split{display:grid;grid-template-columns:1fr 220px;gap:28px;align-items:start}
+@media(max-width:760px){.xp{grid-template-columns:1fr;gap:4px}.xp-split{grid-template-columns:1fr}.xp-split .fig{max-width:260px}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about p{color:var(--ink-2);margin-bottom:14px}
+.skills{background:var(--tint);border:1px solid var(--rule);border-radius:10px;padding:20px 22px}
+.skills dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-top:14px}
+.skills dt:first-child{margin-top:0}
+.skills dd{font-size:14.5px;color:var(--ink);line-height:1.6;margin-top:3px}
+.edu{margin-top:48px;border-top:1px solid var(--rule)}
+.edu-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:15px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.edu-row h4{font-size:17px;font-weight:600}
+.edu-row .deg{font-size:14px;color:var(--ink-2)}
+.edu-row .yr{font-family:var(--mono);font-size:12.5px;color:var(--blue);white-space:nowrap}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}.edu-row{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--blue);color:#fff;border-top:0}
+.contact .sec-head .num{color:#BBD0FF}
+.contact .sec-head h2{color:#fff}
+.contact .big{font-family:var(--head);font-size:clamp(22px,4vw,38px);font-weight:600;letter-spacing:-.02em;margin-bottom:10px;word-break:break-word}
+.contact .big a{color:#fff;border-bottom:2px solid rgba(255,255,255,.4)}
+.contact .big a:hover{border-bottom-color:#fff}
+.contact .note{color:#DCE6FF;max-width:560px;margin-bottom:22px}
+.contact .btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.contact .btn:hover{border-color:#fff;color:#fff}
+.contact .btn.solid{background:#fff;color:var(--blue);border-color:#fff}
+.contact .btn.solid:hover{background:#E9F0FF;color:var(--blue-2)}
+.contact .flag{font-family:var(--mono);font-size:12px;color:#BBD0FF;margin-top:22px}
+footer{background:var(--blue-2);padding:20px 0 36px;font-family:var(--mono);font-size:12px;color:#AFC4F5}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* modals */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,20,45,.55);overflow-y:auto;padding:40px 16px}
 .modal-overlay.open{display:block}
-.modal{background:var(--card);border-radius:14px;max-width:900px;margin:0 auto;overflow:hidden;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.22)}
-.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border-radius:50%;background:var(--bg);border:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--ink-2);line-height:1;z-index:2;transition:background .15s}
-.modal-close:hover{background:#eee}
-.modal-imgs{border-bottom:1px solid var(--line)}
-.modal-imgs img{width:100%;display:block;max-height:620px;object-fit:contain;background:#f8fafc}
-.modal-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px}
-.modal-imgs-strip img{width:100%;height:200px;object-fit:cover;display:block}
-.modal-body{padding:40px 46px 46px}
-@media(max-width:600px){.modal-body{padding:24px 20px 28px}}
-.modal-body .m-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:6px}
-.modal-body h2{font-size:22px;font-weight:600;letter-spacing:-.015em;margin-bottom:20px}
-.modal-body .m-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px}
-.modal-body .m-chips span{font-size:12px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:4px 10px}
-.modal-body .m-section{margin-bottom:32px}
-.modal-body .m-section h3{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-.modal-body .m-section p{font-size:14.5px;color:var(--ink-2);line-height:1.78;margin-bottom:13px}
-.modal-body .m-section p:last-child{margin-bottom:0}
-.modal-body .m-section ul{padding-left:20px;font-size:14.5px;color:var(--ink-2);line-height:1.78}
-.modal-body .m-section ul li{margin-bottom:4px}
-.modal-actions{display:flex;gap:10px;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
-.modal-actions a{font-size:13px;font-weight:500;padding:9px 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s}
-.modal-actions a:hover{border-color:rgba(0,0,0,.2)}
-.modal-actions a.solid{background:var(--accent);border-color:var(--accent);color:#fff}
-.modal-actions a.solid:hover{background:var(--accent-deep)}
-
-.project-status{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:600;padding:5px 9px;border-radius:999px;margin-bottom:12px}
-.project-status.current{background:#fff4dc;color:#8a5400;border:1px solid #efd39c}
-.project-status.validated{background:#eaf6ee;color:#17663a;border:1px solid #bfdfca}
-.status-list{display:grid;gap:10px;margin-top:12px}
-.status-item{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.modal{background:#fff;max-width:880px;margin:0 auto;position:relative;border-radius:12px;overflow:hidden;box-shadow:0 24px 70px rgba(10,20,45,.3)}
+.modal-close{position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:12.5px;background:#fff;border:1px solid var(--rule-2);border-radius:6px;color:var(--ink-2);padding:5px 10px;cursor:pointer;z-index:2}
+.modal-close:hover{border-color:var(--blue);color:var(--blue)}
+.modal-imgs{border-bottom:1px solid var(--rule);background:#fff}
+.modal-imgs img{width:100%;max-height:620px;object-fit:contain;cursor:zoom-in}
+.modal-imgs-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule)}
+.modal-imgs-strip.four{grid-template-columns:repeat(4,1fr)}
+.modal-imgs-strip img{height:220px;object-fit:cover}
+.modal-imgs-strip.four img{height:240px}
+.modal-body{padding:40px 48px 44px}
+@media(max-width:600px){.modal-body{padding:26px 20px 30px}.modal-imgs-strip img,.modal-imgs-strip.four img{height:140px}.modal-imgs-strip.four{grid-template-columns:1fr 1fr}}
+.modal-body .m-label{font-family:var(--mono);font-size:12px;color:var(--blue);margin-bottom:6px}
+.modal-body h2{font-size:28px;font-weight:600;letter-spacing:-.02em;line-height:1.15;margin-bottom:8px}
+.org-modal{font-size:14px;color:var(--ink-3);margin-bottom:12px}
+.m-chips{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-bottom:28px}
+.m-section{margin-bottom:28px}
+.m-section h3{font-family:var(--head);font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--rule)}
+.m-section p{color:var(--ink-2);margin-bottom:12px}
+.m-section p:last-child{margin-bottom:0}
+.m-section ul{padding-left:20px;color:var(--ink-2)}
+.m-section li{margin-bottom:5px}
+.m-fig{margin:14px 0 4px}
+.m-fig img{width:100%;border:1px solid var(--rule);border-radius:8px;cursor:zoom-in}
+.m-fig figcaption{font-size:12.5px;color:var(--ink-3);margin-top:6px}
+.m-note{font-size:13.5px;color:var(--ink-2);background:var(--tint);border-left:3px solid var(--blue-soft);border-radius:0 6px 6px 0;padding:12px 14px;margin-top:20px;line-height:1.6}
+.status-list{margin-top:6px}
+.status-item{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--rule)}
 .status-item:last-child{border-bottom:none}
-.status-item b{font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
-.status-item span{font-size:14px;color:var(--ink-2);line-height:1.65}
-.eq{font-family:Georgia,'Times New Roman',serif;font-size:18px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px 16px;margin:12px 0;color:var(--ink);overflow-x:auto}
-@media(max-width:600px){.status-item{grid-template-columns:1fr;gap:4px}.wrap{padding-left:18px;padding-right:18px}section{padding:48px 0}}
+.status-item b{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--blue);text-transform:uppercase;padding-top:3px}
+.status-item span{color:var(--ink-2);font-size:15.5px}
+@media(max-width:600px){.status-item{grid-template-columns:1fr;gap:2px}}
+.eq{font-family:Georgia,serif;font-size:19px;background:var(--tint);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:10px 0 14px;overflow-x:auto}
+table.mini{border-collapse:collapse;font-size:14.5px;margin:6px 0 4px;width:100%;max-width:420px}
+table.mini td,table.mini th{padding:6px 10px;border-bottom:1px solid var(--rule);text-align:left}
+table.mini th{font-family:var(--mono);font-size:11.5px;font-weight:500;color:var(--ink-3);text-transform:uppercase}
+table.mini td:last-child{font-family:var(--mono)}
+.modal-actions{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;padding-top:20px;border-top:1px solid var(--rule);font-size:14.5px;font-weight:500}
 
+/* nav resume */
+.nav-cta{font-size:13.5px;font-weight:500;padding:6px 12px;border-radius:6px;background:var(--blue);color:#fff!important;border:0;margin-left:6px}
+.nav-cta:hover{background:var(--blue-2)}
+/* at a glance */
+.glance{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:40px;background:#fff;border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.glance div{padding:16px 18px;border-right:1px solid var(--rule)}
+.glance div:last-child{border-right:0}
+.glance b{display:block;font-family:var(--head);font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--blue);line-height:1.2;margin-bottom:4px}
+.glance span{font-size:13.5px;color:var(--ink-2);line-height:1.45;display:block}
+@media(max-width:860px){.glance{grid-template-columns:1fr 1fr}.glance div:nth-child(2){border-right:0}.glance div:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
+@media(max-width:480px){.glance{grid-template-columns:1fr}.glance div{border-right:0;border-bottom:1px solid var(--rule)}.glance div:last-child{border-bottom:0}}
+/* facts row on projects */
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14.5px;margin:0 0 16px;padding:12px 14px;background:var(--tint);border:1px solid var(--rule);border-radius:8px}
+.facts dt{font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);padding-top:3px}
+.facts dd{color:var(--ink)}
+.quote{font-style:italic;color:var(--ink-2);border-left:3px solid var(--blue-soft);padding-left:14px;margin-top:6px}
+
+/* lightbox */
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(8,14,30,.88);padding:32px;align-items:center;justify-content:center;flex-direction:column;gap:12px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:calc(100vh - 110px);object-fit:contain;background:#fff;border-radius:6px}
+.lightbox p{color:#D5DEF0;font-size:13.5px;max-width:760px;text-align:center}
+@media(max-width:600px){.wrap{padding-left:16px;padding-right:16px}section{padding:48px 0}.lightbox{padding:12px}}
 </style>
 </head>
 <body>
 
-<nav>
+<div class="top">
   <div class="wrap">
-    <span class="logo">Carlo Augustine Makeever</span>
-    <div class="navlinks">
-      <a href="#work">Work</a>
+    <a class="brand" href="#">Carlo Makeever <span>/ ME @ SDSU</span></a>
+    <nav>
+      <a href="#current">Projects</a>
+      <a href="#board">Drawings</a>
       <a href="#experience">Experience</a>
+      <a href="#updates">Updates</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-    </div>
+      <a class="nav-cta" href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé</a>
+    </nav>
   </div>
-</nav>
+</div>
 
-<header class="wrap">
+<header>
+ <div class="wrap">
   <div class="hero">
-    <div class="hero-left">
-      <img class="hero-photo" src="Carlo.jpg" alt="Carlo Augustine" />
-      <p class="hero-sub">"The greatest love you can give the universe is to learn about it, and the greatest love you can give yourself is to make something you're proud of. "</p>
-    </div>
-    <div class="hero-right">
-      <h1>SDSU <span>Mechanical Engineering</span> Student.</h1>
-      <div class="hlinks">
-        <a class="solid" href="#work">See my work</a>
-        <a href="mailto:carlomakeever@engineering.ucsb.edu">Email</a>
-        <a href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé</a>
-        <a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
+    <div>
+      <div class="kicker">Mechanical Engineering · San Diego State · Class of 2028</div>
+      <h1>Carlo Augustine Makeever <em>Mechanical engineer building toward a career in materials R&amp;D</em></h1>
+      <p class="lede">I lead lower-airframe structures for a liquid rocket, do materials research in two SDSU labs, and spent 2025 on the Curiosity thermal team at JPL. Looking for summer 2027 internships in structures, materials, thermal, or test.</p>
+      <div class="links">
+        <a class="btn solid" href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+        <a class="btn" href="mailto:cmakeever4960@sdsu.edu">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
+    <figure class="photo">
+      <img src="Carlo.jpg" alt="Portrait of Carlo Makeever" />
+    </figure>
   </div>
+ <div class="glance">
+   <div><b>Deployed to Mars</b><span>Supported a Curiosity heater-table update that was sent to the rover (JPL, 2025)</span></div>
+   <div><b>13-person team</b><span>Lead for lower airframe and fin can, SDSU Rocket Project</span></div>
+   <div><b>Flown, L1</b><span>Designed, printed, built, and flew my high-power cert rocket</span></div>
+   <div><b>43 vs 40 meV</b><span>My DFT MoTe₂ phase energy vs. the published value</span></div>
+ </div>
+ </div>
 </header>
 
-<section id="work" class="wrap reveal">
-  <div class="label">Selected Work</div>
-  <h2 class="sec-title">Projects</h2>
-  <div class="grid">
-
-    <article class="proj proj-featured" onclick="openModal('mwir')">
-      <div class="proj-imgs">
-        <div class="img-main"><img src="mwir_coating_current_status.png" alt="Current MWIR coating optimization research workflow and status" /></div>
-      </div>
-      <div class="proj-body">
-        <div class="project-status current">Thermal coupling in progress</div>
-        <h3>Trajectory-Integrated MWIR Coating Optimization</h3>
-        <div class="org-line">SDSU Aerospace Materials Research · Current</div>
-        <p>Building a Python transfer-matrix and differential-evolution workflow for lightweight all-dielectric coatings, then coupling it to transient ANSYS temperature histories to compare trajectory-aware designs against fixed-temperature baselines.</p>
-        <div class="proj-footer">
-          <div class="chips"><span>Python</span><span>TMM</span><span>Differential Evolution</span><span>ANSYS</span><span>Thermal Modeling</span></div>
-          <span class="proj-more">Current status →</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="proj proj-featured" onclick="openModal('mote2')">
-      <div class="proj-imgs">
-        <div class="img-main"><img src="mote2_radiation_current_status.png" alt="Current MoTe2 DFT validation workflow and research status" /></div>
-      </div>
-      <div class="proj-body">
-        <div class="project-status current">DFT validation in progress</div>
-        <h3>MoTe₂ Phase Switching Under Radiation</h3>
-        <div class="org-line">SDSU Computational Materials Research Lab · Current</div>
-        <p>Establishing a defensible DFT baseline for the 2H and 1T′ phases of MoTe₂ before validating a machine-learned interatomic potential and eventually studying radiation-driven defects and switching reliability.</p>
-        <div class="proj-footer">
-          <div class="chips"><span>DFT</span><span>Python / ASE</span><span>MLIP</span><span>HPC</span><span>Materials Modeling</span></div>
-          <span class="proj-more">Current status →</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="proj proj-featured" onclick="openModal('vwing')">
-      <div class="proj-imgs">
-        <div class="img-main"><img src="vwing_render.jpg" alt="V-Wing UAV Blender render" /></div>
-        <div class="proj-imgs-strip">
-          <img src="vwing_cfd.jpg" alt="V-Wing CFD velocity magnitude" />
-          <img src="vwing_mesh.jpg" alt="V-Wing OpenVSP mesh" />
-        </div>
-      </div>
-      <div class="proj-body">
-        <h3>Deployable Tactical V-Wing UAV</h3>
-        <p>Conceptual design and CFD study of a field-deployable composite UAV. Investigated seam drag cost and dihedral stability tradeoffs from geometry through simulation.</p>
-        <div class="proj-footer">
-          <div class="chips"><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span></div>
-          <span class="proj-more">Read more →</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="proj" onclick="openModal('albatross')">
-      <h3>ALBATROSS-1 Fixed-Wing UAV</h3>
-      <p>Full conceptual design cycle for a long-endurance fixed-wing UAV. Airframe sizing, aerodynamic analysis, and structural layout.</p>
-      <div class="proj-footer">
-        <div class="chips"><span>Conceptual Design</span><span>Aerodynamics</span><span>Structures</span></div>
-        <span class="proj-more">Read more →</span>
-      </div>
-    </article>
-
-    <article class="proj" onclick="openModal('nosecone')">
-      <h3>Nose Cone Geometry CFD Study</h3>
-      <p>Drag comparison across nose cone profiles using OpenFOAM. Meshing, viscous CFD, and ParaView post-processing on multiple geometries.</p>
-      <div class="proj-footer">
-        <div class="chips"><span>OpenFOAM</span><span>ParaView</span><span>Meshing</span></div>
-        <span class="proj-more">Read more →</span>
-      </div>
-    </article>
-
-    <article class="proj" onclick="openModal('tvc')">
-      <h3>Thrust Vector Control Modeling</h3>
-      <p>Simulink TVC model for the Gaucho Rocket Club. Control loop design and simulation to support flight control development and hardware testing.</p>
-      <div class="proj-footer">
-        <div class="chips"><span>Simulink</span><span>MATLAB</span><span>Controls</span></div>
-        <span class="proj-more">Read more →</span>
-      </div>
-    </article>
-
-    <article class="proj" onclick="openModal('picamera')">
-      <h3>Raspberry Pi Instant Camera</h3>
-      <p>Self-built instant camera on Raspberry Pi. Embedded hardware, software integration, and physical packaging from scratch.</p>
-      <div class="proj-footer">
-        <div class="chips"><span>Raspberry Pi</span><span>Python</span><span>Embedded</span></div>
-        <span class="proj-more">Read more →</span>
-      </div>
-    </article>
-
+<!-- ============ CURRENT WORK ============ -->
+<section id="current" class="wrap">
+  <div class="sec-head">
+    <span class="num">01</span><h2>Projects</h2>
+    <p>Work in progress. I've tried to be clear about which parts are finished and which aren't.</p>
   </div>
+
+  <article class="entry">
+    <div class="figs">
+      <figure class="fig diagram"><img src="laf_layout.webp" alt="Lower airframe layout: 60 in structural body tube with oxidizer and fuel tanks, tank cradle, spar bay and boattail" /><figcaption><b>Fig. 1</b> Lower airframe layout. 60 in G12 tube plus a 12 in fin-can module. Tank sizes and cradle location are still proposals.</figcaption></figure>
+      <figure class="fig diagram"><img src="fin_can_concepts.webp" alt="Three fin can integration options: bolt-on sleeve, one-piece composite can, structural boattail" /><figcaption><b>Fig. 2</b> The three fin-can concepts we reviewed.</figcaption></figure>
+    </div>
+    <div>
+      <div class="meta">SDSU Rocket Project · Lower Airframe Lead · Aug 2026 → now</div>
+      <span class="status wip">in design</span>
+      <h3>Liquid Rocket Lower Airframe &amp; Fin Can</h3>
+      <dl class="facts"><dt>Role</dt><dd>Sub-team lead, 13 people</dd><dt>Owns</dt><dd>Load cases, acceptance criteria, propulsion interface, spar and fin-can trades</dd><dt>Result</dt><dd>3 fin-can concepts reviewed; legacy spar frame ruled out before any cutting</dd></dl>
+      <p>I lead a 13-person sub-team on the aft end of the vehicle: the structure between the tanks and the engine, the spars that carry thrust forward, and the fin can.</p>
+      <p>So far most of the work has been setting up the problem properly. That means load cases and acceptance criteria, an interface with propulsion, and spar trade studies on cross-section, material, and isogrid pocketing. The trade studies use hand calcs first and FEA second.</p>
+      <div class="tools"><span>SolidWorks</span><span>hand calcs</span><span>structural FEA</span><span>6061-T6</span><span>composites</span></div>
+      <div class="actions"><button class="open" onclick="openModal('laf')">Read the notes →</button></div>
+    </div>
+  </article>
+
+  <article class="entry flip">
+    <div class="figs two">
+      <figure class="fig tall"><img src="l1_pad.webp" alt="Carlo standing next to his Level 1 rocket on the launch rail in the desert" /><figcaption><b>Fig. 3</b> On the rail.</figcaption></figure>
+      <figure class="fig tall"><img src="l1_launch.webp" alt="Level 1 rocket lifting off from the pad with a smoke trail" /><figcaption><b>Fig. 4</b> Off the pad.</figcaption></figure>
+    </div>
+    <div>
+      <div class="meta">SDSU ANCS · Structures &amp; Materials Lead · Sep–Oct 2026</div>
+      <span class="status done">flown</span>
+      <h3>ANCS Level 1 High-Power Rocket</h3>
+      <dl class="facts"><dt>Role</dt><dd>Designed, built, and flew it</dd><dt>Key call</dt><dd>Fins 3.03 → 4 mm: about 2.3× bending stiffness for 1.32× mass</dd><dt>Result</dt><dd>Flew; CAD caught a fin-tab clash before printing</dd></dl>
+      <p>This is my NAR Level 1 certification rocket. It uses a 2.56 in LOC airframe and a 38 mm motor mount. The nose and fins are printed in ABS, so every custom part had to fit a 300 mm printer. That one constraint shortened the nose from 345 mm to 295 mm.</p>
+      <p>I went from 3.03 mm fins to 4 mm. On paper that's about 2.3× the bending stiffness for 1.32× the mass, and I think that's worth it on a fin that hits the ground every flight.</p>
+      <div class="tools"><span>OpenRocket</span><span>SolidWorks</span><span>ABS printing</span><span>Von Kármán nose</span></div>
+      <div class="actions"><button class="open" onclick="openModal('l1')">Read the notes →</button><a href="ancs_l1_writeup.pdf" target="_blank" rel="noopener">Design write-up (PDF)</a></div>
+    </div>
+  </article>
+
+  <article class="entry">
+    <div class="figs">
+      <figure class="fig"><img src="xfs_concept_a.webp" alt="OpenVSP wireframe of XFS Concept A with canard, cranked-arrow wing and fins" /><figcaption><b>Fig. 5</b> XFS Concept A in OpenVSP: a small delta canard, a cranked-arrow wing, and fins on an area-ruled body.</figcaption></figure>
+      <div class="figs two">
+        <figure class="fig"><img src="xfs_sears_haack.webp" alt="OpenVSP render of the Sears-Haack baseline body" /><figcaption><b>Fig. 6</b> The Sears–Haack baseline body (fineness ratio 12) that everything else is cut from.</figcaption></figure>
+        <figure class="fig"><img src="xfs_wave_drag.webp" alt="XFS Concept A wave drag cross-sectional area distribution at Mach 1.05" /><figcaption><b>Fig. 7</b> Area distribution at M 1.05. C<sub>D,wave</sub> = 0.0254.</figcaption></figure>
+      </div>
+    </div>
+    <div>
+      <div class="meta">SDSU Experimental Flight Sciences · Founder · Oct 2026 → now</div>
+      <span class="status wip">early concept</span>
+      <img class="xfs-logo" src="xfs_logo.webp" alt="XFS logo" />
+      <h3>XFS: Toward a Transonic RC Aircraft</h3>
+      <dl class="facts"><dt>Role</dt><dd>Founder; wrote the area-rule script and runs the analysis</dd><dt>Result</dt><dd>C<sub>D,wave</sub> = 0.0254 at M 1.05 on Concept A (first pass)</dd></dl>
+      <p>Can a turbine RC aircraft get close to Mach 1 at a size a student group can actually build? I'm working that out with the simplest tools first.</p>
+      <p>I generate a Sears–Haack body in Python and area-rule it around the wing and tail. Then I push the stations into OpenVSP and run its wave-drag tool. Alongside that I'm keeping thrust–drag budgets for four turbine options and an OpenFOAM RANS setup in a container.</p>
+      <div class="tools"><span>Python</span><span>OpenVSP</span><span>OpenFOAM</span><span>Docker</span><span>area rule</span></div>
+      <div class="actions"><button class="open" onclick="openModal('xfs')">Read the notes →</button></div>
+    </div>
+  </article>
+
+  <article class="entry flip">
+    <div class="figs">
+      <figure class="fig diagram"><img src="mwir_coating_current_status.png" alt="MWIR coating optimization workflow and status" /><figcaption><b>Fig. 8</b> MWIR coating workflow and where it currently stands.</figcaption></figure>
+    </div>
+    <div>
+      <div class="meta">SDSU Materials Lab · Research Assistant · May 2026 → now</div>
+      <span class="status wip">thermal coupling in progress</span>
+      <h3>Trajectory-Integrated MWIR Coating Optimization</h3>
+      <dl class="facts"><dt>Role</dt><dd>Wrote the optical solver and optimizer</dd><dt>Result</dt><dd>Solver matches Xi et al. (2023); VO₂ temperature behavior checked</dd></dl>
+      <p>I wrote a transfer-matrix solver in Python and checked it against published results. Then I put differential evolution on top to design multilayer coatings with a lower mid-wave infrared signature. The open question is whether optimizing against a full temperature history gives a better coating than optimizing at one temperature.</p>
+      <p>In the same lab I'm building an Ansys APDL thermal-to-structural workflow for layered ceramic tiles. I'm also computing carbon/epoxy RVE properties in Material Designer.</p>
+      <div class="tools"><span>Python</span><span>TMM</span><span>differential evolution</span><span>Ansys APDL</span><span>Material Designer</span></div>
+      <div class="actions"><button class="open" onclick="openModal('mwir')">Read the notes →</button></div>
+    </div>
+  </article>
+
+  <article class="entry">
+    <div class="figs">
+      <figure class="fig diagram"><img src="mote2_radiation_current_status.png" alt="MoTe2 DFT validation workflow and status" /><figcaption><b>Fig. 9</b> MoTe₂ workflow: DFT baseline, then potential validation, then radiation damage.</figcaption></figure>
+    </div>
+    <div>
+      <div class="meta">SDSU Computational Materials Lab · Undergraduate RA · Jul 2026 → now</div>
+      <span class="status wip">DFT baseline</span>
+      <h3>MoTe₂ Phase Switching Under Radiation</h3>
+      <dl class="facts"><dt>Role</dt><dd>DFT baseline and validation workflow</dd><dt>Result</dt><dd>43 meV/f.u. vs. 40 meV published</dd></dl>
+      <p>MoTe₂ can flip between a semiconducting and a metallic phase, which makes it interesting for low-power memory. I'm asking whether it keeps switching reliably after radiation damage builds up under Mars-surface conditions.</p>
+      <p>The DFT baseline gives 43 meV per formula unit between phases, against 40 meV published. Next is a LAMMPS radiation-cascade and kinetic Monte Carlo workflow.</p>
+      <div class="tools"><span>VASP / PBE</span><span>Python / ASE</span><span>LAMMPS</span><span>KMC</span><span>HPC</span></div>
+      <div class="actions"><button class="open" onclick="openModal('mote2')">Read the notes →</button></div>
+    </div>
+  </article>
 </section>
 
-<section id="experience" class="wrap reveal">
-  <div class="label">Experience &amp; Research</div>
-  <h2 class="sec-title">Where I've worked</h2>
-  <div class="grid">
+<!-- ============ DRAWING BOARD ============ -->
+<section id="board" class="alt">
+ <div class="wrap">
+  <div class="sec-head">
+    <span class="num">02</span><h2>Drawing board</h2>
+    <p>Diagrams I've drawn this semester to explain a design or settle an argument. Click any of them to see it full size.</p>
+  </div>
+  <div class="board">
+    <figure class="fig"><img src="tank_stress.webp" alt="Tank membrane stresses at cylinder, dome crown and dome equator" /><figcaption><strong>Where a pressure tank fails first</strong>500 psi, 2:1 dome. The equator governs, because hoop stress goes compressive there.</figcaption></figure>
+    <figure class="fig"><img src="laf_propulsion_interface.webp" alt="Lower airframe and propulsion interface" /><figcaption><strong>Structures ↔ propulsion interface</strong>The thrust path from the engine flange through the thrust ring into the airframe.</figcaption></figure>
+    <figure class="fig"><img src="fin_can_construction.webp" alt="Four fin attachment methods: surface-bonded, through-the-wall, integral sleeve, split clamp-on" /><figcaption><strong>Four ways to attach a fin</strong>Surface-bonded, through-the-wall, integral sleeve, and split clamp-on, with what to check for each.</figcaption></figure>
+    <figure class="fig"><img src="laf_tank_packaging.webp" alt="Tank packaging and lower airframe concept" /><figcaption><strong>Tank packaging</strong>Fitting 18 in and 24 in tanks and a thrust frame into 60 in of tube.</figcaption></figure>
+    <figure class="fig"><img src="gnc_loop.webp" alt="Rocket guidance, navigation and control loop block diagram" /><figcaption><strong>A rocket GNC loop</strong>Guidance, control, TVC and RCS, and navigation feedback, redrawn as a clean reference.</figcaption></figure>
+    <figure class="fig"><img src="xfs_mach_sweep.webp" alt="Drag versus Mach number build-up compared with available thrust" /><figcaption><strong>Why Mach 1 is hard</strong>A first-pass drag build-up for XFS. Wave drag takes over past M<sub>DD</sub>.</figcaption></figure>
+  </div>
+ </div>
+</section>
 
-    <article class="proj proj-featured" onclick="openModal('jpl')">
-      <div class="proj-body">
-        <div class="xp-tag">NASA Jet Propulsion Laboratory · 2025</div>
-        <h3>Curiosity Rover Thermal Diagnostics</h3>
-        <p>Built automated Python tooling for the Curiosity Mars rover's thermal-control subsystem inside a flight-operations environment — replacing manual diagnostics with one pipeline that pulls heating events, computes performance margins, and generates the tactical reports the thermal team posts daily.</p>
-        <div class="proj-footer">
-          <div class="chips"><span>Python</span><span>Systems Integration</span><span>Operational Pipelines</span><span>Automated Reporting</span></div>
-          <span class="proj-more">Read more →</span>
-        </div>
-      </div>
-    </article>
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="wrap">
+  <div class="sec-head">
+    <span class="num">03</span><h2>Experience</h2>
+  </div>
 
-    <article class="proj proj-featured" onclick="openModal('noaa')">
-      <div class="proj-imgs">
-        <div class="img-main"><img src="noaa_regrid.jpg" alt="SFBOFS original netCDF grid resampled onto an interpolated grid" /></div>
-        <div class="proj-imgs-strip">
-          <img src="noaa_stripes.jpg" alt="Relative sea level stripes for Pacific tide stations" />
-          <img src="noaa_interp3d.jpg" alt="3D interpolation surface visualization" />
-        </div>
+  <div class="xp">
+    <div class="when">Jun – Nov 2025</div>
+    <div class="xp-split">
+      <div>
+        <h3>Thermal Engineering Intern, MSL Thermal Systems</h3>
+        <div class="org">NASA Jet Propulsion Laboratory · Pasadena</div>
+        <p>I supported Curiosity heater-table updates and thermal-margin checks for seasonal Martian loads, including one update that was sent to the rover. I also built Python tools that line up 12+ years of thermal and heating-event data for analysis and anomaly review. Hourly ingestion and validation run on their own through Bash and cron.</p>
+        <button class="open" onclick="openModal('jpl')">More →</button>
       </div>
-      <div class="proj-body">
-        <div class="xp-tag">NOAA · Lapenta Fellowship · 2024</div>
-        <h3>Operational Forecast Cloud Port</h3>
-        <p>Ported NOAA's San Francisco Bay forecast model from an on-prem supercomputer to the cloud, and built the netCDF→GRIB2 conversion and interpolation tooling to make the data formats line up.</p>
-        <div class="proj-footer">
-          <div class="chips"><span>HPC</span><span>Python / R</span><span>netCDF / GRIB2</span><span>Interpolation</span></div>
-          <span class="proj-more">Read more →</span>
-        </div>
-      </div>
-    </article>
+      <figure class="fig"><img src="jpl_curiosity.webp" alt="Carlo holding a Curiosity rover wheel replica in front of a rover mural at JPL" /><figcaption>Holding a rover wheel at JPL.</figcaption></figure>
+    </div>
+  </div>
 
-    <article class="proj" onclick="openModal('gaucho')">
+  <div class="xp">
+    <div class="when">Summer 2024</div>
+    <div class="xp-split">
+      <div>
+        <h3>William M. Lapenta Data &amp; Cloud Engineering Intern</h3>
+        <div class="org">NOAA · Center for Operational Oceanographic Products &amp; Services</div>
+        <p>I ported the San Francisco Bay Operational Forecast System from an on-prem supercomputer to the NOS cloud sandbox. I also helped write one of the group's first netCDF → GRIB2 converters, including the regridding.</p>
+        <button class="open" onclick="openModal('noaa')">More →</button>
+      </div>
+      <figure class="fig"><img src="noaa_regrid.jpg" alt="SFBOFS original grid resampled onto an interpolated grid" /><figcaption>Original grid resampled onto the target grid.</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="xp">
+    <div class="when">2025 – 26</div>
+    <div>
       <h3>Lead Control Systems Test Engineer</h3>
-      <div class="org-line">Gaucho Rocket Club · Now</div>
-      <p>Simulink modeling, test design, and validation for flight-control and thrust-vector systems.</p>
-      <div class="proj-footer">
-        <div class="chips"><span>Simulink</span><span>Controls</span><span>Test</span></div>
-        <span class="proj-more">Read more →</span>
-      </div>
-    </article>
+      <div class="org">Gaucho Rocket Club · UC Santa Barbara</div>
+      <p>I built Simulink models for flight control and thrust-vector work and designed the tests to validate them before they touched hardware.</p>
+      <button class="open" onclick="openModal('gaucho')">More →</button>
+    </div>
+  </div>
 
-    <article class="proj" onclick="openModal('scrippshw')">
-      <h3>Ocean Sensor Hardware &amp; Electronics</h3>
-      <div class="org-line">Scripps Institution of Oceanography · 2023</div>
-      <p>CAD housings, electrical schematics, and hands-on calibration for self-calibrating ocean sensors built to survive real deployment.</p>
-      <div class="proj-footer">
-        <div class="chips"><span>CAD</span><span>Electronics</span><span>Field Hardware</span></div>
-        <span class="proj-more">Read more →</span>
-      </div>
-    </article>
+  <div class="xp">
+    <div class="when">May – Sep 2023</div>
+    <div>
+      <h3>Electronics Validation &amp; Test</h3>
+      <div class="org">Scripps Institution of Oceanography · Martz Lab</div>
+      <p>I bench-tested custom sensor circuits for saltwater deployment with an oscilloscope, a multimeter, and an ozone chamber. I also tracked down faults in power regulation, signal conditioning, and the ADC interface, and did CAD for the housings.</p>
+      <button class="open" onclick="openModal('scrippshw')">More →</button>
+    </div>
+  </div>
 
-    <article class="proj proj-featured" onclick="openModal('cce')">
-      <div class="proj-imgs">
-        <div class="img-main"><img src="cce_temp.jpg" alt="Modeled upper-ocean temperature across the California Current" /></div>
-        <div class="proj-imgs-strip">
-          <img src="cce_diatoms.jpg" alt="Modeled diatom concentration, California Current" />
-          <img src="cce_zoo.jpg" alt="Modeled zooplankton concentration, California Current" />
-        </div>
-      </div>
-      <div class="proj-body">
-        <div class="xp-tag">Scripps · CCE-LTER REU · 2023</div>
+  <div class="xp">
+    <div class="when">Summer 2023</div>
+    <div class="xp-split">
+      <div>
         <h3>California Current Ecosystem Modeling</h3>
-        <p>Learned MATLAB to read large ocean-model output and build seasonal-cycle visualizations linking physical drivers — upwelling, El Niño — to ecological response across temperature and plankton types.</p>
-        <div class="proj-footer">
-          <div class="chips"><span>MATLAB</span><span>Scientific Computing</span><span>Data Viz</span></div>
-          <span class="proj-more">Read more →</span>
-        </div>
+        <div class="org">Scripps · CCE-LTER, Dr. Art Miller's lab</div>
+        <p>I learned MATLAB to work with large ocean-model output and built seasonal-cycle maps that connect upwelling and El Niño to plankton response.</p>
+        <button class="open" onclick="openModal('cce')">More →</button>
       </div>
-    </article>
-
-  </div>
-</section>
-
-<section id="about" class="wrap reveal">
-  <div class="label">About</div>
-  <h2 class="sec-title">Background</h2>
-  <p style="color:var(--ink-2);max-width:640px;font-size:15px;margin-bottom:22px">I admit my background looks unusual, it really is a set of separate systems. Most of my hands-on work has been in high-performance computing, sensor hardware, and flight software. At its core, I think that makes me a systems engineer: ever since I was a kid, connecting the pieces, experimenting, learning about how things work and why; this is what I find interesting, and that's still my foundation. I'm at SDSU now to push deeper into mechanics and materials and point all of it at something that I can build and be proud of, which is why aerospace interests me so much and I believe is my calling.</p>
-  <div class="skills">
-    <span>Python</span><span>MATLAB</span><span>R</span><span>C / C++</span><span>Simulink</span><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>ParaView</span><span>Blender</span><span>CAD</span><span>Composite Structures</span><span>Elasticsearch</span><span>HPC</span><span>Linux</span><span>Git</span><span>Numerical Modeling</span><span>ANSYS Mechanical</span><span>Transfer Matrix Method</span><span>Computational Materials</span>
-  </div>
-</section>
-
-<section class="wrap reveal">
-  <div class="label">Education</div>
-  <h2 class="sec-title">Schools</h2>
-  <div>
-    <div class="edu-row">
-      <div><h3>San Diego State University</h3><div class="deg">B.S. Mechanical Engineering, concentration in Materials and Mechanics</div></div>
-      <div class="yr">Incoming · Fall 2026</div>
-    </div>
-    <div class="edu-row">
-      <div><h3>San Diego Mesa College</h3><div class="deg">Computer Science & Engineering transfer coursework · 3.88 GPA</div></div>
-      <div class="yr">Transfer</div>
-    </div>
-    <div class="edu-row">
-      <div><h3>UC Santa Barbara</h3><div class="deg">Physics and Computer Science coursework</div></div>
-      <div class="yr">Foundation</div>
+      <figure class="fig"><img src="cce_temp.jpg" alt="Modeled upper-ocean temperature across the California Current" /><figcaption>Modeled upper-ocean temperature.</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="contact" class="wrap reveal contact-block">
-  <div class="label">Contact</div>
-  <div class="big"><a href="mailto:carlomakeever@engineering.ucsb.edu">carlomakeever@<wbr>engineering.ucsb.edu</a></div>
-  <p class="note">Looking for aerospace, thermal, or systems work. Internships or research.</p>
-  <div class="hlinks">
-    <a class="solid" href="mailto:carlomakeever@engineering.ucsb.edu">Email me</a>
-    <a href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
-    <a href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé</a>
+<!-- ============ EARLIER ============ -->
+<section id="earlier" class="wrap">
+  <div class="sec-head">
+    <span class="num">04</span><h2>Earlier projects</h2>
+    <p>Older projects and class work. Some of the write-ups are still unfinished, and I've marked which ones.</p>
   </div>
-  <div class="flag">U.S. Citizen · DoD Secret clearance eligible</div>
+
+  <article class="entry" style="padding-top:0">
+    <div class="figs">
+      <figure class="fig"><img src="vwing_render.jpg" alt="V-Wing UAV Blender render" /></figure>
+      <div class="figs two">
+        <figure class="fig"><img src="vwing_cfd.jpg" alt="V-Wing CFD velocity magnitude" /></figure>
+        <figure class="fig"><img src="vwing_mesh.jpg" alt="V-Wing OpenVSP mesh" /></figure>
+      </div>
+    </div>
+    <div>
+      <div class="meta">Personal project</div>
+      <h3>Deployable Tactical V-Wing UAV</h3>
+      <p>Can you split a flying wing into sections you carry in a pack and bolt together in the field, without the seams costing too much drag? I worked from geometry in OpenVSP to RANS in OpenFOAM. The answer mostly depends on how flush the joint is.</p>
+      <div class="tools"><span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span></div>
+      <div class="actions"><button class="open" onclick="openModal('vwing')">Read the notes →</button></div>
+    </div>
+  </article>
+
+  <div class="list">
+    <div class="list-row">
+      <div><h3>Vickers Hardness Testing</h3><div class="meta">ME 241 · Oct 2026</div></div>
+      <p>HV10 on five materials from aluminum to zirconia, with a proper uncertainty analysis.</p>
+      <button class="open" onclick="openModal('vickers')">Notes →</button>
+    </div>
+    <div class="list-row">
+      <div><h3>Sn–Pb Phase Diagram &amp; Cooling Curve</h3><div class="meta">ME 241 · Sep 2026</div></div>
+      <p>I recorded a cooling curve for 90Sn–10Pb, picked the liquidus and eutectic points off the slope changes, and compared them with the phase diagram.</p>
+      <a href="phase_diagram_report.pdf" target="_blank" rel="noopener">Report (PDF) →</a>
+    </div>
+    <div class="list-row">
+      <div><h3>ALBATROSS-1 Fixed-Wing UAV</h3><div class="meta">Conceptual design</div></div>
+      <p>A full conceptual design cycle for a long-endurance UAV, from mission and weight budget to a sized wing.</p>
+      <button class="open" onclick="openModal('albatross')">Notes →</button>
+    </div>
+    <div class="list-row">
+      <div><h3>Nose Cone Geometry CFD Study</h3><div class="meta">OpenFOAM · ParaView</div></div>
+      <p>A drag comparison across nose cone families at the same flow conditions.</p>
+      <button class="open" onclick="openModal('nosecone')">Notes →</button>
+    </div>
+    <div class="list-row">
+      <div><h3>Thrust Vector Control Modeling</h3><div class="meta">Gaucho Rocket Club · UCSB</div></div>
+      <p>A closed-loop TVC model in Simulink to support flight-control development and hardware tests.</p>
+      <button class="open" onclick="openModal('tvc')">Notes →</button>
+    </div>
+    <div class="list-row">
+      <div><h3>Raspberry Pi Instant Camera</h3><div class="meta">Hardware</div></div>
+      <p>A small build to make myself deal with real hardware: wiring, software, and packaging.</p>
+      <button class="open" onclick="openModal('picamera')">Notes →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UPDATES ============ -->
+<section id="updates" class="wrap">
+  <div class="sec-head">
+    <span class="num">05</span><h2>Updates</h2>
+    <p>A running log, newest first. Short notes on what changed and what I learned.</p>
+  </div>
+  <div class="log" id="log">
+    <div class="log-row">
+      <div class="d">30 Oct 2026</div><div class="t"><span>XFS</span></div>
+      <div class="b">First wave-drag run on XFS Concept A in OpenVSP at Mach 1.05. C<sub>D,wave</sub> = 0.0254 on S<sub>ref</sub> = 0.463 m², with 20 slices and 10 roll angles. <span>The area curve is mostly smooth. The scatter between roll angles shows up aft of 1.5 m where the tail surfaces start.</span></div>
+    </div>
+    <div class="log-row">
+      <div class="d">Oct 2026</div><div class="t"><span>New group</span></div>
+      <div class="b">Started <b>SDSU Experimental Flight Sciences</b>. <span>First job: a 1.5 m-span UAV testbed in OpenVSP, a containerized OpenFOAM RANS setup for nose shape and fineness ratio, and thrust–drag budgets across four turbine options.</span></div>
+    </div>
+    <div class="log-row">
+      <div class="d">24 Oct 2026</div><div class="t"><span>Rocket Project</span></div>
+      <div class="b">Ran the design review for three fin-can concepts: a bolt-on sleeve, a one-piece composite can, and a structural boattail. <span>The review caught a dimensional mismatch that rules out reusing the old spar frame. Better to find that on paper.</span></div>
+    </div>
+    <div class="log-row">
+      <div class="d">Oct 2026</div><div class="t"><span>ANCS · L1</span></div>
+      <div class="b">Flew my Level 1 high-power rocket in the desert. <span>I designed it in OpenRocket and SolidWorks and printed the nose and fins in ABS. The CAD caught a fin-tab and centering-ring clash before anything got printed.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">26 Oct 2026</div><div class="t"><span>Rocket Project</span></div>
+      <div class="b">Laid out the lower airframe work breakdown for the rest of the semester. <span>That's 12 trade studies across spars, fin can, fins, integration, and analysis. Each one ends in CAD, with reviews on Nov 13 and Dec 4 and CAD release on Dec 11.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">11 Oct 2026</div><div class="t"><span>ME 241</span></div>
+      <div class="b">Vickers hardness lab (HV10) on 6061-T6 aluminum, 1018 steel, 360 brass, 110 copper, and zirconia. <span>Zirconia came in at 1600 ± 200 HV against 250 ± 10 for the steel, and it had by far the most scatter. Writing the uncertainty section taught me more than the test did.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">8 Oct 2026</div><div class="t"><span>Structures</span></div>
+      <div class="b">Hand-checked membrane stresses in a 500 psi propellant tank with a 2:1 elliptical dome. <span>The dome equator turned out to govern, not the cylinder. Hoop stress there goes compressive, so the von Mises stress rises to 20.8 ksi, which is a factor of 1.92 on an assumed 40 ksi yield. Joints, welds, and buckling aren't included yet.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">Sep 2026</div><div class="t"><span>Rocket Project</span></div>
+      <div class="b">Nose cone design review, my first structures assignment. <span>The constraints were a 10 in body, Mach 1.4, and a 6 × 10 in payload in ABS under 6 lb. I compared tangent ogive, parabolic, and Von Kármán at the same length and wall thickness, then picked Von Kármán at 36 in.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">Aug 2026</div><div class="t"><span>SDSU</span></div>
+      <div class="b">Started at San Diego State in mechanical engineering. <span>I took on lower airframe lead for the Rocket Project and structures lead for ANCS.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">Jul 2026</div><div class="t"><span>MoTe₂</span></div>
+      <div class="b">Joined the Computational Materials lab. <span>My first DFT number for the monolayer MoTe₂ phase-energy difference was 43 meV per formula unit, against 40 meV published. That's close enough to keep going and not close enough to stop checking.</span></div>
+    </div>
+    <div class="log-row log-more">
+      <div class="d">Nov 2025</div><div class="t"><span>JPL</span></div>
+      <div class="b">Finished my internship with the MSL thermal team. <span>A heater-table update I helped support was sent up to Curiosity.</span></div>
+    </div>
+  </div>
+  <button class="log-toggle" id="logToggle" aria-expanded="false">Show older entries</button>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="alt">
+ <div class="wrap">
+  <div class="sec-head"><span class="num">06</span><h2>About</h2></div>
+  <div class="about">
+    <div>
+      <p>I'll admit my background looks unusual. Most of my early hands-on work was in high-performance computing, sensor hardware, and flight software. At its core I think that makes me a systems person. Since I was a kid I've liked connecting the pieces, experimenting, and figuring out how things work and why. That's still the foundation.</p>
+      <p>I came to SDSU to go deeper into mechanics and materials and to point all of it at things I can build and be proud of. That's why aerospace pulls at me so much. This year that has meant fin cans, printed nose cones, and a lot of hand calcs I check twice.</p>
+      <p class="quote">"The greatest love you can give the universe is to learn about it, and the greatest love you can give yourself is to make something you're proud of."</p>
+    </div>
+    <dl class="skills">
+      <dt>Design &amp; fabrication</dt><dd>SolidWorks, Fusion 360, OpenVSP, OpenRocket, 3D printing, composite layup</dd>
+      <dt>Analysis</dt><dd>Thermal/structural FEA, Ansys Mechanical, APDL, Material Designer, OpenFOAM, VSPAERO, ParaView</dd>
+      <dt>Materials &amp; modeling</dt><dd>DFT (VASP), LAMMPS, transfer-matrix optics, hardness and impact testing</dd>
+      <dt>Programming</dt><dd>Python, MATLAB/Simulink, C/C++, R, Bash, Git, Linux, HPC</dd>
+      <dt>Test &amp; electronics</dt><dd>Oscilloscope, multimeter, bench testing, fault isolation, sensor validation</dd>
+    </dl>
+  </div>
+
+  <div class="edu">
+    <div class="edu-row">
+      <div><h4>San Diego State University</h4><div class="deg">B.S. Mechanical Engineering · GPA 3.71</div></div>
+      <div class="yr">2026 – May 2028</div>
+    </div>
+    <div class="edu-row">
+      <div><h4>San Diego Mesa College</h4><div class="deg">A.S. Computer Science &amp; Engineering · GPA 3.89</div></div>
+      <div class="yr">2023 – 2026</div>
+    </div>
+    <div class="edu-row">
+      <div><h4>UC Santa Barbara</h4><div class="deg">Physics and Computer Science coursework</div></div>
+      <div class="yr">2025 – 2026</div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+ <div class="wrap">
+  <div class="sec-head"><span class="num">07</span><h2>Contact</h2></div>
+  <div class="big"><a href="mailto:cmakeever4960@sdsu.edu">cmakeever4960@sdsu.edu</a></div>
+  <p class="note">I'm looking for summer 2027 internships or research in aerospace structures, thermal, or test. If you're working on something that flies, I'd like to hear about it.</p>
+  <div class="links">
+    <a class="btn solid" href="mailto:cmakeever4960@sdsu.edu">Email me</a>
+    <a class="btn" href="Carlo_Makeever.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+    <a class="btn" href="https://www.linkedin.com/in/carlo-makeever-880b232a6/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/carloxaugustine" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="flag">U.S. Citizen · DoD Secret clearance eligible · San Diego, CA</div>
+ </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr"></span> Carlo Augustine</span>
-    <span>San Diego, CA</span>
+    <span>© <span id="yr"></span> Carlo Augustine Makeever</span>
+    <span>Last updated Nov 2026 · hand-written HTML, no framework</span>
   </div>
 </footer>
 
 
+<!-- ===================== MODALS ===================== -->
+
+<!-- LAF MODAL -->
+<div class="modal-overlay" id="modal-laf">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('laf')">close ✕</button>
+    <div class="modal-imgs"><img src="laf_workflow.webp" alt="Lower-airframe development sequence and responsibility interfaces" /></div>
+    <div class="modal-body">
+      <div class="m-label">Structures · Integration · Team lead</div>
+      <h2>Liquid Rocket Lower Airframe &amp; Fin Can</h2>
+      <div class="org-modal">SDSU Rocket Project · Lower Airframe Lead · Aug 2026 → now</div>
+      <div class="m-chips">SolidWorks · hand calcs · structural FEA · 6061-T6 · G12 · composites</div>
+
+      <div class="m-section">
+        <h3>Scope</h3>
+        <p>The lower airframe (LAF) is everything aft of the forward structure: a 60 in G12 structural tube that holds the propellant tanks and a tank cradle, then a 12 in fin-can module with a spar bay and boattail around the engine. Thrust comes in through the engine flange and a thrust ring. From there it has to go through the spars and into the body tube without anything bending where it shouldn't.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>How I set it up</h3>
+        <p>With 13 people on the team, the biggest risk early on was everyone designing against different numbers. The first thing I did was write one shared set of requirements: dimensions, interfaces, load cases, and mass targets. Propulsion, flight analysis, and the structures lead feed into it. Spars and the fin-to-boattail joint run in parallel with fin core and skin materials, then come back together in one integrated CAD model for review (figure above).</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Packaging and interfaces</h3>
+        <figure class="m-fig"><img src="laf_tank_packaging.webp" alt="Tank packaging and lower-airframe concept with 18 in fuel and 24 in oxidizer tanks, sections A-A and B-B" /><figcaption>Preliminary tank packaging: 54 in of G12 body plus a 6 in custom boattail. Section B–B shows the aft thrust frame.</figcaption></figure>
+        <figure class="m-fig"><img src="laf_propulsion_interface.webp" alt="Lower airframe and propulsion integration schematic showing thrust path through engine flange and thrust ring" /><figcaption>Where structures and propulsion meet. I drew this so both teams agree on who owns the flange, the bolt pattern, and the clearance for thermal growth.</figcaption></figure>
+      </div>
+
+      <div class="m-section">
+        <h3>Tank pressure check</h3>
+        <p>As a first sanity check on the tank walls I ran membrane theory on a 500 psi tank (r = 3.94 in, t = 0.125 in, 2:1 dome). The cylinder wall and dome crown are fine. At the dome equator, though, the hoop stress turns compressive. Because the two principal stresses have opposite signs, von Mises goes up instead of down there: 20.8 ksi, which is a factor of 1.92 on an assumed 40 ksi yield. Joint bending, welds, a design factor, and buckling under flight loads are still to come.</p>
+        <figure class="m-fig"><img src="tank_stress.webp" alt="Stress elements at cylinder wall, dome crown and dome equator for a 500 psi tank" /><figcaption>Stress elements at three points on the tank, in ksi.</figcaption></figure>
+      </div>
+
+      <div class="m-section">
+        <h3>Plan for the semester</h3>
+        <figure class="m-fig"><img src="laf_work_breakdown.webp" alt="Work breakdown and trade-study flow from Oct 26 to Dec 11" /><figcaption>Every owner runs a trade study that picks a design, then CAD shows the pick works. Fin-can concepts A–C merge at the first review.</figcaption></figure>
+      </div>
+
+      <div class="m-section">
+        <h3>Decisions so far</h3>
+        <div class="status-list">
+          <div class="status-item"><b>Done</b><span>Reviewed three fin-can concepts: a bolt-on sleeve, a one-piece composite can, and a structural boattail. The review found a dimensional incompatibility that rules out reusing the legacy spar frame.</span></div>
+          <div class="status-item"><b>Done</b><span>Proposed spar bay layout: 4 × 0.75 in square spars with 1/16 in wall on a 3.25 in radius, with a thrust ring at each end of the 6 in bay. 6061-T6 is the candidate material.</span></div>
+          <div class="status-item"><b>Now</b><span>Spar trade studies on cross-section, material, and isogrid pocketing. Hand calcs first, then FEA to compare mass against stiffness.</span></div>
+          <div class="status-item"><b>Open</b><span>Fin shape, boattail aft diameter, and tank cradle location. Spar strength hasn't been checked yet.</span></div>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h3>What I've learned</h3>
+        <p>Most of the hard problems so far have been about interfaces, not stress. Who owns the bolt pattern, how much radial clearance the nozzle needs for thermal growth, and which team carries which load. Putting those on paper early has saved us more time than any single calculation.</p>
+      </div>
+
+      <div class="m-note">Dimensions shown are working values from team design reviews and will change. Schematics are my own originals, not manufacturing drawings.</div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- L1 MODAL -->
+<div class="modal-overlay" id="modal-l1">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('l1')">close ✕</button>
+    <div class="modal-imgs">
+      <div class="modal-imgs-strip four">
+        <img src="l1_pad.webp" alt="Rocket on the launch rail" />
+        <img src="l1_boost.webp" alt="Rocket under boost just after leaving the rail" />
+        <img src="l1_ascent.webp" alt="Rocket climbing with a smoke trail against blue sky" />
+        <img src="l1_trail.webp" alt="Smoke trail rising into the clouds after burnout" />
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="m-label">High-power rocketry · Design for manufacture</div>
+      <h2>ANCS Level 1 High-Power Rocket</h2>
+      <div class="org-modal">SDSU Aerospace Navigation &amp; Control Society · Structures &amp; Materials Lead · Fall 2026</div>
+      <div class="m-chips">OpenRocket · SolidWorks · ABS printing · LOC BT-2.56 · 38 mm motor mount</div>
+
+      <div class="m-section">
+        <h3>Goal</h3>
+        <p>Build a safe, manufacturable Level 1 certification rocket around a purchased 2.56 in LOC body tube and a 38 mm I-class motor, with every custom part printable on a 300 × 300 × 300 mm printer. The workflow was OpenRocket first, then CAD for the custom parts, then a check that the CAD still matched the sim, then print, build, and fly.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Design changes and why</h3>
+        <ul>
+          <li><b>Nose:</b> The first version was a 280 mm cone plus a 65 mm shoulder, 345 mm total. That doesn't fit the printer, so I cut it to 235 mm plus a 60 mm shoulder, 295 mm in one piece. I kept the Von Kármán profile because it's the standard low-drag Haack shape. The real benefit here is a smooth, credible nose, not extra apogee.</li>
+          <li><b>Fins:</b> I went from 3.03 mm to 4 mm thick. Since bending stiffness goes with t³, that's about 2.3× the stiffness for 1.32× the mass. The fins are a swept clipped-delta planform with through-wall tabs.</li>
+          <li><b>Fit check:</b> The CAD showed a fin tab interfering with a centering ring before anything was printed. I moved the ring and measured the received tube with calipers before freezing the slots.</li>
+          <li><b>Recovery:</b> A 30 in compact elliptical chute on 1/4 in Kevlar shock cord with a Nomex protector.</li>
+        </ul>
+      </div>
+
+      <div class="m-section">
+        <h3>How I wrote it up</h3>
+        <p>In the write-up I kept three things separate: facts backed by a source, calculations from the current geometry, and judgment calls. Each judgment call is labeled as a recommendation or an open verification item, not presented as proven. I'd like to keep doing it that way.</p>
+      </div>
+
+      <div class="modal-actions"><a href="ancs_l1_writeup.pdf" target="_blank" rel="noopener">Full design write-up (PDF)</a><a href="#contact" onclick="closeAll()">Get in touch</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- XFS MODAL -->
+<div class="modal-overlay" id="modal-xfs">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('xfs')">close ✕</button>
+    <div class="modal-imgs"><img src="xfs_mach_sweep.webp" alt="Drag build-up versus Mach number and total drag versus body length, compared with available thrust" /></div>
+    <div class="modal-body">
+      <div class="m-label">Transonic aerodynamics · Conceptual design</div>
+      <h2>XFS: Toward a Transonic RC Aircraft</h2>
+      <div class="org-modal">SDSU Experimental Flight Sciences · Founder · Oct 2026 → now</div>
+      <div class="m-chips">Python · OpenVSP wave drag · OpenFOAM RANS · Docker</div>
+
+      <div class="m-section">
+        <h3>The question</h3>
+        <p>Turbine RC jets are fast, but near Mach 1 the drag rises sharply. The plot above is a first-pass drag build-up: friction, wave, and drag due to lift, compared with flat available thrust. It shows why. Below M ≈ 0.8, friction drag is most of the total. Past the drag-divergence Mach number, wave drag takes over and total drag passes the thrust line quickly. Making the body longer helps above Mach 1 but costs a little friction drag below it.</p>
+      </div>
+
+      <div class="m-section">
+        <h3>Method</h3>
+        <ul>
+          <li>Generate a Sears–Haack body at a chosen fineness ratio in Python.</li>
+          <li>Add the cross-sectional area of the wing, canard, and fins at each station. Then pinch the fuselage so the total follows a Sears–Haack distribution with the same length and volume (Whitcomb area rule).</li>
+          <li>Export the stations to OpenVSP and run its wave-drag tool. The first run on Concept A at M 1.05 gave C<sub>D,wave</sub> = 0.0254 on S<sub>ref</sub> = 0.463 m².</li>
+          <li>Set up a containerized OpenFOAM RANS case to compare nose shapes and fineness ratios on a 1.5 m-span testbed.</li>
+        </ul>
+      </div>
+
+      <div class="m-section">
+        <h3>Design decisions on Concept A</h3>
+        <figure class="m-fig"><img src="xfs_concept_a.webp" alt="OpenVSP wireframe of XFS Concept A" /><figcaption>Concept A as modeled in OpenVSP.</figcaption></figure>
+        <ul>
+          <li><b>Start from a Sears–Haack body.</b> For a given length and volume, it's the shape with the lowest supersonic wave drag, which makes it the right reference before anything gets bolted on. I picked a fineness ratio of 12 (length over max diameter) because longer and thinner lowers wave drag. The cost is more wetted area and a longer, more flexible fuselage, which is the trade in the Mach sweep above.</li>
+          <li><b>Area-rule the whole aircraft, not just the body.</b> Near Mach 1, wave drag follows the total cross-sectional area at each station: body plus wing, canard, and fins. So I set the total to follow a Sears–Haack curve with the same length and volume, and the fuselage gets whatever is left over. That gives the body a waist where the wing is thickest. A naive "nice body plus wings" layout puts a big bump in the curve.</li>
+          <li><b>Open the tail for the nozzle.</b> A true Sears–Haack body closes to a point, which leaves nowhere for the exhaust to go. I use a longer equivalent body (1.15 L) and cut it off at L, so the cut face becomes the nozzle exit.</li>
+          <li><b>Don't squeeze the engine.</b> From 40% of length to the tail, the fuselage can't shrink below 55% of its max radius, as a placeholder turbine and duct envelope. Wherever that limit wins, the body sits above the ideal area curve, and the script flags it.</li>
+          <li><b>Thin, swept, cranked-arrow wing.</b> 70° sweep inboard and about 52° outboard keeps the inboard leading edge well behind the Mach cone and leaves room at the root for structure and fuel. I used a biconvex section at 3.5% thickness, because thickness is one of the biggest drivers of transonic wave drag.</li>
+          <li><b>Small delta canard and twin fins at 4% thickness.</b> The canard is for pitch trim as the center of pressure moves aft through transonic flight. The twin fins handle directional stability. They're kept small and thin because every bit of their area counts toward the same area budget.</li>
+        </ul>
+        <figure class="m-fig"><img src="xfs_sears_haack.webp" alt="Sears-Haack baseline body in OpenVSP" /><figcaption>The Sears–Haack baseline body before area ruling.</figcaption></figure>
+      </div>
+
+      <div class="m-section">
+        <h3>What this isn't yet</h3>
+        <p>The planform numbers and drag inputs are placeholders I'm using to learn the method. Nothing has been sized, and no stability, inlet, or flight-performance claims are validated. The thrust–drag budgets across four turbine options are there to decide whether the idea is worth pursuing.</p>
+      </div>
+
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
+    </div>
+  </div>
+</div>
+
 <!-- MWIR COATING MODAL -->
 <div class="modal-overlay" id="modal-mwir">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('mwir')">✕</button>
-    <div class="modal-imgs">
-      <img src="mwir_coating_current_status.png" alt="MWIR coating optimization current research status" />
-    </div>
+    <button class="modal-close" onclick="closeModal('mwir')">close ✕</button>
+    <div class="modal-imgs"><img src="mwir_coating_current_status.png" alt="MWIR coating optimization current research status" /></div>
     <div class="modal-body">
-      <div class="m-label">Optical Modeling · Optimization · Transient Thermal Analysis</div>
+      <div class="m-label">Optical modeling · Optimization · Transient thermal</div>
       <h2>Trajectory-Integrated MWIR Coating Optimization</h2>
-      <div class="org-modal">SDSU Aerospace Materials Research · Current</div>
-      <div class="m-chips">
-        <span>Python</span><span>Transfer Matrix Method</span><span>Differential Evolution</span><span>ANSYS Mechanical</span><span>Thermal Radiation</span>
+      <div class="org-modal">SDSU Materials Laboratory · Aerospace Materials RA · May 2026 → now</div>
+      <div class="m-chips">Python · transfer matrix method · differential evolution · Ansys Mechanical / APDL · thermal radiation</div>
+
+      <div class="m-section">
+        <h3>Research question</h3>
+        <p>Most multilayer infrared-coating studies optimize at one temperature, or collapse a changing thermal history into one representative condition. My project asks whether optimizing directly against the full surface-temperature trajectory produces a meaningfully better coating for reducing MWIR signature.</p>
       </div>
 
       <div class="m-section">
-        <h3>Research Question</h3>
-        <p>Most multilayer infrared-coating studies optimize at one temperature or collapse a changing thermal history into a simplified representative condition. My project asks whether optimizing directly against the full surface-temperature trajectory produces a meaningfully better MWIR signature-reduction coating.</p>
-      </div>
-
-      <div class="m-section">
-        <h3>Completed Optical Work</h3>
+        <h3>Completed optical work</h3>
         <ul>
           <li>Built a custom Python transfer-matrix solver for multilayer optical stacks.</li>
           <li>Integrated differential evolution to search layer materials and thicknesses.</li>
@@ -420,31 +828,33 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
       </div>
 
       <div class="m-section">
-        <h3>Objective Formulation</h3>
+        <h3>Objective</h3>
         <p>The current optical baseline trades MWIR emissivity against coating mass:</p>
         <div class="eq">J = w<sub>ε</sub> ε̄<sub>MWIR</sub> + w<sub>m</sub>(m/A)</div>
-        <p>The transient branch will replace the single-temperature optical term with time-integrated spectral radiance along the simulated surface-temperature history. That coupling is the research contribution currently being implemented; I am not claiming a trajectory-level performance result yet.</p>
+        <p>The transient branch will replace the single-temperature optical term with time-integrated spectral radiance along the simulated surface-temperature history. That coupling is the part I'm building now, so I'm not claiming a trajectory-level result yet.</p>
       </div>
 
       <div class="m-section">
-        <h3>Transient ANSYS Branch — Current Status</h3>
+        <h3>Transient Ansys branch: status</h3>
         <div class="status-list">
           <div class="status-item"><b>Defined</b><span>Element configuration, thermal-mass properties, boundary-condition strategy, adaptive time stepping, and temperature-output requirements.</span></div>
-          <div class="status-item"><b>In progress</b><span>Building the transient thermal model using a layered shell or through-thickness solid representation and resolving the surface/laminate temperature history.</span></div>
+          <div class="status-item"><b>In progress</b><span>Building the transient thermal model with either a layered shell or a through-thickness solid, and resolving the temperature history through the surface and laminate.</span></div>
           <div class="status-item"><b>Next</b><span>Export T(x,t) to the Python TMM kernel and evaluate spectral emissivity and radiance at each time step.</span></div>
           <div class="status-item"><b>Comparison</b><span>Benchmark trajectory-aware optimization against fixed-temperature and uniformly weighted temperature baselines.</span></div>
         </div>
       </div>
 
       <div class="m-section">
-        <h3>My Exact Contribution</h3>
-        <p>I developed the optical solver and optimization workflow, performed the literature benchmark and VO₂ validation, and architected the transient ANSYS-to-Python coupling. The transient thermal simulations and trajectory comparison are current work, not completed results.</p>
+        <h3>Related lab work</h3>
+        <p>I'm also developing an Ansys APDL workflow for sequential thermal-to-structural FEA of layered ceramic tiles, with temperature-dependent properties and convection and radiation boundary conditions. Separately, I computed effective thermal conductivity and stiffness inputs for carbon/epoxy representative volume elements at 70% fiber volume in Ansys Material Designer.</p>
       </div>
 
-      <div class="modal-actions">
-        <a class="solid" href="mwir_coating_current_status.png" target="_blank" rel="noopener">Open project graphic</a>
-        <a href="#contact">Get in touch</a>
+      <div class="m-section">
+        <h3>My contribution</h3>
+        <p>I developed the optical solver and optimization workflow, did the literature benchmark and VO₂ validation, and designed the transient Ansys-to-Python coupling. The transient thermal simulations and the trajectory comparison are still in progress, not completed results.</p>
       </div>
+
+      <div class="modal-actions"><a href="mwir_coating_current_status.png" target="_blank" rel="noopener">Open project graphic</a><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -452,64 +862,51 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- MOTE2 MODAL -->
 <div class="modal-overlay" id="modal-mote2">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('mote2')">✕</button>
-    <div class="modal-imgs">
-      <img src="mote2_radiation_current_status.png" alt="MoTe2 radiation project current research status" />
-    </div>
+    <button class="modal-close" onclick="closeModal('mote2')">close ✕</button>
+    <div class="modal-imgs"><img src="mote2_radiation_current_status.png" alt="MoTe2 radiation project current research status" /></div>
     <div class="modal-body">
-      <div class="m-label">Computational Materials · DFT · Radiation Damage</div>
+      <div class="m-label">Computational materials · DFT · Radiation damage</div>
       <h2>MoTe₂ Phase Switching Under Radiation</h2>
-      <div class="org-modal">SDSU Computational Materials Research Lab · Current</div>
-      <div class="m-chips">
-        <span>DFT</span><span>Python</span><span>ASE</span><span>MLIP Validation</span><span>HPC</span>
+      <div class="org-modal">SDSU Computational Materials Research Lab · Undergraduate RA · Jul 2026 → now</div>
+      <div class="m-chips">VASP / PBE · Python / ASE · MLIP validation · LAMMPS · kinetic Monte Carlo · HPC</div>
+
+      <div class="m-section">
+        <h3>Physical problem</h3>
+        <p>MoTe₂ can switch reversibly between the semiconducting 2H phase and the metallic 1T′ phase, which makes it a candidate for non-volatile phase-change memory. In a spacecraft or on the Martian surface, displacement damage and vacancy buildup may shift phase stability, change switching barriers, and eventually make the device unreliable.</p>
       </div>
 
       <div class="m-section">
-        <h3>Physical Problem</h3>
-        <p>MoTe₂ can reversibly switch between the semiconducting 2H phase and metallic 1T′ phase, making it a candidate for non-volatile phase-change memory. In a spacecraft environment, displacement damage and vacancy accumulation may shift phase stability, alter switching barriers, and eventually make the device unreliable.</p>
+        <h3>DFT baseline</h3>
+        <p>I have relaxed structures for both phases. The 1T′–2H energy difference comes out to 43 meV per formula unit with 2H lower, against a published value of 40 meV. The 1T′ Mo–Mo dimer distance is 2.89 Å.</p>
+        <p>The first calculations used a 300 eV cutoff and fixed cells. For matched reruns I'm using 500 eV, 18 Å of vacuum, and ISIF = 3. That removes inherited cell strain so the phase-energy comparison holds up.</p>
       </div>
 
       <div class="m-section">
-        <h3>Current Work — DFT Baseline</h3>
-        <p>I now have relaxed structures for both phases. Initial checks give a 1T′–2H energy difference of 43 meV per formula unit, with 2H lower, and a 1T′ Mo–Mo dimer distance of 2.89 Å. Those numbers are close to the expected published behavior, but they are preliminary rather than final validation.</p>
-        <p>The first calculations used a 300 eV cutoff and fixed cells, so I am preparing matched reruns at 500 eV with 18 Å vacuum and ISIF = 3. This removes inherited cell strain and makes the phase-energy comparison defensible.</p>
-      </div>
-
-      <div class="m-section">
-        <h3>Planned Workflow</h3>
+        <h3>Workflow</h3>
         <div class="status-list">
-          <div class="status-item"><b>Completed</b><span>Relaxed 2H and 1T′ structures and performed initial phase-ordering, lattice, and dimerization checks.</span></div>
-          <div class="status-item"><b>Current</b><span>Run converged, matched DFT calculations and verify energy normalization per formula unit.</span></div>
-          <div class="status-item"><b>Next</b><span>Validate the Shuang machine-learned interatomic potential against DFT energies, forces, structures, and phase ordering.</span></div>
-          <div class="status-item"><b>Later</b><span>Test short-range behavior, add screened repulsion if required, then run radiation-damage molecular dynamics and map switching degradation.</span></div>
+          <div class="status-item"><b>Completed</b><span>Relaxed 2H and 1T′ structures and did the initial phase-ordering, lattice, and dimerization checks.</span></div>
+          <div class="status-item"><b>Current</b><span>Converged, matched DFT runs and a check of the per-formula-unit energy normalization.</span></div>
+          <div class="status-item"><b>Next</b><span>Validate a machine-learned interatomic potential against DFT energies, forces, structures, and phase ordering.</span></div>
+          <div class="status-item"><b>Later</b><span>Run LAMMPS radiation-cascade MD and kinetic Monte Carlo under Mars-surface conditions, then map how switching degrades.</span></div>
         </div>
       </div>
 
       <div class="m-section">
-        <h3>My Exact Contribution</h3>
-        <p>I am interpreting and validating the relaxed structures, normalizing phase energies, checking the defining 1T′ dimerization, defining the higher-fidelity rerun protocol, and building the Python/ASE validation workflow that will gate all later MLIP and cascade work.</p>
+        <h3>My contribution</h3>
+        <p>I interpret and validate the relaxed structures, normalize phase energies, check the defining 1T′ dimerization, define the higher-fidelity rerun protocol, and build the Python/ASE validation workflow that every later MLIP and cascade step depends on. None of the MLIP training, cascade simulation, or device-performance work is presented here as finished.</p>
       </div>
 
-      <div class="m-section">
-        <h3>Intended Application</h3>
-        <p>The long-term goal is a physics-based design map for low-power, non-volatile MoTe₂ memory that retains reliable switching as radiation defects accumulate. No MLIP training, radiation cascade simulation, or final device-performance claim is presented as completed work yet.</p>
-      </div>
-
-      <div class="modal-actions">
-        <a class="solid" href="mote2_radiation_current_status.png" target="_blank" rel="noopener">Open project graphic</a>
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="modal-actions"><a href="mote2_radiation_current_status.png" target="_blank" rel="noopener">Open project graphic</a><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
 
-
 <!-- V-WING MODAL -->
 <div class="modal-overlay" id="modal-vwing">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('vwing')">✕</button>
+    <button class="modal-close" onclick="closeModal('vwing')">close ✕</button>
     <div class="modal-imgs">
-      <div class="img-main"><img src="vwing_render.jpg" alt="V-Wing UAV render" /></div>
+      <img src="vwing_render.jpg" alt="V-Wing UAV render" />
       <div class="modal-imgs-strip">
         <img src="vwing_cfd.jpg" alt="CFD velocity magnitude" />
         <img src="vwing_mesh.jpg" alt="OpenVSP mesh" />
@@ -518,44 +915,63 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
     <div class="modal-body">
       <div class="m-label">Aerodynamics · Structures · CFD</div>
       <h2>Deployable Tactical V-Wing UAV</h2>
-      <div class="m-chips">
-        <span>OpenVSP</span><span>VSPAERO</span><span>OpenFOAM</span><span>Blender</span>
-      </div>
+      <div class="m-chips">OpenVSP · VSPAERO · OpenFOAM · Blender</div>
 
       <div class="m-section">
-        <h3>The Problem</h3>
+        <h3>The problem</h3>
         <p>Most fixed-wing ISR platforms are way too big or structurally complicated to actually carry and deploy in the field. I wanted to see if a V-wing configuration could be split into sections you could pack out and bolt together on-site without paying a huge aerodynamic penalty for the seams.</p>
-        <p>The reason I went with a flying wing specifically is that you get good span efficiency and no tail drag, which gives you some margin to absorb whatever penalty the seams add. The catch is that flying wings are inherently pitch unstable, so dihedral and sweep are doing a lot of work on the stability side.</p>
+        <p>I went with a flying wing because you get good span efficiency and no tail drag, which leaves some margin to absorb whatever the seams cost. The catch is that flying wings are inherently pitch unstable, so dihedral and sweep are doing a lot of the work on stability.</p>
       </div>
 
       <div class="m-section">
-        <h3>Geometry and Configuration</h3>
+        <h3>Geometry and configuration</h3>
         <p>I built everything in OpenVSP, starting with a central fuselage pod that the wing panels attach to. The pod is both the payload housing and the structural spine. I ran a bunch of VSPAERO iterations sweeping dihedral and sweep angle before landing on what you see in the render.</p>
-        <p>Getting the mesh to behave at the wing-pod junction took longer than I expected. OpenVSP's surface mesher produces irregular triangles at blended junctions and my early VSPAERO runs were throwing off-axis moments that didn't match my hand calcs. I had to go back and clean up those intersections before I trusted the panel results.</p>
+        <p>Getting the mesh to behave at the wing-pod junction took longer than I expected. OpenVSP's surface mesher produces irregular triangles at blended junctions, and my early VSPAERO runs were throwing off-axis moments that didn't match my hand calcs. I had to go back and clean up those intersections before I trusted the panel results.</p>
       </div>
 
       <div class="m-section">
-        <h3>CFD and Seam Drag</h3>
-        <p>The CFD ran in OpenFOAM using simpleFoam, steady-state incompressible RANS, k-omega SST turbulence model. The flow domain you can see in the mesh screenshot has the inlet about 3 chord lengths upstream and the outlet 8 chord lengths downstream.</p>
+        <h3>CFD and seam drag</h3>
+        <p>The CFD ran in OpenFOAM using simpleFoam: steady-state incompressible RANS with the k-omega SST turbulence model. The inlet is about 3 chord lengths upstream and the outlet 8 chord lengths downstream.</p>
         <p>I modeled the seams as a surface gap and step discontinuity at the panel joints. My first mesh was bad. The y+ values near the seam were way too high, over 100 in some spots, so the wall treatment wasn't actually resolving the boundary layer where I needed it. I refined the mesh locally around the seam features and reran. The velocity contour shown is from the corrected run.</p>
-        <p>Main finding: seam drag depends a lot on gap width and surface flush. A tight flush joint is manageable. A proud or recessed edge is way worse than the geometry would suggest because of the separation at the step.</p>
+        <p>Main finding: seam drag depends a lot on gap width and how flush the surface is. A tight flush joint is manageable. A proud or recessed edge is way worse than the geometry would suggest because of the separation at the step.</p>
       </div>
 
       <div class="m-section">
-        <h3>Dihedral and Stability</h3>
+        <h3>Dihedral and stability</h3>
         <p>I swept dihedral angle through VSPAERO and looked at static margin and Dutch roll characteristics at each point. More dihedral improves roll stability but pushes the neutral point forward and eats into pitch stability margin. The configuration in the render is the best tradeoff from that sweep.</p>
       </div>
 
       <div class="m-section">
-        <h3>What I'd Do Differently</h3>
-        <p>Everything here is simulation only and the CFD hasn't been validated against any physical data. VSPAERO is also inviscid so it misses the separated flow regions I actually care most about. The real next step is building a scaled section and running it in a wind tunnel to get a validation point for the seam drag numbers.</p>
-        <p>I'd also redo the mesh with structured hexahedrals instead of snappyHexMesh. The unstructured approach is faster to set up but the near-wall resolution suffers for the same cell count, which matters a lot for this kind of boundary layer study.</p>
+        <h3>What I'd do differently</h3>
+        <p>Everything here is simulation only, and the CFD hasn't been validated against physical data. VSPAERO is also inviscid, so it misses the separated flow I care most about. The real next step is building a scaled section and running it in a wind tunnel to get a validation point for the seam drag numbers.</p>
+        <p>I'd also redo the mesh with structured hexahedra instead of snappyHexMesh. The unstructured approach is faster to set up, but near-wall resolution suffers for the same cell count, and that matters a lot for this kind of boundary layer study.</p>
       </div>
 
-      <div class="modal-actions">
-        <a class="solid" href="vwing_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a href="#contact">Get in touch</a>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- VICKERS MODAL -->
+<div class="modal-overlay" id="modal-vickers">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('vickers')">close ✕</button>
+    <div class="modal-imgs"><img src="vickers.webp" alt="Bar chart of Vickers hardness HV10 for 6061-T6 Al, 1018 steel, 360 brass, 110 Cu and zirconia" /></div>
+    <div class="modal-body">
+      <div class="m-label">Materials testing · Uncertainty analysis</div>
+      <h2>Vickers Hardness Testing</h2>
+      <div class="org-modal">ME 241 Materials Lab · SDSU · Oct 2026 · individual report</div>
+      <div class="m-chips">Vickers HV10 · MATLAB · error propagation</div>
+      <div class="m-section">
+        <h3>What we did</h3>
+        <p>I measured HV10 on 6061-T6 aluminum, 1018 cold-rolled steel, 360 half-hard brass, 110 copper, and a zirconia ceramic. I used a macro Vickers tester at 98.07 N (10 kgf) for 15 s, with three indents per material and six diagonal readings each. The average deviation of the diagonals was carried through into hardness as the uncertainty.</p>
+        <table class="mini"><tr><th>Material</th><th>HV10</th></tr><tr><td>6061-T6 aluminum</td><td>107 ± 2</td></tr><tr><td>1018 steel</td><td>250 ± 10</td></tr><tr><td>360 brass</td><td>141 ± 5</td></tr><tr><td>110 copper</td><td>108 ± 3</td></tr><tr><td>Zirconia (ZrO₂)</td><td>1600 ± 200</td></tr></table>
       </div>
+      <div class="m-section">
+        <h3>What stood out</h3>
+        <p>The metals all fell between about 100 and 250 HV with tight error bars. Zirconia was more than six times harder than the steel and had much more scatter. Hard, brittle ceramics leave small indents with fuzzy, sometimes cracked corners, so measuring the diagonal becomes the main source of error. Seeing that in my own data made the hardness numbers in a datasheet a lot more concrete.</p>
+      </div>
+      <div class="modal-actions"><a href="vickers_hardness_report.pdf" target="_blank" rel="noopener">Full lab report (PDF)</a><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -563,38 +979,21 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- ALBATROSS MODAL -->
 <div class="modal-overlay" id="modal-albatross">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('albatross')">✕</button>
+    <button class="modal-close" onclick="closeModal('albatross')">close ✕</button>
     <div class="modal-body">
-      <div class="m-label">Conceptual Design · Aerodynamics · Structures</div>
+      <div class="m-label">Conceptual design · Aerodynamics · Structures</div>
       <h2>ALBATROSS-1 Fixed-Wing UAV</h2>
-      <div class="m-chips">
-        <span>Conceptual Design</span><span>Aerodynamics</span><span>Structures</span><span>OpenVSP</span>
-      </div>
-
+      <div class="m-chips">Conceptual design · Aerodynamics · Structures · OpenVSP</div>
       <div class="m-section">
-        <h3>The Project</h3>
-        <p>ALBATROSS-1 was a full conceptual design study for a long-endurance low-altitude fixed-wing UAV. I wanted to actually work through a complete design cycle from mission requirements to a sized airframe rather than just sketch something and call it a concept.</p>
+        <h3>The project</h3>
+        <p>ALBATROSS-1 was a full conceptual design study for a long-endurance, low-altitude fixed-wing UAV. I wanted to actually work through a complete design cycle from mission requirements to a sized airframe, rather than just sketch something and call it a concept.</p>
       </div>
-
       <div class="m-section">
-        <h3>Design Process</h3>
-        <p>I started from a weight budget and mission profile and worked backward to size the wing using a simplified Breguet range equation. Wing geometry was iterated in OpenVSP to hit the required cruise lift coefficient while keeping the aspect ratio within structural limits for a composite spar.</p>
+        <h3>Design process</h3>
+        <p>I started from a weight budget and mission profile and worked backward to size the wing using a simplified Breguet range equation. I iterated the wing geometry in OpenVSP to hit the required cruise lift coefficient while keeping the aspect ratio within structural limits for a composite spar.</p>
       </div>
-
-      <div class="m-section">
-        <h3>Aerodynamic Analysis</h3>
-        <p><em>Writeup in progress.</em></p>
-      </div>
-
-      <div class="m-section">
-        <h3>Structural Sizing</h3>
-        <p><em>Writeup in progress.</em></p>
-      </div>
-
-      <div class="modal-actions">
-        <a class="solid" href="albatross_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="m-note">The aerodynamic analysis and structural sizing write-ups are still in progress.</div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -602,28 +1001,21 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- NOSE CONE MODAL -->
 <div class="modal-overlay" id="modal-nosecone">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('nosecone')">✕</button>
+    <button class="modal-close" onclick="closeModal('nosecone')">close ✕</button>
     <div class="modal-body">
-      <div class="m-label">CFD · Aerodynamics · Comparative Study</div>
+      <div class="m-label">CFD · Aerodynamics · Comparative study</div>
       <h2>Nose Cone Geometry CFD Study</h2>
-      <div class="m-chips">
-        <span>OpenFOAM</span><span>ParaView</span><span>snappyHexMesh</span>
-      </div>
-
+      <div class="m-chips">OpenFOAM · ParaView · snappyHexMesh</div>
       <div class="m-section">
-        <h3>The Project</h3>
-        <p>There is a lot of conventional wisdom in rocketry about nose cone geometry but I wanted to actually run the numbers on a controlled set of profiles instead of just trusting Barrowman equations. Direct drag comparison across common nose cone families at the same flow conditions.</p>
+        <h3>The project</h3>
+        <p>There's a lot of conventional wisdom in rocketry about nose cone geometry, but I wanted to actually run the numbers on a controlled set of profiles instead of just trusting the Barrowman equations. It's a direct drag comparison across common nose cone families at the same flow conditions.</p>
       </div>
-
       <div class="m-section">
-        <h3>CFD Setup and Results</h3>
-        <p><em>Writeup in progress.</em></p>
+        <h3>Where it went next</h3>
+        <p>The same question came up in my first SDSU Rocket Project assignment. That was a 10 in, Mach 1.4 nose cone in ABS with a 6 × 10 in payload and a 6 lb limit. I held length, wall thickness, and material fixed and compared tangent ogive, parabolic, and Von Kármán profiles. I picked Von Kármán at the full 36 in length (fineness ratio 3.6) to keep transonic wave drag down. I used the same reasoning on my L1 nose.</p>
       </div>
-
-      <div class="modal-actions">
-        <a class="solid" href="nosecone_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="m-note">The full CFD setup and results write-up is still in progress.</div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -631,33 +1023,17 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- TVC MODAL -->
 <div class="modal-overlay" id="modal-tvc">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('tvc')">✕</button>
+    <button class="modal-close" onclick="closeModal('tvc')">close ✕</button>
     <div class="modal-body">
       <div class="m-label">Controls · Simulation · Gaucho Rocket Club</div>
       <h2>Thrust Vector Control Modeling</h2>
-      <div class="m-chips">
-        <span>Simulink</span><span>MATLAB</span><span>Controls</span><span>State-Space</span>
-      </div>
-
+      <div class="m-chips">Simulink · MATLAB · controls · state-space</div>
       <div class="m-section">
         <h3>Context</h3>
-        <p>As lead control systems test engineer for the Gaucho Rocket Club I was responsible for modeling and validating the TVC system for the team's vehicle. TVC is the primary flight control authority during boost. If it doesn't work the vehicle is unstable from liftoff.</p>
+        <p>As lead control systems test engineer for the Gaucho Rocket Club, I was responsible for modeling and validating the TVC system for the team's vehicle. TVC is the main source of flight control during boost. If it doesn't work, the vehicle is unstable from liftoff.</p>
       </div>
-
-      <div class="m-section">
-        <h3>System Model and Control Design</h3>
-        <p><em>Writeup in progress.</em></p>
-      </div>
-
-      <div class="m-section">
-        <h3>Simulation and Testing</h3>
-        <p><em>Writeup in progress.</em></p>
-      </div>
-
-      <div class="modal-actions">
-        <a class="solid" href="tvc_writeup.pdf" target="_blank" rel="noopener">Download PDF</a>
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="m-note">System model, control design, and test write-ups are still in progress.</div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -665,27 +1041,17 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- PI CAMERA MODAL -->
 <div class="modal-overlay" id="modal-picamera">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('picamera')">✕</button>
+    <button class="modal-close" onclick="closeModal('picamera')">close ✕</button>
     <div class="modal-body">
-      <div class="m-label">Embedded Systems · Hardware · Python</div>
+      <div class="m-label">Embedded systems · Hardware · Python</div>
       <h2>Raspberry Pi Instant Camera</h2>
-      <div class="m-chips">
-        <span>Raspberry Pi</span><span>Python</span><span>Embedded</span><span>Hardware</span>
-      </div>
-
+      <div class="m-chips">Raspberry Pi · Python · embedded · hardware</div>
       <div class="m-section">
-        <h3>Why I Built This</h3>
-        <p>Most of my work is in simulation. I built this to force myself to deal with real hardware problems. An instant camera is scoped small enough to actually finish but there are enough real integration challenges that you can't just skip the hard parts.</p>
+        <h3>Why I built this</h3>
+        <p>Most of my work is in simulation. I built this to force myself to deal with real hardware problems. An instant camera is small enough in scope to actually finish, but it has enough real integration challenges that you can't skip the hard parts.</p>
       </div>
-
-      <div class="m-section">
-        <h3>Build and Software</h3>
-        <p><em>Writeup in progress.</em></p>
-      </div>
-
-      <div class="modal-actions">
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="m-note">Build and software write-up in progress.</div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -693,40 +1059,30 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- JPL MODAL -->
 <div class="modal-overlay" id="modal-jpl">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('jpl')">✕</button>
+    <button class="modal-close" onclick="closeModal('jpl')">close ✕</button>
     <div class="modal-body">
-      <div class="m-label">Flight Operations · Systems · Python</div>
-      <h2>Curiosity Rover Thermal Diagnostics</h2>
-      <div class="org-modal">NASA Jet Propulsion Laboratory — Mars Science Laboratory · Summer 2025</div>
-      <div class="m-chips">
-        <span>Python</span><span>Systems Integration</span><span>Operational Data Pipelines</span><span>Elasticsearch</span><span>Automated Reporting</span>
-      </div>
-
+      <div class="m-label">Flight operations · Thermal · Python</div>
+      <h2>Curiosity Rover Thermal Systems</h2>
+      <div class="org-modal">NASA Jet Propulsion Laboratory, Mars Science Laboratory · Thermal Engineering Intern · Jun – Nov 2025</div>
+      <div class="m-chips">Python · Bash / cron · Elasticsearch · operational data pipelines · thermal margins</div>
       <div class="m-section">
-        <h3>The Problem</h3>
-        <p>On an active Mars mission, the thermal team has to keep rover components inside tight temperature limits, which means constant "preheat" diagnostics. That data was scattered across systems and validated by hand, and there was no standard way to see long-term trends — slow, and easy to get wrong.</p>
+        <h3>The problem</h3>
+        <p>On an active Mars mission, the thermal team has to keep rover components inside tight temperature limits, which means constant preheat diagnostics. That data was scattered across systems and checked by hand, and there was no standard way to see long-term trends. It was slow and easy to get wrong.</p>
       </div>
-
       <div class="m-section">
-        <h3>What I Built</h3>
-        <p>Three modular Python tools that together form one pipeline: pull the relevant heating events from the operations database, compute performance margins automatically, and generate the formatted tactical reports the thermal team posts. I replaced an older manual workflow with a native Python implementation and put the whole thing on an automated schedule so it runs without anyone touching it.</p>
+        <h3>What I built</h3>
+        <p>I wrote modular Python tools that work as one pipeline. They pull heating events from the operations database, compute performance margins automatically, and generate the formatted tactical reports the thermal team posts. I also brought 12+ years of thermal and heating-event history into time-aligned datasets for analysis and anomaly review. The whole thing runs hourly on cron without anyone touching it.</p>
       </div>
-
       <div class="m-section">
-        <h3>Working in Flight Ops</h3>
-        <p>The harder half was integration. Everything had to slot into existing flight-operations infrastructure and match the team's conventions and config structures. I spent real time fighting environment and dependency issues across different machines before it ran cleanly end to end, working alongside thermal, operations, and systems engineers to get it right.</p>
+        <h3>Thermal support</h3>
+        <p>Beyond the tooling, I supported heater-table updates and thermal-margin assessments for seasonal Martian loads, including an update that was deployed to the rover. I also helped with daily downlink analysis and command validation.</p>
       </div>
-
       <div class="m-section">
-        <h3>Impact</h3>
-        <p>Every heating event now gets automatic margin and efficiency metrics and shows up in the daily operational reports with no manual data entry. The work is continuing toward a single consolidated thermal data index and a dashboard.</p>
+        <h3>Working in flight ops</h3>
+        <p>The harder half was integration. Everything had to fit into existing flight-operations infrastructure and match the team's conventions and config structures. I spent real time fighting environment and dependency issues across machines before it ran cleanly end to end, working alongside thermal, operations, and systems engineers.</p>
       </div>
-
-      <div class="m-note">This project involves export-controlled mission data, so the description here is intentionally high-level. Technical specifics, schematics, and internal tooling are omitted.</div>
-
-      <div class="modal-actions">
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="m-note">This work involves export-controlled mission data, so the description here is intentionally high-level. Technical specifics, schematics, and internal tooling are left out.</div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -734,46 +1090,36 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- NOAA MODAL -->
 <div class="modal-overlay" id="modal-noaa">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('noaa')">✕</button>
+    <button class="modal-close" onclick="closeModal('noaa')">close ✕</button>
     <div class="modal-imgs">
-      <div class="img-main"><img src="noaa_regrid.jpg" alt="SFBOFS original netCDF grid vs interpolated GRIB-style grid" /></div>
+      <img src="noaa_regrid.jpg" alt="SFBOFS original netCDF grid vs interpolated GRIB-style grid" />
       <div class="modal-imgs-strip">
         <img src="noaa_stripes.jpg" alt="Relative sea level stripes for La Jolla, San Diego, Honolulu, Kodiak Island" />
         <img src="noaa_interp3d.jpg" alt="3D interpolation surface and nearest-neighbor grid" />
       </div>
     </div>
     <div class="modal-body">
-      <div class="m-label">HPC · Operational Forecasting · Scientific Computing</div>
+      <div class="m-label">HPC · Operational forecasting · Scientific computing</div>
       <h2>Operational Forecast Cloud Port</h2>
-      <div class="org-modal">NOAA — Center for Operational Oceanographic Products &amp; Services · William M. Lapenta Fellowship · 2024</div>
-      <div class="m-chips">
-        <span>Python</span><span>R</span><span>HPC</span><span>netCDF / GRIB2</span><span>Interpolation</span>
-      </div>
-
+      <div class="org-modal">NOAA Center for Operational Oceanographic Products &amp; Services · William M. Lapenta Internship · 2024</div>
+      <div class="m-chips">Python · R · HPC · netCDF / GRIB2 · interpolation</div>
       <div class="m-section">
-        <h3>The Problem</h3>
+        <h3>The problem</h3>
         <p>NOAA's San Francisco Bay Operational Forecast System (SFBOFS) ran on an on-premise supercomputer. The goal was to get it running on the National Ocean Service cloud sandbox, which meant moving the model and reconciling some awkward data-format differences along the way.</p>
       </div>
-
       <div class="m-section">
-        <h3>HPC → Cloud Port</h3>
-        <p>I ported the system from the on-prem NOAA HPC to the cloud sandbox, reusing the existing finite-element mesh and grid. From there I ran SFBOFS under different forcing conditions and looked at how water level, currents, temperature, and salinity responded — including a comparison of global-model versus regional-model forcing to see which performed better.</p>
+        <h3>HPC → cloud port</h3>
+        <p>I ported the system from the on-prem NOAA HPC to the cloud sandbox, reusing the existing finite-element mesh and grid. From there I ran SFBOFS under different forcing conditions and looked at how water level, currents, temperature, and salinity responded. That included comparing global-model and regional-model forcing to see which performed better.</p>
       </div>
-
       <div class="m-section">
-        <h3>Data-Format Tooling: netCDF → GRIB2</h3>
-        <p>A big chunk of the work was format conversion. I helped build one of the first netCDF-to-GRIB2 converters for the group, in Python and R. The hard part is regridding: the source data lives on an unstructured, CDF-style grid and GRIB2 wants a regular grid, so I implemented the interpolation — nearest-neighbor and bilinear — to move values across without distorting them. The plot above shows the original grid resampled onto the target grid.</p>
+        <h3>netCDF → GRIB2</h3>
+        <p>A big chunk of the work was format conversion. I helped build one of the group's first netCDF-to-GRIB2 converters, in Python and R. The hard part is regridding. The source data lives on an unstructured grid and GRIB2 wants a regular one, so I implemented nearest-neighbor and bilinear interpolation to move values across without distorting them.</p>
       </div>
-
       <div class="m-section">
-        <h3>Side Build: Sea Level Stripes</h3>
-        <p>I also built a small tool that pulls hourly water-level data from the NOAA API, resamples it to monthly means, and renders long-term trends as "climate stripes" per tide station. The four-panel image shows relative sea level at La Jolla, San Diego, Honolulu, and Kodiak Island from the early 1900s to today.</p>
+        <h3>Side build: sea level stripes</h3>
+        <p>I also built a small tool that pulls hourly water-level data from the NOAA API, resamples it to monthly means, and shows long-term trends as "climate stripes" for each tide station. The panels show La Jolla, San Diego, Honolulu, and Kodiak Island from the early 1900s to today.</p>
       </div>
-
-      <div class="modal-actions">
-        <a class="solid" href="https://tidesandcurrents.noaa.gov/" target="_blank" rel="noopener">NOAA CO-OPS</a>
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="modal-actions"><a href="https://tidesandcurrents.noaa.gov/" target="_blank" rel="noopener">NOAA CO-OPS</a><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -781,26 +1127,17 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- GAUCHO MODAL -->
 <div class="modal-overlay" id="modal-gaucho">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('gaucho')">✕</button>
+    <button class="modal-close" onclick="closeModal('gaucho')">close ✕</button>
     <div class="modal-body">
-      <div class="m-label">Controls · Test · Flight Systems</div>
+      <div class="m-label">Controls · Test · Flight systems</div>
       <h2>Lead Control Systems Test Engineer</h2>
-      <div class="org-modal">Gaucho Rocket Club · Current</div>
-      <div class="m-chips">
-        <span>Simulink</span><span>MATLAB</span><span>Controls</span><span>Test &amp; Validation</span>
-      </div>
+      <div class="org-modal">Gaucho Rocket Club · UC Santa Barbara</div>
+      <div class="m-chips">Simulink · MATLAB · controls · test &amp; validation</div>
       <div class="m-section">
         <h3>Role</h3>
-        <p>I lead control-systems testing for the club's flight-control and thrust-vector work: building the Simulink models, designing the tests that exercise them, and validating results against expected behavior before anything goes near hardware.</p>
+        <p>I led control-systems testing for the club's flight-control and thrust-vector work. That meant building the Simulink models, designing the tests that exercise them, and checking results against expected behavior before anything went near hardware. The TVC modeling in Earlier projects came out of this role.</p>
       </div>
-      <div class="m-section">
-        <h3>Related Project</h3>
-        <p>The thrust-vector control modeling in my Selected Work came out of this role — closed-loop TVC simulation to support flight-control development and hardware testing.</p>
-      </div>
-      <div class="modal-actions">
-        <a href="#work">See TVC project</a>
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -808,25 +1145,22 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- SCRIPPS HARDWARE MODAL -->
 <div class="modal-overlay" id="modal-scrippshw">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('scrippshw')">✕</button>
+    <button class="modal-close" onclick="closeModal('scrippshw')">close ✕</button>
     <div class="modal-body">
-      <div class="m-label">Hardware · Electronics · CAD</div>
-      <h2>Ocean Sensor Hardware &amp; Electronics</h2>
-      <div class="org-modal">Scripps Institution of Oceanography · 2023</div>
-      <div class="m-chips">
-        <span>CAD</span><span>Electrical Schematics</span><span>Sensor Calibration</span><span>Field Hardware</span>
+      <div class="m-label">Hardware · Electronics · Test</div>
+      <h2>Electronics Validation &amp; Test</h2>
+      <div class="org-modal">Scripps Institution of Oceanography, Martz Lab · May – Sep 2023</div>
+      <div class="m-chips">Oscilloscope · multimeter · ozone chamber · CAD · schematics</div>
+      <div class="m-section">
+        <h3>What I did</h3>
+        <p>I validated custom environmental sensor circuits for saltwater deployment using oscilloscope and multimeter bench tests and controlled ozone-chamber testing. When something failed, I isolated the fault in the power regulation, signal conditioning, or ADC interface, documented the failure mode, and checked the fix before field deployment.</p>
+        <p>I also designed CAD for sensor housings and structural parts, and helped with wiring diagrams and schematics for self-calibrating ocean sensors.</p>
       </div>
       <div class="m-section">
-        <h3>What I Did</h3>
-        <p>I designed CAD models for sensor housings and structural components used in marine instrumentation, and helped develop the wiring diagrams and electrical schematics for self-calibrating ocean sensors.</p>
+        <h3>What it taught me</h3>
+        <p>Ocean hardware fails from saltwater corrosion, biofouling, and pressure, not from the ideal design. That's where I learned how much of real engineering is integration constraints.</p>
       </div>
-      <div class="m-section">
-        <h3>Hands-On</h3>
-        <p>I calibrated sensors against lab test systems to keep measurements honest, troubleshot pressure-housing seal failures and sensor-communication faults, and verified field-readiness against the things that actually break ocean hardware: saltwater corrosion, biofouling, and pressure. It's where I learned how much of real engineering is integration constraints rather than the ideal design.</p>
-      </div>
-      <div class="modal-actions">
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
@@ -834,61 +1168,81 @@ footer .wrap{display:flex;justify-content:space-between;font-size:12px;color:var
 <!-- CCE MODAL -->
 <div class="modal-overlay" id="modal-cce">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal('cce')">✕</button>
+    <button class="modal-close" onclick="closeModal('cce')">close ✕</button>
     <div class="modal-imgs">
-      <div class="img-main"><img src="cce_temp.jpg" alt="Modeled upper-ocean temperature across the California Current" /></div>
+      <img src="cce_temp.jpg" alt="Modeled upper-ocean temperature across the California Current" />
       <div class="modal-imgs-strip">
         <img src="cce_diatoms.jpg" alt="Modeled diatom concentration, California Current" />
         <img src="cce_zoo.jpg" alt="Modeled zooplankton concentration, California Current" />
       </div>
     </div>
     <div class="modal-body">
-      <div class="m-label">Scientific Computing · Modeling · MATLAB</div>
+      <div class="m-label">Scientific computing · Modeling · MATLAB</div>
       <h2>California Current Ecosystem Modeling</h2>
-      <div class="org-modal">Scripps Institution of Oceanography — CCE-LTER REU, Dr. Art Miller's lab · 2023</div>
-      <div class="m-chips">
-        <span>MATLAB</span><span>Numerical Models</span><span>Data Visualization</span><span>Statistics</span>
+      <div class="org-modal">Scripps Institution of Oceanography, CCE-LTER, Dr. Art Miller's lab · 2023</div>
+      <div class="m-chips">MATLAB · numerical models · data visualization · statistics</div>
+      <div class="m-section">
+        <h3>The work</h3>
+        <p>I worked with output from a regional ocean model of the California Current: POP for the physics, COBALT biogeochemistry, and MARBL ecology. I picked up MATLAB to read the large output files, then built seasonal-cycle snapshots and animations of temperature and several plankton types: diatoms, small phytoplankton, coccolithophores, diazotrophs, and zooplankton.</p>
       </div>
       <div class="m-section">
-        <h3>The Work</h3>
-        <p>I worked with output from a regional ocean model of the California Current — POP for the physics, COBALT biogeochemistry, MARBL ecology. I picked up MATLAB to read the large model-output files, then built seasonal-cycle "snapshots" and animations across temperature and the different plankton types: diatoms, small phytoplankton, coccolithophores, diazotrophs, and zooplankton.</p>
+        <h3>What it showed</h3>
+        <p>Averaging by month and computing anomalies let me line up physical drivers with ecological response. The coldest coastal water came during spring upwelling, diatom blooms tracked the nutrients that upwelling brought up, and the offshore and coastal phytoplankton regimes were clearly different. The maps are from my own processing of the model output.</p>
       </div>
-      <div class="m-section">
-        <h3>What It Showed</h3>
-        <p>By averaging by month and computing anomalies, I could line up physical drivers with ecological response: coldest coastal water during spring upwelling, diatom blooms tracking those upwelling nutrients, and clearly different offshore-versus-coastal phytoplankton regimes. The maps shown are from my own model output — temperature, diatoms, and zooplankton.</p>
-      </div>
-      <div class="modal-actions">
-        <a href="#contact">Get in touch</a>
-      </div>
+      <div class="modal-actions"><a href="#contact" onclick="closeAll()">Get in touch</a></div>
     </div>
   </div>
 </div>
 
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image"><img alt="" /><p></p></div>
+
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
-var io = new IntersectionObserver(function(es){
-  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
-},{threshold:.08});
-document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+
+var lastFocus = null;
 function openModal(id){
-  document.getElementById('modal-'+id).classList.add('open');
-  document.body.style.overflow='hidden';
+  lastFocus = document.activeElement;
+  var m = document.getElementById('modal-'+id);
+  m.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  m.querySelector('.modal-close').focus();
 }
 function closeModal(id){
   document.getElementById('modal-'+id).classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
+  if(lastFocus) lastFocus.focus();
 }
-document.querySelectorAll('.modal-overlay').forEach(function(overlay){
-  overlay.addEventListener('click', function(e){
-    if(e.target===overlay){ overlay.classList.remove('open'); document.body.style.overflow=''; }
-  });
+function closeAll(){
+  document.querySelectorAll('.modal-overlay.open').forEach(function(m){ m.classList.remove('open'); });
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.modal-overlay').forEach(function(o){
+  o.setAttribute('role','dialog'); o.setAttribute('aria-modal','true');
+  o.addEventListener('click', function(e){ if(e.target === o) closeAll(); });
 });
+var lb = document.getElementById('lightbox');
+document.addEventListener('click', function(e){
+  var img = e.target.closest('.fig img, .m-fig img, .modal-imgs img');
+  if(!img) return;
+  var fig = img.closest('figure');
+  var cap = fig && fig.querySelector('figcaption');
+  lb.querySelector('img').src = img.currentSrc || img.src;
+  lb.querySelector('img').alt = img.alt;
+  lb.querySelector('p').textContent = cap ? cap.textContent : img.alt;
+  lb.classList.add('open');
+});
+lb.addEventListener('click', function(){ lb.classList.remove('open'); });
 document.addEventListener('keydown', function(e){
-  if(e.key==='Escape'){
-    document.querySelectorAll('.modal-overlay.open').forEach(function(m){
-      m.classList.remove('open'); document.body.style.overflow='';
-    });
-  }
+  if(e.key !== 'Escape') return;
+  if(lb.classList.contains('open')){ lb.classList.remove('open'); return; }
+  closeAll();
+});
+
+var log = document.getElementById('log'), tog = document.getElementById('logToggle');
+tog.addEventListener('click', function(){
+  var open = log.classList.toggle('expanded');
+  tog.textContent = open ? 'Show fewer' : 'Show older entries';
+  tog.setAttribute('aria-expanded', open);
 });
 </script>
 </body>
